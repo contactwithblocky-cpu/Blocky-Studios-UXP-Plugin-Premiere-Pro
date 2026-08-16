@@ -1,0 +1,15 @@
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/oracle-native-drag.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/Experimental.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/Nightly.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/Continuous.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/NightlyMemoryCheck.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/oracle-native-drag-tests.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/oracle-atomic-file-tests.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/oracle-file-operation-tests.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/oracle-directory-watch-tests.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/oracle-packaged-font-registration-tests.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/oracle-replay-media-tests.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/oracle-native-drag-harness.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/RUN_TESTS.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/ALL_BUILD.dir
+D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/CMakeFiles/ZERO_CHECK.dir

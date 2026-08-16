@@ -1,0 +1,38 @@
+{
+  "capturedLocal": "2026-07-16T12:35:19-04:00",
+  "endpoint": "ws://127.0.0.1:3001",
+  "client": "Node.js ws from current plugin dependency tree",
+  "subscriptionSent": {
+    "event": "subscribe",
+    "client": "oracle-premiere",
+    "protocol": 2,
+    "schema": "com.blocky.oracle.bridge-subscription",
+    "version": 2,
+    "thumbnail": {
+      "position": 0.5,
+      "width": 640,
+      "height": 360
+    }
+  },
+  "messagesReceived": [
+    {
+      "event": "bridge_hello",
+      "schema": "com.blocky.oracle.bridge-hello",
+      "protocol": 2,
+      "version": 2,
+      "minimumProtocol": 1,
+      "message": "Oracle Minecraft bridge ready"
+    },
+    {
+      "event": "snapshot",
+      "schema": "com.blocky.oracle.bridge-snapshot",
+      "protocol": 2,
+      "version": 2,
+      "replays": [],
+      "imports": []
+    }
+  ],
+  "completionReason": "received bridge_hello and snapshot",
+  "exitCode": 0,
+  "result": "PASS"
+}

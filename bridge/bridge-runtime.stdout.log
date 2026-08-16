@@ -1,0 +1,6 @@
+[Oracle bridge] Listening on ws://127.0.0.1:3001
+[Oracle bridge] Waiting for render_complete payloads.
+DEBUG RAW DATA: {"event":"status","message":"mod_connected"}
+[Oracle bridge] Publisher status: mod_connected
+DEBUG RAW DATA: {"event":"status","message":"mod_connected"}
+[Oracle bridge] Publisher status: mod_connected

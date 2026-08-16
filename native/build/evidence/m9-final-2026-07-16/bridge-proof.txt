@@ -1,0 +1,26 @@
+Oracle Overdrive M9 live bridge proof
+Date: 2026-07-16
+Result: PASS
+
+1. TCP LISTEN
+   127.0.0.1:3001 was in LISTEN state.
+   Owning PID: 61560 (javaw.exe)
+   Window: Minecraft* 1.21.11, HWND 4068524
+   Listener creation: 2026-07-16T11:46:58.000-04:00
+
+2. Source contract
+   main.js SHA-256: F30A4F0191760DAE33538097DF0900D634818C032056D4B5AA4540743A27BA87
+   The current client uses ws://127.0.0.1:3001 and sends the protocol-v2
+   com.blocky.oracle.bridge-subscription payload documented alongside this file.
+
+3. Live WebSocket exchange
+   Connection opened successfully.
+   The server returned bridge_hello using com.blocky.oracle.bridge-hello v2.
+   After subscribe, it returned snapshot using com.blocky.oracle.bridge-snapshot v2.
+   The current live snapshot was valid and empty: 0 replays, 0 imports.
+   Probe exit code: 0.
+
+Files:
+  bridge-listener.json
+  bridge-subscription-contract.txt
+  bridge-probe.json

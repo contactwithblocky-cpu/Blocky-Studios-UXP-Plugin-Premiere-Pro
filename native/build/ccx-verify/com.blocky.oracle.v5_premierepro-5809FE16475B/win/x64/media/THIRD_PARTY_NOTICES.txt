@@ -1,0 +1,19 @@
+FFmpeg 6.1.1 Windows x86_64 runtime
+==================================
+
+Oracle includes the unmodified FFmpeg and FFprobe command-line programs and
+their runtime libraries from the Bytedeco ffmpeg 6.1.1-1.5.10
+windows-x86_64 artifact already used by the Oracle exporter.
+
+Upstream project: https://ffmpeg.org/
+Artifact project: https://github.com/bytedeco/javacpp-presets/tree/master/ffmpeg
+Corresponding source: https://github.com/FFmpeg/FFmpeg/tree/n6.1.1
+
+The packaged binaries report that they are licensed under the GNU Lesser
+General Public License, version 3 or (at your option) any later version. The
+license text is available at https://www.gnu.org/licenses/lgpl-3.0.txt and the
+FFmpeg licensing documentation is available at https://ffmpeg.org/legal.html.
+
+No replay media is uploaded or sent to a network service. These binaries run
+only on local media selected through Oracle and create managed thumbnail and
+preview cache files without modifying the original replay.

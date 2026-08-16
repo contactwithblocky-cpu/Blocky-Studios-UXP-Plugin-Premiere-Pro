@@ -1,0 +1,401 @@
+{
+    "schema":  "com.blocky.oracle.private-ccx-inventory",
+    "version":  2,
+    "releaseEligible":  false,
+    "distribution":  "PRIVATE LOCAL ACCEPTANCE ONLY - DO NOT DISTRIBUTE",
+    "pluginId":  "com.blocky.oracle.v5",
+    "pluginVersion":  "2.0.18",
+    "generatedAt":  "2026-08-13T17:53:31.1525727Z",
+    "nativeAddon":  {
+                        "path":  "win/x64/oracle-native-drag.uxpaddon",
+                        "size":  675328,
+                        "sha256":  "6E62F5140C463ED2FF40370ED90D571EE741B2CF012EA567408DE359CD19D956"
+                    },
+    "files":  [
+                  {
+                      "path":  "assets/fonts/samsung_sharp_sans_bold.otf",
+                      "size":  148384,
+                      "sha256":  "9A1C1852B791C69A8EE4949669A08C7B0D36E63698B761B06E557E3E9A8BC582"
+                  },
+                  {
+                      "path":  "assets/fonts/samsung_sharp_sans_medium.otf",
+                      "size":  146236,
+                      "sha256":  "1805CE1A423442D522BF4368FBF0C4E4556FB043352B8227BE6481256AC63E51"
+                  },
+                  {
+                      "path":  "assets/fonts/samsung_sharp_sans_regular.otf",
+                      "size":  145216,
+                      "sha256":  "025E1B8AEF83739DAF18D3553756D96E416C09E1BA010709486C2B6080A92033"
+                  },
+                  {
+                      "path":  "assets/icons/add.png",
+                      "size":  250,
+                      "sha256":  "3A361780B75E0DC08D4DB193A2C1F32C63B105E59D21659FB859D2310E0A76AE"
+                  },
+                  {
+                      "path":  "assets/icons/apply.png",
+                      "size":  470,
+                      "sha256":  "05FBF6002CC4EB412E98F9389F3EA974246FDFB12284C5B57A23A446890F1EB6"
+                  },
+                  {
+                      "path":  "assets/icons/close.png",
+                      "size":  343,
+                      "sha256":  "8D129C806771601301DD93C9E26953633968F287B78AD415B8DBBF935203EB99"
+                  },
+                  {
+                      "path":  "assets/icons/curves.png",
+                      "size":  1300,
+                      "sha256":  "4BBC1E58B320774256D921FDDBB96D74DDDD2EB3515122B948777CB6FC993711"
+                  },
+                  {
+                      "path":  "assets/icons/favorite.png",
+                      "size":  967,
+                      "sha256":  "196F8D2A366A48FF867F5BCB3471D0C72900ACE41F4AA4415352BA7F0B1DDC87"
+                  },
+                  {
+                      "path":  "assets/icons/loop.png",
+                      "size":  996,
+                      "sha256":  "0B56543A05A1D73D145AF3BA38D997F35DCC1BFEAE7BB4F6BA9838605CB2143C"
+                  },
+                  {
+                      "path":  "assets/icons/menu.png",
+                      "size":  312,
+                      "sha256":  "E19C3359CD0D0CBBF11EF8F0A21D9839AC6B8F252E9489EE6B2E29C71A2E23B7"
+                  },
+                  {
+                      "path":  "assets/icons/muted.png",
+                      "size":  504,
+                      "sha256":  "EB7C69A85E18EF260C628DC846B1DF701DA2FCC785EC465771B27225B3DB7B7F"
+                  },
+                  {
+                      "path":  "assets/icons/pause.png",
+                      "size":  192,
+                      "sha256":  "47F86D4E0900049368AC8086FEAE1A31D194CA5E1F802243820AFF53EF5FDA19"
+                  },
+                  {
+                      "path":  "assets/icons/play.png",
+                      "size":  418,
+                      "sha256":  "8F774117BCD5782EA5EAE4A6B091E9608CCDF50E33F1B0079A1B2645231C0F62"
+                  },
+                  {
+                      "path":  "assets/icons/quick-apply.png",
+                      "size":  1302,
+                      "sha256":  "430187891A4A389FBB2171D09AA2E668E6A034FF32FFCC2356F917FEC21D360B"
+                  },
+                  {
+                      "path":  "assets/icons/refresh.png",
+                      "size":  1439,
+                      "sha256":  "FE556EBD685AE99C4ED1793B6782DAF1F3DA6CA27715A41D01F415442C9EE165"
+                  },
+                  {
+                      "path":  "assets/icons/reorder.png",
+                      "size":  376,
+                      "sha256":  "EE8E2F7DF2C6B6FF63ECB74A86539670D4FA299385734DDD430EED5E73A73A02"
+                  },
+                  {
+                      "path":  "assets/icons/replays.png",
+                      "size":  714,
+                      "sha256":  "CC0C6AB041BF0AF3D297405D351370598624492AD36BE573658F72BEA95BB565"
+                  },
+                  {
+                      "path":  "assets/icons/search.png",
+                      "size":  1044,
+                      "sha256":  "BBCA87096CAEEB971A0F7B0324540B5E6E9262F037F9CE997FB8355B090FAD7D"
+                  },
+                  {
+                      "path":  "assets/icons/settings.png",
+                      "size":  866,
+                      "sha256":  "71A9445882490793FC00F2968D1D7821C7A021DFCCA6A474162796893D788DF2"
+                  },
+                  {
+                      "path":  "assets/icons/step-back.png",
+                      "size":  453,
+                      "sha256":  "7DF21B9CB41212733DAF10F6A28886EA297FC97C989023AC7D064327B26F2271"
+                  },
+                  {
+                      "path":  "assets/icons/step-forward.png",
+                      "size":  441,
+                      "sha256":  "B5A29279918F344BD6B5386C235E3C606E48A4678859A1871C92C94E20ED478A"
+                  },
+                  {
+                      "path":  "assets/icons/stop.png",
+                      "size":  238,
+                      "sha256":  "E9AE23FA8F371F69A4DB9F7C3FCEEB496C183BF7C73D6CC4D3B1393D242FA342"
+                  },
+                  {
+                      "path":  "assets/icons/subtract.png",
+                      "size":  191,
+                      "sha256":  "D35ADB9D1D46EE6C48616726B7A05D6B83220501D57993E58A133E7C72A87715"
+                  },
+                  {
+                      "path":  "assets/icons/volume.png",
+                      "size":  950,
+                      "sha256":  "A8B1C68C3D9F9CB0BAC33587AB1C6CF3F5B9174D849BED1B58A4A4772F49740A"
+                  },
+                  {
+                      "path":  "assets/logo/blocky-studios-dark-mode.png",
+                      "size":  339110,
+                      "sha256":  "0C00F7A3CBBEC54B317CB01DA457E8DA5D89234F934501A8EC1813687688B8D0"
+                  },
+                  {
+                      "path":  "assets/logo/blocky-studios-light-mode.png",
+                      "size":  342067,
+                      "sha256":  "6163ACA8D939EE290E08C43FD100DCA5A48DB28A0F83D9E722B5826BA3FED660"
+                  },
+                  {
+                      "path":  "dist/blocky-studios-ui.css",
+                      "size":  194828,
+                      "sha256":  "901ADA22FB3A1D6E9A0B8770DADCE7C6A76DDDAE3247D4AFA5E370C408FA7278"
+                  },
+                  {
+                      "path":  "icons/dark.png",
+                      "size":  1037,
+                      "sha256":  "FD141F7DAD3892CE00B96CFBA1986DA89386B27A1C02D0BDACFA7A932374883E"
+                  },
+                  {
+                      "path":  "icons/dark@1x.png",
+                      "size":  1037,
+                      "sha256":  "FD141F7DAD3892CE00B96CFBA1986DA89386B27A1C02D0BDACFA7A932374883E"
+                  },
+                  {
+                      "path":  "icons/dark@2x.png",
+                      "size":  2047,
+                      "sha256":  "F84D509B0AF7FF8AA2C3D91739E38823793252A6A745FB974BA77952E73E1FCC"
+                  },
+                  {
+                      "path":  "icons/light.png",
+                      "size":  996,
+                      "sha256":  "A98A77B8DDDD51C218BDEC9DFF5074D797ED45FC385DAA83FF5BD17FB1A800F6"
+                  },
+                  {
+                      "path":  "icons/light@1x.png",
+                      "size":  996,
+                      "sha256":  "A98A77B8DDDD51C218BDEC9DFF5074D797ED45FC385DAA83FF5BD17FB1A800F6"
+                  },
+                  {
+                      "path":  "icons/light@2x.png",
+                      "size":  2149,
+                      "sha256":  "4E9653E7D7B4CE8FFCD326B574AD7E5572BB517A91E4EC9ED8D45E925DA42090"
+                  },
+                  {
+                      "path":  "icons/plugin@1x.png",
+                      "size":  888,
+                      "sha256":  "17D5BAADB121AF1CE74A9FAAE6E67C22AC8A8F0B696369E9434144C60D7349CE"
+                  },
+                  {
+                      "path":  "icons/plugin@2x.png",
+                      "size":  2621,
+                      "sha256":  "225DDA06CBCAEBFB609E3978C718F60C2959BFAFF9EB39BC7AF25608224B7146"
+                  },
+                  {
+                      "path":  "icons/plugin-icon.png",
+                      "size":  888,
+                      "sha256":  "17D5BAADB121AF1CE74A9FAAE6E67C22AC8A8F0B696369E9434144C60D7349CE"
+                  },
+                  {
+                      "path":  "icons/plugin-icon@2x.png",
+                      "size":  2621,
+                      "sha256":  "225DDA06CBCAEBFB609E3978C718F60C2959BFAFF9EB39BC7AF25608224B7146"
+                  },
+                  {
+                      "path":  "index.html",
+                      "size":  67837,
+                      "sha256":  "E85BEAF3C6462C8E043F1139AFD88046AD99A924307A0FD52BB01AF21A89617A"
+                  },
+                  {
+                      "path":  "main.js",
+                      "size":  474226,
+                      "sha256":  "E00B000E09ADE517291E9EDDC57222A885233DF435B324BC111711BB1CCA8BFA"
+                  },
+                  {
+                      "path":  "manifest.json",
+                      "size":  2613,
+                      "sha256":  "DAD5F08F769D1CC40293AC133830988AD7EE823744E9C5AA2CA780C7CEF34C93"
+                  },
+                  {
+                      "path":  "PRIVATE_LOCAL_ACCEPTANCE_ONLY.txt",
+                      "size":  361,
+                      "sha256":  "29E35E47E7064190FB54B884E518F6BE3A7C303A6654739A022815A5280DFFB6"
+                  },
+                  {
+                      "path":  "src/app/oracle-panel-dom.js",
+                      "size":  16010,
+                      "sha256":  "9BE59705788D54AA589147F67DBCC750F81676A1A3FB6FCE4933E5A6E4E8FE31"
+                  },
+                  {
+                      "path":  "src/app/oracle-runtime-registry.js",
+                      "size":  21088,
+                      "sha256":  "42E4B76D4FDFF86F7287CAA8F576F51C08FD1061F059C75A0F75120A5EB75DD4"
+                  },
+                  {
+                      "path":  "src/app/oracle-shell.js",
+                      "size":  11331,
+                      "sha256":  "B1071DD7413DDB8D9FBA9F2E738E3B24E0B44B64F9631423BCA083BB3E99A5ED"
+                  },
+                  {
+                      "path":  "src/core/oracle-diagnostics.js",
+                      "size":  6593,
+                      "sha256":  "A8E8CBB3C0388FC0C417629194DDC10A4BD0A3F445FB25C86482A83AA0DFC957"
+                  },
+                  {
+                      "path":  "src/core/oracle-platform-telemetry.js",
+                      "size":  11233,
+                      "sha256":  "0D443C57D78A09C6DCDD5636754B0C5E7E0F4F327011E363A187BA1295E27D06"
+                  },
+                  {
+                      "path":  "src/core/oracle-ui-runtime.js",
+                      "size":  50856,
+                      "sha256":  "9771721B159E4CB11EED114CF00F3037ED5F36E49C1A5DC1F56A4BBB3BC691D1"
+                  },
+                  {
+                      "path":  "src/curves/oracle-curve-math.js",
+                      "size":  19438,
+                      "sha256":  "52D5D8CC5D624C2929F6DE1C650B851BFDC1F56A4E63481C5A5C858D4DD549FE"
+                  },
+                  {
+                      "path":  "src/curves/oracle-curve-presets.js",
+                      "size":  38108,
+                      "sha256":  "DF5F200389E9EAA1AA179E4E0F2F266CDCF384D7375202502616060E7F549E5C"
+                  },
+                  {
+                      "path":  "src/curves/oracle-curves-workspace.js",
+                      "size":  122889,
+                      "sha256":  "9DEAFC7ED817B99ED06DB92CCD5B807E608D7DF59A4C226A927AD205DD3A1DA9"
+                  },
+                  {
+                      "path":  "src/curves/oracle-premiere-curves-adapter.js",
+                      "size":  107373,
+                      "sha256":  "6F1CED6975F40256388C6A222738118E514094FE32CD1CA6D5FBF1CCA28147B8"
+                  },
+                  {
+                      "path":  "src/data/oracle-data-schema.js",
+                      "size":  13331,
+                      "sha256":  "C6764D57780DAD54C8771BA60991518F25D7C0796B18EA79D0C7F59CC9DD7BCD"
+                  },
+                  {
+                      "path":  "src/data/oracle-migrations.js",
+                      "size":  20450,
+                      "sha256":  "90748B1B27B7C2304BBA81D4DFE9982CCD89C2D4129E25BE06801575F1986E6A"
+                  },
+                  {
+                      "path":  "src/generated/oracle-build-info.js",
+                      "size":  724,
+                      "sha256":  "681A049EDF15817B8AFE89C18ECE5DB1E8358FD43BA7E94CCAFAB276FF96BB4C"
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-effect-index.js",
+                      "size":  13837,
+                      "sha256":  "F52360C3DC1DD6B76094109F4B98ECC05047F1BDD9FEB07259C4C20EF9E0A0C4"
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-premiere-effects-adapter.js",
+                      "size":  86688,
+                      "sha256":  "B69FA01353100CF83E559774798F5CAAD2C5C05757458F78758DBE66643132CC"
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-quick-apply-domain.js",
+                      "size":  67191,
+                      "sha256":  "19C7CBDB0D7035145A8AF8404B399B2D4E08B6CD7DEF941A64C552BF04E3B063"
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-quick-apply-workspace.js",
+                      "size":  60511,
+                      "sha256":  "191C2CED1CBBC60F3C4CE84C71B09EBC0A65C0CDA84F6E68D081DD73389241F2"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-library.js",
+                      "size":  94991,
+                      "sha256":  "43A213E9B93462564C49F8F0A2139AE44C36DA1DE0164760129022A1738C74DF"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-lifecycle-ui.js",
+                      "size":  70252,
+                      "sha256":  "36906AE3BFCA071D96E5DE09108CF05ECB0847025A8394A5C1B1E2D81CC0C561"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-media.js",
+                      "size":  11248,
+                      "sha256":  "A6B0E88A08F307C542CF014F0EA93BAC5521D3CFBB605D8A028801A8EE54908F"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-organization.js",
+                      "size":  74381,
+                      "sha256":  "77DD5BDE1B9C31E4DDDEE085FFB881AB577C06749ADC6F8BC48505EE75FC1DAF"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-viewer.js",
+                      "size":  59774,
+                      "sha256":  "7E4A59FFB250DC9E4BF82479C1FB232AD9CCF6F03B8C826BBE8DB208F8D3E9A9"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-workspace.js",
+                      "size":  12723,
+                      "sha256":  "2E5F907D8DE7EE1635F08122BA1F71A75B6AD82DA39BAD64B29EEE0B27894701"
+                  },
+                  {
+                      "path":  "src/settings/oracle-preferences.js",
+                      "size":  100212,
+                      "sha256":  "C787E03CC36E696FEA4441BB8E481AABCBD2BB711000C3A5C69574D8F303829A"
+                  },
+                  {
+                      "path":  "win/x64/media/avcodec-60.dll",
+                      "size":  36032512,
+                      "sha256":  "1C14BD9F942C5A1929B708AEDF2B7B65AD6276F59E3971DE92E5B2D181C47C84"
+                  },
+                  {
+                      "path":  "win/x64/media/avdevice-60.dll",
+                      "size":  139776,
+                      "sha256":  "8A779A3441DE3BEC14AAA93191B680150648E53B15D2C4F6C8F5239D23C8ADBD"
+                  },
+                  {
+                      "path":  "win/x64/media/avfilter-9.dll",
+                      "size":  5164032,
+                      "sha256":  "6C96830F66B0E3F38DE69E55C4B4191156F301808640B9CE08F4A00F74319C43"
+                  },
+                  {
+                      "path":  "win/x64/media/avformat-60.dll",
+                      "size":  10985984,
+                      "sha256":  "DD5EA884F93165071FC361106B4ADF62DA86C19AE98D4FF5B1F287AAA566BE2C"
+                  },
+                  {
+                      "path":  "win/x64/media/avutil-58.dll",
+                      "size":  5655040,
+                      "sha256":  "A6EBE77A393BCBA9AC2135A197871A7952B819B6B922ADCDB8E6B9B87AE7EA9C"
+                  },
+                  {
+                      "path":  "win/x64/media/ffmpeg.exe",
+                      "size":  363008,
+                      "sha256":  "53EAADC5959D5F3AF5B43B9DFC578B5723C66FCC90F49860539064DF4BD3C357"
+                  },
+                  {
+                      "path":  "win/x64/media/ffprobe.exe",
+                      "size":  188416,
+                      "sha256":  "4397A9EF5C0B4E6882A4AE7272196BBB872365753C84B94566B4D904E425B423"
+                  },
+                  {
+                      "path":  "win/x64/media/swresample-4.dll",
+                      "size":  125952,
+                      "sha256":  "DE5269740694FB8C79553092A2589AE56F14D261B36203FFC2898C205E6D04A9"
+                  },
+                  {
+                      "path":  "win/x64/media/swscale-7.dll",
+                      "size":  604160,
+                      "sha256":  "BD924C419B6655B0BD7477FDA2821029F25096C07A3C5C1C061FBDCBA0776C13"
+                  },
+                  {
+                      "path":  "win/x64/media/THIRD_PARTY_NOTICES.txt",
+                      "size":  1004,
+                      "sha256":  "CDDA788C2B9B2EF87E72C37A0D99351B12AAD2C545E80B9B8EB88C2882CB5F14"
+                  },
+                  {
+                      "path":  "win/x64/oracle-native-drag.uxpaddon",
+                      "size":  675328,
+                      "sha256":  "6E62F5140C463ED2FF40370ED90D571EE741B2CF012EA567408DE359CD19D956"
+                  }
+              ],
+    "blockers":  [
+                     "Font redistribution/commercial-use rights are undocumented.",
+                     "Blocky Studios logo/icon redistribution rights are undocumented.",
+                     "Final semantic version requires project-owner confirmation."
+                 ]
+}

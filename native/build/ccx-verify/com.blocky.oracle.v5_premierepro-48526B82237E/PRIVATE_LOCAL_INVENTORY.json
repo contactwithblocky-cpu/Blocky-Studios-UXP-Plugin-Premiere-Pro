@@ -1,0 +1,336 @@
+{
+    "schema":  "com.blocky.oracle.private-ccx-inventory",
+    "version":  2,
+    "releaseEligible":  false,
+    "distribution":  "PRIVATE LOCAL ACCEPTANCE ONLY - DO NOT DISTRIBUTE",
+    "pluginId":  "com.blocky.oracle.v5",
+    "pluginVersion":  "2.0.16",
+    "generatedAt":  "2026-08-13T04:10:03.3070972Z",
+    "nativeAddon":  {
+                        "path":  "win/x64/oracle-native-drag.uxpaddon",
+                        "size":  675328,
+                        "sha256":  "BAC340DCA29265E617CF4B92A9117BB99E37CA51722EA4DF5D87D1E633E7405E"
+                    },
+    "files":  [
+                  {
+                      "path":  "assets/fonts/samsung_sharp_sans_bold.otf",
+                      "size":  148384,
+                      "sha256":  "9A1C1852B791C69A8EE4949669A08C7B0D36E63698B761B06E557E3E9A8BC582"
+                  },
+                  {
+                      "path":  "assets/fonts/samsung_sharp_sans_medium.otf",
+                      "size":  146236,
+                      "sha256":  "1805CE1A423442D522BF4368FBF0C4E4556FB043352B8227BE6481256AC63E51"
+                  },
+                  {
+                      "path":  "assets/fonts/samsung_sharp_sans_regular.otf",
+                      "size":  145216,
+                      "sha256":  "025E1B8AEF83739DAF18D3553756D96E416C09E1BA010709486C2B6080A92033"
+                  },
+                  {
+                      "path":  "assets/icons/settings_icon.svg",
+                      "size":  365,
+                      "sha256":  "409A2172E7DC417243721FEB494092008B410A69C99074F720B3CF35B23C7B6B"
+                  },
+                  {
+                      "path":  "assets/logo/blocky-studios-dark-mode.png",
+                      "size":  339110,
+                      "sha256":  "0C00F7A3CBBEC54B317CB01DA457E8DA5D89234F934501A8EC1813687688B8D0"
+                  },
+                  {
+                      "path":  "assets/logo/blocky-studios-light-mode.png",
+                      "size":  342067,
+                      "sha256":  "6163ACA8D939EE290E08C43FD100DCA5A48DB28A0F83D9E722B5826BA3FED660"
+                  },
+                  {
+                      "path":  "assets/logo/oracle_logo_anim.json",
+                      "size":  315,
+                      "sha256":  "CBFA30F6ED8BF8DEAA539AEA583DD27DAD18CC1733AA31870586B7D42580865C"
+                  },
+                  {
+                      "path":  "assets/logo/oracle_logo_anim.png",
+                      "size":  4713527,
+                      "sha256":  "D4A4BF8C5EC47BF740BDAADEC1DCC171A896788FEDCDEAD53E82BFC26334405B"
+                  },
+                  {
+                      "path":  "icons/dark.png",
+                      "size":  1037,
+                      "sha256":  "FD141F7DAD3892CE00B96CFBA1986DA89386B27A1C02D0BDACFA7A932374883E"
+                  },
+                  {
+                      "path":  "icons/dark@1x.png",
+                      "size":  1037,
+                      "sha256":  "FD141F7DAD3892CE00B96CFBA1986DA89386B27A1C02D0BDACFA7A932374883E"
+                  },
+                  {
+                      "path":  "icons/dark@2x.png",
+                      "size":  2047,
+                      "sha256":  "F84D509B0AF7FF8AA2C3D91739E38823793252A6A745FB974BA77952E73E1FCC"
+                  },
+                  {
+                      "path":  "icons/light.png",
+                      "size":  996,
+                      "sha256":  "A98A77B8DDDD51C218BDEC9DFF5074D797ED45FC385DAA83FF5BD17FB1A800F6"
+                  },
+                  {
+                      "path":  "icons/light@1x.png",
+                      "size":  996,
+                      "sha256":  "A98A77B8DDDD51C218BDEC9DFF5074D797ED45FC385DAA83FF5BD17FB1A800F6"
+                  },
+                  {
+                      "path":  "icons/light@2x.png",
+                      "size":  2149,
+                      "sha256":  "4E9653E7D7B4CE8FFCD326B574AD7E5572BB517A91E4EC9ED8D45E925DA42090"
+                  },
+                  {
+                      "path":  "icons/plugin@1x.png",
+                      "size":  888,
+                      "sha256":  "17D5BAADB121AF1CE74A9FAAE6E67C22AC8A8F0B696369E9434144C60D7349CE"
+                  },
+                  {
+                      "path":  "icons/plugin@2x.png",
+                      "size":  2621,
+                      "sha256":  "225DDA06CBCAEBFB609E3978C718F60C2959BFAFF9EB39BC7AF25608224B7146"
+                  },
+                  {
+                      "path":  "icons/plugin-icon.png",
+                      "size":  888,
+                      "sha256":  "17D5BAADB121AF1CE74A9FAAE6E67C22AC8A8F0B696369E9434144C60D7349CE"
+                  },
+                  {
+                      "path":  "icons/plugin-icon@2x.png",
+                      "size":  2621,
+                      "sha256":  "225DDA06CBCAEBFB609E3978C718F60C2959BFAFF9EB39BC7AF25608224B7146"
+                  },
+                  {
+                      "path":  "index.html",
+                      "size":  63756,
+                      "sha256":  "5CF37C057D0E49C0CE82C4576EA3C78D8A25B01BFE0F3C3473758D1A43EB61A6"
+                  },
+                  {
+                      "path":  "main.js",
+                      "size":  462814,
+                      "sha256":  "FF8473DD1727B7D59ADA747EBB0351B11F0E0EE642FBDB0874454D2AA00ADCC7"
+                  },
+                  {
+                      "path":  "manifest.json",
+                      "size":  2483,
+                      "sha256":  "34C0D3CC9CF7DD30C0B41E87DD8EC068D49B95CBB13641A6883578B247ED9745"
+                  },
+                  {
+                      "path":  "PRIVATE_LOCAL_ACCEPTANCE_ONLY.txt",
+                      "size":  361,
+                      "sha256":  "29E35E47E7064190FB54B884E518F6BE3A7C303A6654739A022815A5280DFFB6"
+                  },
+                  {
+                      "path":  "src/app/oracle-panel-dom.js",
+                      "size":  16010,
+                      "sha256":  "9BE59705788D54AA589147F67DBCC750F81676A1A3FB6FCE4933E5A6E4E8FE31"
+                  },
+                  {
+                      "path":  "src/app/oracle-runtime-registry.js",
+                      "size":  21088,
+                      "sha256":  "42E4B76D4FDFF86F7287CAA8F576F51C08FD1061F059C75A0F75120A5EB75DD4"
+                  },
+                  {
+                      "path":  "src/app/oracle-shell.js",
+                      "size":  10038,
+                      "sha256":  "6F4C4E7C4434BBA7D65B1517F6A20BB32AD129E2D6BF51FDE715D71B4625A463"
+                  },
+                  {
+                      "path":  "src/core/oracle-diagnostics.js",
+                      "size":  6593,
+                      "sha256":  "A8E8CBB3C0388FC0C417629194DDC10A4BD0A3F445FB25C86482A83AA0DFC957"
+                  },
+                  {
+                      "path":  "src/curves/oracle-curve-math.js",
+                      "size":  19438,
+                      "sha256":  "52D5D8CC5D624C2929F6DE1C650B851BFDC1F56A4E63481C5A5C858D4DD549FE"
+                  },
+                  {
+                      "path":  "src/curves/oracle-curve-presets.js",
+                      "size":  38108,
+                      "sha256":  "DF5F200389E9EAA1AA179E4E0F2F266CDCF384D7375202502616060E7F549E5C"
+                  },
+                  {
+                      "path":  "src/curves/oracle-curves-workspace.js",
+                      "size":  117473,
+                      "sha256":  "7A39A3BC3B1307BDF2D828FFD2565D6BB4090574ADE54B4AFE542652BFA38318"
+                  },
+                  {
+                      "path":  "src/curves/oracle-premiere-curves-adapter.js",
+                      "size":  103599,
+                      "sha256":  "3156263C5E79B1A93BC5079741D4939320A8CA9293FA3197948EA051F40760F2"
+                  },
+                  {
+                      "path":  "src/data/oracle-data-schema.js",
+                      "size":  13331,
+                      "sha256":  "C6764D57780DAD54C8771BA60991518F25D7C0796B18EA79D0C7F59CC9DD7BCD"
+                  },
+                  {
+                      "path":  "src/data/oracle-migrations.js",
+                      "size":  20450,
+                      "sha256":  "90748B1B27B7C2304BBA81D4DFE9982CCD89C2D4129E25BE06801575F1986E6A"
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-effect-index.js",
+                      "size":  13837,
+                      "sha256":  "F52360C3DC1DD6B76094109F4B98ECC05047F1BDD9FEB07259C4C20EF9E0A0C4"
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-premiere-effects-adapter.js",
+                      "size":  83135,
+                      "sha256":  "CB9649E302D8F7EFD96491AF6A869EBE05A21C3B81A2A3610AB1BEF964A8B894"
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-quick-apply-domain.js",
+                      "size":  66542,
+                      "sha256":  "5BC947C6851743EC2199004428D5A4F29C5EA1D09B220CC1010770A6456DCF8E"
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-quick-apply-workspace.js",
+                      "size":  54530,
+                      "sha256":  "5DB238AC785BC8365A49EF2A2A3BCC35E6B1333740C25CE52091A8DC459DC8B1"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-library.js",
+                      "size":  94991,
+                      "sha256":  "43A213E9B93462564C49F8F0A2139AE44C36DA1DE0164760129022A1738C74DF"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-lifecycle-ui.js",
+                      "size":  70041,
+                      "sha256":  "12363675590CEBE9CDF2F95A927029649DFCA040FEB3E6D13A8F9540AB20751E"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-media.js",
+                      "size":  10685,
+                      "sha256":  "95D5FD0C3BC5468C9AFC8090068D92FC47BA63237AD3247A9DDEEA63D04568A5"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-organization.js",
+                      "size":  74381,
+                      "sha256":  "77DD5BDE1B9C31E4DDDEE085FFB881AB577C06749ADC6F8BC48505EE75FC1DAF"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-viewer.js",
+                      "size":  58058,
+                      "sha256":  "F419F60094EBB677066BA4B8273354F3720B25395F0952EE85304A840BEB1494"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-workspace.js",
+                      "size":  11017,
+                      "sha256":  "79DAEDE8634521F50A6160CFE9737B1E2508CD27CFB7405288409910CE01944C"
+                  },
+                  {
+                      "path":  "src/settings/oracle-preferences.js",
+                      "size":  96804,
+                      "sha256":  "4659F34B032635F924749BD938009189676102F816F786A8D289A1D5F98BE4D2"
+                  },
+                  {
+                      "path":  "style.css",
+                      "size":  19192,
+                      "sha256":  "2CA263A62FD9D7698F6EF17FE74D734693E9820D04989FA0C17A968D7A2A89EE"
+                  },
+                  {
+                      "path":  "styles/blocky-studios.css",
+                      "size":  40212,
+                      "sha256":  "8457B0C3D9C2830BDE138F4FFA8F23BF8F30B31ED9761ECA1637B783CA05A2B3"
+                  },
+                  {
+                      "path":  "styles/overdrive-m1.css",
+                      "size":  23658,
+                      "sha256":  "8325EEA195FD7564CC7F4B1D317CCDA5BFCD24C8997457F87C7CB4FF10013B5F"
+                  },
+                  {
+                      "path":  "styles/overdrive-m2.css",
+                      "size":  7356,
+                      "sha256":  "B4712216D6BE71A3F441224640E3813D13B2B1571FAAA5B5C24A56FFFD7006EE"
+                  },
+                  {
+                      "path":  "styles/overdrive-m3.css",
+                      "size":  10211,
+                      "sha256":  "57D6859F08A67395DA98D6B2AAEE61EEB62A82D7845CB3AB67B0079596F4452F"
+                  },
+                  {
+                      "path":  "styles/overdrive-m4.css",
+                      "size":  9252,
+                      "sha256":  "421A2586E7E7D4330CF0AC9EE9B2098F96CFD3D55B97346A8FF4AEBFAEA0A0C9"
+                  },
+                  {
+                      "path":  "styles/overdrive-m5.css",
+                      "size":  22506,
+                      "sha256":  "C982029F91EBA5BE275734FF2191DBD68DBCFAE3494F46A263B263539EDDDFF5"
+                  },
+                  {
+                      "path":  "styles/overdrive-m6.css",
+                      "size":  17577,
+                      "sha256":  "7761114CC8D3285662374EA443B69AC6B513FC675C3806D2C1549AC0F25E5BD6"
+                  },
+                  {
+                      "path":  "styles/overdrive-m7.css",
+                      "size":  2431,
+                      "sha256":  "1F25C0A5688BB78AB84BBFFAEE9B03B4A2FB9B8FEDF907C56052C9B41BEF1A9D"
+                  },
+                  {
+                      "path":  "win/x64/media/avcodec-60.dll",
+                      "size":  36032512,
+                      "sha256":  "1C14BD9F942C5A1929B708AEDF2B7B65AD6276F59E3971DE92E5B2D181C47C84"
+                  },
+                  {
+                      "path":  "win/x64/media/avdevice-60.dll",
+                      "size":  139776,
+                      "sha256":  "8A779A3441DE3BEC14AAA93191B680150648E53B15D2C4F6C8F5239D23C8ADBD"
+                  },
+                  {
+                      "path":  "win/x64/media/avfilter-9.dll",
+                      "size":  5164032,
+                      "sha256":  "6C96830F66B0E3F38DE69E55C4B4191156F301808640B9CE08F4A00F74319C43"
+                  },
+                  {
+                      "path":  "win/x64/media/avformat-60.dll",
+                      "size":  10985984,
+                      "sha256":  "DD5EA884F93165071FC361106B4ADF62DA86C19AE98D4FF5B1F287AAA566BE2C"
+                  },
+                  {
+                      "path":  "win/x64/media/avutil-58.dll",
+                      "size":  5655040,
+                      "sha256":  "A6EBE77A393BCBA9AC2135A197871A7952B819B6B922ADCDB8E6B9B87AE7EA9C"
+                  },
+                  {
+                      "path":  "win/x64/media/ffmpeg.exe",
+                      "size":  363008,
+                      "sha256":  "53EAADC5959D5F3AF5B43B9DFC578B5723C66FCC90F49860539064DF4BD3C357"
+                  },
+                  {
+                      "path":  "win/x64/media/ffprobe.exe",
+                      "size":  188416,
+                      "sha256":  "4397A9EF5C0B4E6882A4AE7272196BBB872365753C84B94566B4D904E425B423"
+                  },
+                  {
+                      "path":  "win/x64/media/swresample-4.dll",
+                      "size":  125952,
+                      "sha256":  "DE5269740694FB8C79553092A2589AE56F14D261B36203FFC2898C205E6D04A9"
+                  },
+                  {
+                      "path":  "win/x64/media/swscale-7.dll",
+                      "size":  604160,
+                      "sha256":  "BD924C419B6655B0BD7477FDA2821029F25096C07A3C5C1C061FBDCBA0776C13"
+                  },
+                  {
+                      "path":  "win/x64/media/THIRD_PARTY_NOTICES.txt",
+                      "size":  1004,
+                      "sha256":  "CDDA788C2B9B2EF87E72C37A0D99351B12AAD2C545E80B9B8EB88C2882CB5F14"
+                  },
+                  {
+                      "path":  "win/x64/oracle-native-drag.uxpaddon",
+                      "size":  675328,
+                      "sha256":  "BAC340DCA29265E617CF4B92A9117BB99E37CA51722EA4DF5D87D1E633E7405E"
+                  }
+              ],
+    "blockers":  [
+                     "Font redistribution/commercial-use rights are undocumented.",
+                     "Blocky Studios logo/icon redistribution rights are undocumented.",
+                     "Final semantic version requires project-owner confirmation."
+                 ]
+}

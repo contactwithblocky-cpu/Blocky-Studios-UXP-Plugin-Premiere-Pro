@@ -1,0 +1,11 @@
+[Oracle bridge] Listening on ws://127.0.0.1:3001
+[Oracle bridge] Waiting for render_complete payloads.
+DEBUG RAW DATA: {"event":"status","message":"mod_connected"}
+[Oracle bridge] Publisher status: mod_connected
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"render_complete","filepath":"C:\\Users\\salim\\Downloads\\Scene 1 12.333-28.667.mov","file_path":"C:\\Users\\salim\\Downloads\\Scene 1 12.333-28.667.mov","title":"Scene 1 12.333-28.667","thumbnail":"D:\\Blocky HQ\\Oracle Mod by Blocky\\Oracle\\run\\config\\oracle\\render_thumbnails\\Scene_1_12.333-28.667-cc1d1b4c-5c05-4819-82a7-bbe1717448b1.png","timestamp":"2026-07-14T02:41:52.383Z"}
+[Oracle bridge] Render ready: Scene 1 12.333-28.667
+DEBUG RAW DATA: {"event":"render_complete","filepath":"C:\\Users\\salim\\Downloads\\Scene 1 12.333-28.667 (2).mov","file_path":"C:\\Users\\salim\\Downloads\\Scene 1 12.333-28.667 (2).mov","title":"Scene 1 12.333-28.667 (2)","thumbnail":"D:\\Blocky HQ\\Oracle Mod by Blocky\\Oracle\\run\\config\\oracle\\render_thumbnails\\Scene_1_12.333-28.667_2_-80cdc69b-9d8c-4836-9de4-8eed5984bd86.png","timestamp":"2026-07-14T02:42:12.785Z"}
+[Oracle bridge] Render ready: Scene 1 12.333-28.667 (2)

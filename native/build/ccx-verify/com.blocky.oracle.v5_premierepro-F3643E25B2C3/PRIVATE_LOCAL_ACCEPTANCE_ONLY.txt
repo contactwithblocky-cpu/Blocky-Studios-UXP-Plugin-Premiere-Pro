@@ -1,0 +1,6 @@
+PRIVATE LOCAL ACCEPTANCE ONLY - DO NOT DISTRIBUTE
+
+This package contains supplied Samsung Sharp Sans fonts and Blocky Studios artwork whose
+redistribution/commercial-use provenance is not documented in this checkout.
+It may be used only for local acceptance by the project owner. It is not a
+public, Marketplace, commercial, or redistributable release artifact.

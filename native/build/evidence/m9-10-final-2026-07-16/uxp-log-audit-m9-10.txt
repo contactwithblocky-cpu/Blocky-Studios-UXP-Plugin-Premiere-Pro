@@ -1,0 +1,81 @@
+Oracle Overdrive M9-10 final UXP log audit
+Recorded=2026-07-16
+LogFile=UXPLogs_2026-07-16_14-14-07_521512.log
+LogBytes=150280
+LogSHA256=8D197C09931FF67C5253D7EEE78D9E7D79625828A7887B7C6AA4C51B4F8FD0A3
+LogLines=536
+OracleRegistrationLine=11
+ExceptionStringMatches=0
+GlobalErrorRecords=15
+OracleAttributableErrorOrMissingMatches=0
+GlobalMissingResourceMatches=41
+FirstGlobalMissingResourceLine=13
+FirstGlobalErrorLine=65
+UnscopedInputFocusWarnings=2
+UnscopedInputFocusWarningLines=283,316
+
+Classification=All 41 global missing-resource matches belong to Spell Book, Preset Pilot, OpenCurve, Adobe Frame.io, or Adobe Discover Panel/DP; none identifies com.blocky.oracle.v5.
+
+ALL_MISSING_RESOURCE_MATCHES
+13: [2026-07-16_14-14-07][23540][Info] [general] Plugin knights_of_the_editing_table.spell_book_premierepro : Scaled Icon :  assets/icons/plugin-icon@1x.png  not found
+14: [2026-07-16_14-14-07][23540][Info] [general] Plugin knights_of_the_editing_table.spell_book_premierepro : Scaled Icon :  assets/icons/plugin-icon@2x.png  not found
+18: [2026-07-16_14-14-07][23540][Info] [general] Plugin preset-pilot : Scaled Icon :  icons/icon_D@1x.png  not found
+19: [2026-07-16_14-14-07][23540][Info] [general] Plugin preset-pilot : Scaled Icon :  icons/icon_N@1x.png  not found
+20: [2026-07-16_14-14-07][23540][Info] [general] Plugin preset-pilot : Scaled Icon :  icons/icon_D@1x.png  not found
+21: [2026-07-16_14-14-07][23540][Info] [general] Plugin preset-pilot : Scaled Icon :  icons/icon_N@1x.png  not found
+24: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.fayelab.opencurve : Scaled Icon :  icons/icon-dark@1x.png  not found
+25: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.fayelab.opencurve : Scaled Icon :  icons/icon-dark@2x.png  not found
+26: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.fayelab.opencurve : Scaled Icon :  icons/plugin-icon-dark@1x.png  not found
+27: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.fayelab.opencurve : Scaled Icon :  icons/plugin-icon-dark@2x.png  not found
+42: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.fayelab.opencurve : Scaled Icon :  icons/icon-dark@1x.png  not found
+43: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.fayelab.opencurve : Scaled Icon :  icons/icon-dark@2x.png  not found
+44: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.fayelab.opencurve : Scaled Icon :  icons/plugin-icon-dark@1x.png  not found
+45: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.fayelab.opencurve : Scaled Icon :  icons/plugin-icon-dark@2x.png  not found
+48: [2026-07-16_14-14-07][23540][Info] [general] Plugin preset-pilot : Scaled Icon :  icons/icon_D@1x.png  not found
+49: [2026-07-16_14-14-07][23540][Info] [general] Plugin preset-pilot : Scaled Icon :  icons/icon_N@1x.png  not found
+50: [2026-07-16_14-14-07][23540][Info] [general] Plugin preset-pilot : Scaled Icon :  icons/icon_D@1x.png  not found
+51: [2026-07-16_14-14-07][23540][Info] [general] Plugin preset-pilot : Scaled Icon :  icons/icon_N@1x.png  not found
+58: [2026-07-16_14-14-07][23540][Info] [general] Plugin knights_of_the_editing_table.spell_book_premierepro : Scaled Icon :  assets/icons/plugin-icon@1x.png  not found
+59: [2026-07-16_14-14-07][23540][Info] [general] Plugin knights_of_the_editing_table.spell_book_premierepro : Scaled Icon :  assets/icons/plugin-icon@2x.png  not found
+73: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.adobe.frameio.uxp : Scaled Icon :  icons/frameio@1x.png  not found
+74: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.adobe.frameio.uxp : Scaled Icon :  icons/frameio@2x.png  not found
+76: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.adobe.frameio.uxp : Scaled Icon :  icons/frameio@1x.png  not found
+77: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.adobe.frameio.uxp : Scaled Icon :  icons/frameio@2x.png  not found
+107: [2026-07-16_14-14-07][23540][Info] [general] Plugin knights_of_the_editing_table.spell_book_premierepro : Scaled Icon :  assets/icons/plugin-icon@1x.png  not found
+108: [2026-07-16_14-14-07][23540][Info] [general] Plugin knights_of_the_editing_table.spell_book_premierepro : Scaled Icon :  assets/icons/plugin-icon@2x.png  not found
+111: [2026-07-16_14-14-07][23540][Info] [general] Plugin knights_of_the_editing_table.spell_book_PS : Scaled Icon :  assets/icons/plugin-icon@1x.png  not found
+112: [2026-07-16_14-14-07][23540][Info] [general] Plugin knights_of_the_editing_table.spell_book_PS : Scaled Icon :  assets/icons/plugin-icon@2x.png  not found
+116: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.fayelab.opencurve : Scaled Icon :  icons/icon-dark@1x.png  not found
+117: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.fayelab.opencurve : Scaled Icon :  icons/icon-dark@2x.png  not found
+118: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.fayelab.opencurve : Scaled Icon :  icons/plugin-icon-dark@1x.png  not found
+119: [2026-07-16_14-14-07][23540][Info] [general] Plugin com.fayelab.opencurve : Scaled Icon :  icons/plugin-icon-dark@2x.png  not found
+123: [2026-07-16_14-14-07][23540][Info] [general] Plugin preset-pilot : Scaled Icon :  icons/icon_D@1x.png  not found
+124: [2026-07-16_14-14-07][23540][Info] [general] Plugin preset-pilot : Scaled Icon :  icons/icon_N@1x.png  not found
+125: [2026-07-16_14-14-07][23540][Info] [general] Plugin preset-pilot : Scaled Icon :  icons/icon_D@1x.png  not found
+126: [2026-07-16_14-14-07][23540][Info] [general] Plugin preset-pilot : Scaled Icon :  icons/icon_N@1x.png  not found
+156: [2026-07-16_14-14-16][38660][Warn] [console] [DP] Failed to fetch resource at ./locale/en/ppro/curatedContent.json
+157: [2026-07-16_14-14-16][38660][Warn] [console] [DP] Failed to fetch resource at ./locale/en/ppro/synonyms.json
+158: [2026-07-16_14-14-16][38660][Warn] [console] [DP] Failed to fetch resource at ./locale/en/ppro/curatedContent.json
+160: [2026-07-16_14-14-16][38660][Warn] [console] [DP] Failed to fetch resource at ./locale/en/ppro/synonyms.json
+174: [2026-07-16_14-14-17][38660][Error] [console] [DP] Error: Discover_Panel surface is not found!! Error loading Discover_Panel surface
+
+GLOBAL_ERROR_RECORD_PREFIXES
+65: [2026-07-16_14-14-07][23540][Error] [general] Plugin com.adobe.dva.export.queue : Expected a width for the plugin icon
+103: [2026-07-16_14-14-07][23540][Error] [general] Plugin com.adobe.substance-3d.viewer.ps : Expected 'host.app' to be premierepro
+104: [2026-07-16_14-14-07][23540][Error] [general] Failed to parse the manifest.json file.
+113: [2026-07-16_14-14-07][23540][Error] [general] Plugin knights_of_the_editing_table.spell_book_PS : Expected 'host.app' to be premierepro
+114: [2026-07-16_14-14-07][23540][Error] [general] Failed to parse the manifest.json file.
+159: [2026-07-16_14-14-16][38660][Error] [console] [DP] AppSDK.i18n.init: 
+163: [2026-07-16_14-14-16][38660][Error] [console] [DP] Invalid trigger name(PSAtlasTrigger) for Sensor(UnifiedPanelSensor)
+165: [2026-07-16_14-14-16][38660][Error] [console] [DP] Error on getActiveDocId():  {}
+166: [2026-07-16_14-14-17][38660][Error] [console] [DP] err name not in allowlist psEvent
+167: [2026-07-16_14-14-17][38660][Error] [console] [DP] err name not in allowlist modalStateChanged
+173: [2026-07-16_14-14-17][38660][Error] [console] [DP] Error: Discover_Panel surface has no containers. {"expirationDTS":"2026-07-17T21:09:11.509Z","surfaces":{"Discover_Panel":{"failedContainers":[{"gsdkEnabledContent":true,"containerId":1,"containerLabel":"Discover Panel","containerAnalyticsData":{"variationId":"21617def-cb64-4d77-a309-6bef73b3feca-0:::17da5b6a-5841-499c-81d9-4b5bb9ca0f23#3edb1997-bf0a-435c-a254-129f5aa290ac, 14e68667-b036-4890-b95b-af3b145acd7d#4ba9ecea-0971-435a-91ab-37fd2a46436 [TRUNCATED IN AUDIT; FULL LINE IN SOURCE LOG]
+174: [2026-07-16_14-14-17][38660][Error] [console] [DP] Error: Discover_Panel surface is not found!! Error loading Discover_Panel surface
+175: [2026-07-16_14-14-17][38660][Error] [console] [DP] Error: in_app_contextual_notifications surface has no containers. {"expirationDTS":"2026-07-17T21:09:11.509Z","surfaces":{"Discover_Panel":{"failedContainers":[{"gsdkEnabledContent":true,"containerId":1,"containerLabel":"Discover Panel","containerAnalyticsData":{"variationId":"21617def-cb64-4d77-a309-6bef73b3feca-0:::17da5b6a-5841-499c-81d9-4b5bb9ca0f23#3edb1997-bf0a-435c-a254-129f5aa290ac, 14e68667-b036-4890-b95b-af3b145acd7d#4ba9ecea-0971-435a [TRUNCATED IN AUDIT; FULL LINE IN SOURCE LOG]
+176: [2026-07-16_14-14-17][38660][Error] [console] [DP] Error: in_app_contextual_notifications surface has no containers. {"expirationDTS":"2026-07-17T21:09:11.509Z","surfaces":{"Discover_Panel":{"failedContainers":[{"gsdkEnabledContent":true,"containerId":1,"containerLabel":"Discover Panel","containerAnalyticsData":{"variationId":"21617def-cb64-4d77-a309-6bef73b3feca-0:::17da5b6a-5841-499c-81d9-4b5bb9ca0f23#3edb1997-bf0a-435c-a254-129f5aa290ac, 14e68667-b036-4890-b95b-af3b145acd7d#4ba9ecea-0971-435a [TRUNCATED IN AUDIT; FULL LINE IN SOURCE LOG]
+177: [2026-07-16_14-14-17][38660][Error] [console] [DP] Invalid survey content: surface(NPS_SURVEY): has no containers})
+
+ALL_UNSCOPED_INPUT_FOCUS_WARNINGS
+283: [2026-07-16_14-22-21][23540][Warn] [general] Setting focus failed on node: input
+316: [2026-07-16_14-25-00][23540][Warn] [general] Setting focus failed on node: input

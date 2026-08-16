@@ -1,0 +1,10 @@
+ORACLE M9-8 INSTALLED UXP LOG SLICE
+SOURCE=D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\evidence\m9-final-2026-07-16\premiere-uxp-full.log
+BYTES=136114
+SHA256=3336FEF8B9CD8B947F4F5F0E69FBB4A709E7A4149047B682A667FF96B35B09F0
+LINE_COUNT=324
+ORACLE_PLUGIN_IDENTITY_LINES=1
+[2026-07-16_12-26-31][48240][Debug] upic::plugin with id: com.blocky.oracle.v5 is added in uxp plugin manager with status as enabled
+ORACLE_ATTRIBUTABLE_ERROR_OR_MISSING_LINES=0
+ORACLE_ASSET_OR_STYLESHEET_MISSING_LINES=0
+NOTE=The full Premiere log contains unrelated Adobe and third-party errors; counts above are scoped to Oracle identifiers and packaged Oracle asset/module paths.

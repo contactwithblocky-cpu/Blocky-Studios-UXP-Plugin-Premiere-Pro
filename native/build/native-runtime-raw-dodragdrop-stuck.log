@@ -1,0 +1,72 @@
+[OracleNativeDrag] request=1 monotonicMs=16172625 thread=20872 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=1 monotonicMs=16172625 thread=20872 stage=PATH_VALIDATED
+[OracleNativeDrag] request=1 monotonicMs=16172625 thread=20872 stage=LEFT_BUTTON_NOT_HELD hresult=0x800704C7
+[OracleNativeDrag] request=2 monotonicMs=16172625 thread=20872 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=2 monotonicMs=16172625 thread=20872 stage=REQUEST_REJECTED hresult=0x80004004
+[OracleNativeDrag] request=1 monotonicMs=16527390 thread=40788 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=1 monotonicMs=16527390 thread=40788 stage=PATH_VALIDATED
+[OracleNativeDrag] request=1 monotonicMs=16527390 thread=40788 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=1 monotonicMs=16527406 thread=40788 stage=WORKER_QUEUED
+[OracleNativeDrag] request=1 monotonicMs=16527406 thread=23788 stage=WORKER_AWAKENED
+[OracleNativeDrag] request=1 monotonicMs=16527406 thread=23788 stage=OLE_INITIALIZED hresult=0x0
+[OracleNativeDrag] request=1 monotonicMs=16527406 thread=23788 stage=DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=2 monotonicMs=16529640 thread=40788 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=2 monotonicMs=16529640 thread=40788 stage=PATH_VALIDATED
+[OracleNativeDrag] request=2 monotonicMs=16529640 thread=40788 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=2 monotonicMs=16529640 thread=40788 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=2 monotonicMs=16529640 thread=40788 stage=PROMISE_REJECTED
+[OracleNativeDrag] request=3 monotonicMs=16532578 thread=40788 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=3 monotonicMs=16532578 thread=40788 stage=PATH_VALIDATED
+[OracleNativeDrag] request=3 monotonicMs=16532578 thread=40788 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=3 monotonicMs=16532593 thread=40788 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=3 monotonicMs=16532593 thread=40788 stage=PROMISE_REJECTED
+[OracleNativeDrag] request=4 monotonicMs=16535671 thread=40788 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=4 monotonicMs=16535671 thread=40788 stage=PATH_VALIDATED
+[OracleNativeDrag] request=4 monotonicMs=16535671 thread=40788 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=4 monotonicMs=16535671 thread=40788 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=4 monotonicMs=16535671 thread=40788 stage=PROMISE_REJECTED
+[OracleNativeDrag] request=5 monotonicMs=16540984 thread=40788 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=5 monotonicMs=16540984 thread=40788 stage=PATH_VALIDATED
+[OracleNativeDrag] request=5 monotonicMs=16540984 thread=40788 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=5 monotonicMs=16540984 thread=40788 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=5 monotonicMs=16540984 thread=40788 stage=PROMISE_REJECTED
+[OracleNativeDrag] request=6 monotonicMs=16569109 thread=40788 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=6 monotonicMs=16569109 thread=40788 stage=PATH_VALIDATED
+[OracleNativeDrag] request=6 monotonicMs=16569109 thread=40788 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=6 monotonicMs=16569109 thread=40788 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=6 monotonicMs=16569125 thread=40788 stage=PROMISE_REJECTED
+[OracleNativeDrag] request=7 monotonicMs=16570953 thread=40788 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=7 monotonicMs=16570953 thread=40788 stage=PATH_VALIDATED
+[OracleNativeDrag] request=7 monotonicMs=16570953 thread=40788 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=7 monotonicMs=16570953 thread=40788 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=7 monotonicMs=16570953 thread=40788 stage=PROMISE_REJECTED
+[OracleNativeDrag] request=8 monotonicMs=16581734 thread=40788 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=8 monotonicMs=16581734 thread=40788 stage=PATH_VALIDATED
+[OracleNativeDrag] request=8 monotonicMs=16581734 thread=40788 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=8 monotonicMs=16581734 thread=40788 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=8 monotonicMs=16581734 thread=40788 stage=PROMISE_REJECTED
+[OracleNativeDrag] request=9 monotonicMs=16602796 thread=40788 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=9 monotonicMs=16602796 thread=40788 stage=PATH_VALIDATED
+[OracleNativeDrag] request=9 monotonicMs=16602796 thread=40788 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=9 monotonicMs=16602796 thread=40788 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=9 monotonicMs=16602796 thread=40788 stage=PROMISE_REJECTED
+[OracleNativeDrag] request=10 monotonicMs=16617812 thread=40788 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=10 monotonicMs=16617812 thread=40788 stage=PATH_VALIDATED
+[OracleNativeDrag] request=10 monotonicMs=16617812 thread=40788 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=10 monotonicMs=16617812 thread=40788 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=10 monotonicMs=16617812 thread=40788 stage=PROMISE_REJECTED
+[OracleNativeDrag] request=11 monotonicMs=16659484 thread=40788 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=11 monotonicMs=16659484 thread=40788 stage=PATH_VALIDATED
+[OracleNativeDrag] request=11 monotonicMs=16659484 thread=40788 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=11 monotonicMs=16659484 thread=40788 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=11 monotonicMs=16659500 thread=40788 stage=PROMISE_REJECTED
+[OracleNativeDrag] request=12 monotonicMs=16667828 thread=40788 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=12 monotonicMs=16667828 thread=40788 stage=PATH_VALIDATED
+[OracleNativeDrag] request=12 monotonicMs=16667828 thread=40788 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=12 monotonicMs=16667828 thread=40788 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=12 monotonicMs=16667828 thread=40788 stage=PROMISE_REJECTED
+[OracleNativeDrag] request=1 monotonicMs=16683765 thread=39616 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=1 monotonicMs=16683765 thread=39616 stage=PATH_VALIDATED
+[OracleNativeDrag] request=1 monotonicMs=16683765 thread=39616 stage=LEFT_BUTTON_NOT_HELD hresult=0x800704C7
+[OracleNativeDrag] request=2 monotonicMs=16683765 thread=39616 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=2 monotonicMs=16683765 thread=39616 stage=REQUEST_REJECTED hresult=0x80004004

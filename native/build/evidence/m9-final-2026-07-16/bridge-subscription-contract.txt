@@ -1,0 +1,41 @@
+Oracle Premiere bridge subscription contract
+Captured: 2026-07-16T12:36:11.947-04:00
+
+Source: main.js
+SHA-256: F30A4F0191760DAE33538097DF0900D634818C032056D4B5AA4540743A27BA87
+
+Endpoint source, main.js:502-503
+  // The endpoint is fixed and never sourced from project data or messages.
+  const BRIDGE_URL = "ws://127.0.0.1:3001";
+
+Thumbnail request source, main.js:505-516
+  function bridgeThumbnailRequest() {
+    const replayPreferences = oracleWindow.oracleWorkspacePreferences &&
+      oracleWindow.oracleWorkspacePreferences.replay
+      ? oracleWindow.oracleWorkspacePreferences.replay
+      : {};
+    const position = Number(replayPreferences.thumbnailPosition);
+    const dpr = Math.max(1, Math.min(2, Number(window.devicePixelRatio) || 1));
+    return {
+      position: Number.isFinite(position) ? Math.max(0, Math.min(1, position)) : 0.5,
+      width: Math.round(640 * dpr),
+      height: Math.round(360 * dpr),
+    };
+  }
+
+Open subscription source, main.js:724-732
+  socket.send(
+    JSON.stringify({
+      event: "subscribe",
+      client: "oracle-premiere",
+      protocol: 2,
+      schema: "com.blocky.oracle.bridge-subscription",
+      version: 2,
+      thumbnail: bridgeThumbnailRequest(),
+    }),
+  );
+
+Probe used the same protocol-v2 schema and the default 1x DPR request:
+  {"event":"subscribe","client":"oracle-premiere","protocol":2,"schema":"com.blocky.oracle.bridge-subscription","version":2,"thumbnail":{"position":0.5,"width":640,"height":360}}
+
+Result: PASS

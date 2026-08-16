@@ -1,0 +1,41 @@
+[Oracle bridge] Listening on ws://127.0.0.1:3001
+[Oracle bridge] Waiting for render_complete and IMPORT_CLIP payloads.
+DEBUG RAW DATA: {"event":"status","message":"mod_connected"}
+[Oracle bridge] Publisher status: mod_connected
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"type":"IMPORT_CLIP","payload":{"absolutePath":"C:\\\\Users\\\\salim\\\\Downloads\\\\Scene 1 12.333-28.667.mov","title":"Scene 1 12.333-28.667"}}
+[Oracle bridge] Import queued: C:\Users\salim\Downloads\Scene 1 12.333-28.667.mov
+DEBUG RAW DATA: {"event":"status","message":"mod_connected"}
+[Oracle bridge] Publisher status: mod_connected
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"type":"IMPORT_CLIP","payload":{"absolutePath":"C:/Users/salim/Downloads/Scene 1 12.333-28.667.mov","title":"Scene 1 12.333-28.667"}}
+[Oracle bridge] Import queued: C:\Users\salim\Downloads\Scene 1 12.333-28.667.mov
+DEBUG RAW DATA: {"event":"status","message":"mod_connected"}
+[Oracle bridge] Publisher status: mod_connected
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"IMPORT_CLIP","absolutePath":"C:/Users/salim/Downloads/Scene 1 12.333-28.667.mov","title":"Scene 1 12.333-28.667"}
+[Oracle bridge] Import queued: C:\Users\salim\Downloads\Scene 1 12.333-28.667.mov
+DEBUG RAW DATA: {"event":"status","message":"mod_connected"}
+[Oracle bridge] Publisher status: mod_connected
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"status","message":"mod_connected"}
+[Oracle bridge] Publisher status: mod_connected
+DEBUG RAW DATA: {"type":"IMPORT_CLIP","payload":{"absolutePath":"C:\\Users\\salim\\Downloads\\Scene 1 13-45.333.mov","fileName":"Scene 1 13-45.333.mov","timestamp":"2026-07-14T03:01:37.035446Z"}}
+[Oracle bridge] Import queued: C:\Users\salim\Downloads\Scene 1 13-45.333.mov
+DEBUG RAW DATA: {"type":"IMPORT_CLIP","payload":{"absolutePath":"C:\\Users\\salim\\Downloads\\Scene 1 23-36.mov","fileName":"Scene 1 23-36.mov","timestamp":"2026-07-14T03:02:56.306129800Z"}}
+[Oracle bridge] Import queued: C:\Users\salim\Downloads\Scene 1 23-36.mov
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}
+DEBUG RAW DATA: {"event":"subscribe","client":"oracle-premiere","protocol":1}

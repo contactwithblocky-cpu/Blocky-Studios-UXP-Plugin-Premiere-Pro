@@ -1,0 +1,784 @@
+.curves-workspace {
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--oracle-text, #f6f3f6);
+  background:
+    linear-gradient(180deg, rgba(229, 72, 199, 0.035), transparent 190px),
+    var(--oracle-bg, #151515);
+  --curve-handle-size: 12px;
+  --curve-graph-line: var(--accent-color, #e548c7);
+  --curve-graph-grid: #3c3c3c;
+}
+
+.curves-workspace[hidden] {
+  display: none !important;
+}
+
+.curves-workspace__header {
+  min-width: 0;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px 11px;
+  border-bottom: 1px solid var(--oracle-border, #353535);
+  background: rgba(16, 16, 16, 0.94);
+}
+
+.curves-workspace__identity {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.curves-workspace__identity h1,
+.curves-workspace__identity h2 {
+  margin: 2px 0 0;
+  overflow: hidden;
+  color: var(--oracle-text, #f6f3f6);
+  font-family: var(--oracle-font-heading, Arial, sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.curves-workspace__header-note {
+  flex: 0 1 260px;
+  margin: 0;
+  color: var(--oracle-dim, #878087);
+  font-size: 10px;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.curves-workspace__state {
+  min-width: 0;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  border-bottom: 1px solid var(--oracle-border, #353535);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.curves-workspace__state-mark {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  border: 1px solid var(--oracle-border-strong, #555055);
+  background: var(--oracle-dim, #878087);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.42);
+}
+
+.curves-workspace__state[data-state="loading"] .curves-workspace__state-mark {
+  background: var(--accent-color, #e548c7);
+  animation: oracle-curves-pulse 900ms steps(2, end) infinite;
+}
+
+.curves-workspace__state[data-state="ready"] .curves-workspace__state-mark {
+  border-color: #72c88f;
+  background: #72c88f;
+}
+
+.curves-workspace__state[data-state="unsupported"] .curves-workspace__state-mark {
+  border-color: #e6b65d;
+  background: #e6b65d;
+}
+
+.curves-workspace__state[data-state="error"] .curves-workspace__state-mark {
+  border-color: var(--oracle-danger, #ff5b67);
+  background: var(--oracle-danger, #ff5b67);
+}
+
+.curves-workspace__state-copy {
+  min-width: 0;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+}
+
+.curves-workspace__state-copy strong {
+  flex: 0 0 auto;
+  color: var(--oracle-text, #f6f3f6);
+  font-size: 11px;
+}
+
+.curves-workspace__state-copy span,
+.curves-workspace__state-copy p {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--oracle-muted, #bdb7bd);
+  font-size: 10px;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.curves-workspace__content {
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 auto;
+  display: flex;
+  overflow: hidden;
+}
+
+.curves-workspace__content[hidden] {
+  display: none !important;
+}
+
+.curves-editor {
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 620px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-right: 1px solid var(--oracle-border, #353535);
+}
+
+.curves-inspector {
+  min-width: 220px;
+  min-height: 0;
+  flex: 0 1 310px;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(20, 20, 20, 0.82);
+}
+
+.curves-selector-bar {
+  min-width: 0;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 10px 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-bottom: 1px solid var(--oracle-border, #353535);
+  background: var(--oracle-surface, #1a1a1a);
+}
+
+.curves-selector-bar .oracle-field {
+  min-width: 130px;
+  flex: 1 1 180px;
+}
+
+.curves-selector-bar .oracle-field select {
+  width: 100%;
+  min-width: 0;
+}
+
+.curves-graph-card {
+  min-width: 0;
+  min-height: 190px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+  overflow: hidden;
+  border: 1px solid var(--oracle-border-strong, #555055);
+  background: #0c0c0e;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.28);
+}
+
+.curves-graph-card__toolbar,
+.curves-workspace__apply-bar,
+.curves-preset-actions {
+  min-width: 0;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 9px;
+}
+
+.curves-graph-card__toolbar {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-bottom: 1px solid var(--oracle-border, #353535);
+  background: rgba(255, 255, 255, 0.026);
+}
+
+.curves-graph-card__toolbar .oracle-button {
+  min-width: 34px;
+  min-height: 28px;
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  white-space: nowrap;
+}
+
+.curves-mode-switch {
+  min-width: 0;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.curves-mode-switch button,
+.curves-mode-switch label {
+  min-height: 28px;
+  flex: 0 1 auto;
+}
+
+.curves-mode-switch button.is-active,
+.curves-mode-switch label.is-active {
+  color: var(--oracle-text, #f6f3f6);
+  border-color: var(--accent-color, #e548c7);
+  background: rgba(229, 72, 199, 0.14);
+}
+
+.curves-graph-wrap {
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.curves-graph {
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  display: block;
+  overflow: visible;
+  touch-action: none;
+  cursor: grab;
+}
+
+.curves-graph[data-dragging="true"] {
+  cursor: grabbing;
+}
+
+.curves-graph__background {
+  fill: #0c0c0e;
+}
+
+.curves-graph__grid line,
+.curves-graph__axis {
+  vector-effect: non-scaling-stroke;
+  stroke: var(--curve-graph-grid, #3c3c3c);
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.curves-graph__axis {
+  stroke: rgba(246, 243, 246, 0.4);
+}
+
+.curves-graph__endpoint {
+  vector-effect: non-scaling-stroke;
+  fill: #0c0c0e;
+  stroke: var(--oracle-text, #f6f3f6);
+  stroke-width: 1.5;
+}
+
+.curves-graph__curve {
+  vector-effect: non-scaling-stroke;
+  fill: none;
+  stroke: var(--curve-graph-line, #e548c7);
+  stroke-width: 2.5;
+  stroke-linecap: square;
+  filter: drop-shadow(0 0 5px rgba(229, 72, 199, 0.24));
+}
+
+.curves-graph__overlay {
+  vector-effect: non-scaling-stroke;
+  fill: none;
+  opacity: 0.43;
+  stroke: #8fc6ff;
+  stroke-width: 1.3;
+  stroke-dasharray: 4 3;
+}
+
+.curves-graph__overlay--unsupported {
+  opacity: 0.35;
+  stroke: #e6b65d;
+}
+
+.curves-graph__handle-line {
+  vector-effect: non-scaling-stroke;
+  stroke: rgba(229, 72, 199, 0.56);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+}
+
+.curves-graph__handle {
+  vector-effect: non-scaling-stroke;
+  fill: var(--oracle-text, #f6f3f6);
+  stroke: #0c0c0e;
+  stroke-width: 2;
+  cursor: crosshair;
+}
+
+.curves-graph__handle:hover,
+.curves-graph__handle:focus {
+  fill: var(--accent-color, #e548c7);
+  stroke: var(--focus-color, #ffffff);
+}
+
+.curves-graph__axis-label {
+  fill: var(--oracle-dim, #878087);
+  font-family: var(--oracle-font-compact, Arial, sans-serif);
+  font-size: 5px;
+  pointer-events: none;
+}
+
+.curves-numeric-points {
+  min-width: 0;
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 8px 10px 10px;
+  border-top: 1px solid var(--oracle-border, #353535);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.curves-numeric-points .oracle-field {
+  min-width: 72px;
+  flex: 1 1 82px;
+}
+
+.curves-numeric-points input {
+  width: 100%;
+  min-width: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.curves-workspace__apply-bar {
+  border-top: 1px solid var(--oracle-border, #353535);
+  background: var(--oracle-surface, #1a1a1a);
+}
+
+.curves-workspace__apply-status {
+  min-width: 0;
+  flex: 1 1 auto;
+  margin: 0;
+  overflow: hidden;
+  color: var(--oracle-muted, #bdb7bd);
+  font-size: 10px;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.curves-workspace__apply-bar .oracle-button--primary {
+  min-width: 92px;
+  flex: 0 0 auto;
+}
+
+.curves-inspector__section {
+  min-width: 0;
+  flex: 0 0 auto;
+  padding: 12px;
+  border-bottom: 1px solid var(--oracle-border, #353535);
+}
+
+.curves-inspector__section h3 {
+  margin: 0 0 9px;
+  color: var(--oracle-text, #f6f3f6);
+  font-family: var(--oracle-font-heading, Arial, sans-serif);
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.curves-property-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 0;
+}
+
+.curves-property-summary__row {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.curves-property-summary dt {
+  min-width: 74px;
+  flex: 0 0 74px;
+  color: var(--oracle-dim, #878087);
+  font-family: var(--oracle-font-compact, Arial, sans-serif);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.curves-property-summary dd {
+  min-width: 0;
+  flex: 1 1 auto;
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: var(--oracle-muted, #bdb7bd);
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.curves-baked-reason {
+  margin: 8px 0 0;
+  padding: 8px;
+  color: #e8c985;
+  font-size: 9px;
+  line-height: 1.4;
+  border-left: 2px solid #d49b42;
+  background: rgba(212, 155, 66, 0.08);
+}
+
+.curves-preset-tabs {
+  min-width: 0;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.curves-preset-tabs button {
+  min-height: 29px;
+  flex: 1 1 0;
+}
+
+.curves-preset-tabs button[aria-selected="true"] {
+  color: var(--oracle-text, #f6f3f6);
+  border-color: var(--accent-color, #e548c7);
+  background: rgba(229, 72, 199, 0.13);
+}
+
+.curves-preset-search {
+  width: 100%;
+  min-width: 0;
+  min-height: 30px;
+  padding: 6px 8px;
+  color: var(--oracle-text, #f6f3f6);
+  background: var(--oracle-header, #101010);
+  border: 1px solid var(--oracle-border-strong, #555055);
+}
+
+.curves-preset-list {
+  min-width: 0;
+  min-height: 76px;
+  max-height: 260px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 7px;
+  margin-top: 8px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.curves-preset-card {
+  min-width: 94px;
+  min-height: 72px;
+  height: auto;
+  flex: 1 1 108px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px;
+  overflow: hidden;
+  color: var(--oracle-muted, #bdb7bd);
+  text-align: left;
+  background: var(--oracle-header, #101010);
+  border: 1px solid var(--oracle-border, #353535);
+  border-radius: 2px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.24);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.curves-preset-card:hover {
+  color: var(--oracle-text, #f6f3f6);
+  border-color: var(--oracle-border-strong, #555055);
+  background: var(--oracle-surface-hover, #262126);
+}
+
+.curves-preset-card.is-selected,
+.curves-preset-card[aria-selected="true"] {
+  color: var(--oracle-text, #f6f3f6);
+  border-color: var(--accent-color, #e548c7);
+  background: rgba(229, 72, 199, 0.11);
+}
+
+.curves-preset-card__preview {
+  width: 100%;
+  height: 42px;
+  min-height: 42px;
+  flex: 0 0 42px;
+  display: block;
+  background: #09090b;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.curves-preset-card__preview path {
+  fill: none;
+  stroke: var(--accent-color, #e548c7);
+  stroke-width: 2;
+}
+
+.curves-preset-card__name {
+  overflow: hidden;
+  font-size: 9px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.curves-preset-card__favorite {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  color: #ffd46b;
+  font-size: 10px;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.curves-preset-empty {
+  margin: 8px 0 0;
+  padding: 10px;
+  color: var(--oracle-dim, #878087);
+  font-size: 10px;
+  line-height: 1.4;
+  border: 1px dashed var(--oracle-border, #353535);
+}
+
+.curves-preset-actions {
+  flex-wrap: wrap;
+  padding: 8px 0 0;
+}
+
+.curves-preset-actions .oracle-button {
+  min-height: 27px;
+  flex: 1 1 auto;
+  padding: 4px 7px;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.curves-json-note {
+  margin: 8px 0 0;
+  color: var(--oracle-dim, #878087);
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.curves-workspace button:focus-visible,
+.curves-workspace input:focus-visible,
+.curves-workspace select:focus-visible,
+.curves-workspace [tabindex]:focus-visible {
+  outline: 2px solid var(--focus-color, #ffffff);
+  outline-offset: 2px;
+}
+
+.curves-workspace button:disabled,
+.curves-workspace input:disabled,
+.curves-workspace select:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+@keyframes oracle-curves-pulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 760px) {
+  .curves-workspace__content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: column;
+  }
+
+  .curves-editor {
+    min-height: 410px;
+    flex: 0 0 auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--oracle-border, #353535);
+  }
+
+  .curves-inspector {
+    min-width: 0;
+    flex: 0 0 auto;
+    overflow: visible;
+  }
+
+  .curves-preset-list {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 620px) {
+  .curves-workspace__state {
+    align-items: flex-start;
+  }
+
+  .curves-workspace__state-copy {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .curves-workspace__state-copy span,
+  .curves-workspace__state-copy p {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  .curves-graph-card__toolbar {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+
+  .curves-mode-switch {
+    flex: 1 0 100%;
+  }
+
+  .curves-mode-switch .oracle-button {
+    flex: 1 1 72px;
+  }
+
+  .curves-mode-switch .oracle-field {
+    min-width: 118px;
+    flex: 1 1 140px;
+  }
+
+  .curves-graph-wrap {
+    min-height: 300px;
+  }
+
+  .curves-graph {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .curves-workspace__apply-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .curves-workspace__apply-status {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  .curves-workspace__apply-bar .oracle-button--primary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 470px) {
+  .curves-workspace__header {
+    padding: 10px;
+  }
+
+  .curves-workspace__header-note {
+    display: none;
+  }
+
+  .curves-workspace__state {
+    align-items: flex-start;
+    padding: 8px 10px;
+  }
+
+  .curves-workspace__state-copy {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .curves-workspace__state-copy span,
+  .curves-workspace__state-copy p {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  .curves-selector-bar {
+    align-items: stretch;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .curves-selector-bar .oracle-field {
+    min-width: 0;
+    flex: 0 0 auto;
+  }
+
+  .curves-graph-card {
+    min-height: 360px;
+    margin: 8px;
+  }
+
+  .curves-graph-card__toolbar {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+
+  .curves-mode-switch {
+    flex: 1 0 100%;
+  }
+
+  .curves-graph-wrap {
+    min-height: 190px;
+  }
+
+  .curves-graph {
+    height: 190px;
+    min-height: 190px;
+  }
+
+  .curves-workspace__apply-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .curves-workspace__apply-status {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  .curves-workspace__apply-bar .oracle-button--primary {
+    width: 100%;
+  }
+}
+
+@media (max-height: 520px) and (min-width: 761px) {
+  .curves-workspace__header {
+    padding-top: 8px;
+    padding-bottom: 7px;
+  }
+
+  .curves-workspace__state {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .curves-graph-card {
+    min-height: 150px;
+    margin: 8px;
+  }
+
+  .curves-numeric-points {
+    padding-top: 5px;
+    padding-bottom: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curves-workspace__state[data-state="loading"] .curves-workspace__state-mark {
+    animation: none;
+  }
+}

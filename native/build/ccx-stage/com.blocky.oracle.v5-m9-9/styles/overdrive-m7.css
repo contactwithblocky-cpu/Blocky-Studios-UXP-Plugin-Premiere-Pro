@@ -1,0 +1,94 @@
+.oracle-panel--entrypoint {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.oracle-panel--entrypoint > .oracle-startup-state--entrypoint {
+  inset: 0;
+  z-index: 40;
+}
+
+.oracle-panel-entrypoint__content {
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  overflow: hidden;
+}
+
+.oracle-panel-entrypoint__content[hidden] {
+  display: none;
+}
+
+.oracle-panel-entrypoint__content > [data-oracle-workspace] {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 auto;
+}
+
+.oracle-panel--entrypoint[data-oracle-panel-kind="replays"] .replay-scroller {
+  height: 100%;
+  min-height: 0;
+  padding-top: var(--space-4);
+}
+
+.oracle-panel--entrypoint[data-oracle-panel-kind="curves"] .curves-workspace,
+.oracle-panel--entrypoint[data-oracle-panel-kind="quick-apply"] .quick-apply-workspace {
+  height: 100%;
+  min-height: 0;
+  overflow: auto;
+}
+
+.oracle-panel--entrypoint .oracle-context-menu,
+.oracle-panel--entrypoint .replay-lifecycle-backdrop,
+.oracle-panel--entrypoint .oracle-layer-backdrop,
+.oracle-panel--entrypoint .oracle-dialog {
+  position: absolute;
+}
+
+.oracle-panel--entrypoint .toast-region {
+  position: absolute;
+  right: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 90;
+}
+
+.oracle-panel--entrypoint[data-oracle-panel-density="compact"] .curves-workspace__header,
+.oracle-panel--entrypoint[data-oracle-panel-density="compact"] .quick-apply-workspace__header {
+  padding-inline: var(--space-4);
+}
+
+.oracle-panel--entrypoint[data-oracle-panel-density="compact"] .curves-workspace__header-note,
+.oracle-panel--entrypoint[data-oracle-panel-density="compact"] .quick-apply-workspace__header-note {
+  display: none;
+}
+
+.oracle-panel--entrypoint[data-oracle-panel-density="compact"] .curves-workspace__content,
+.oracle-panel--entrypoint[data-oracle-panel-density="compact"] .quick-apply-content {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.oracle-panel--entrypoint[data-oracle-panel-kind="quick-apply"] .quick-apply-search {
+  overflow: hidden;
+}
+
+.oracle-panel--entrypoint[data-oracle-panel-kind="quick-apply"] .quick-apply-search input {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.oracle-panel--entrypoint[data-oracle-panel-kind="quick-apply"] [data-oracle-element="quickApplySearchClear"] {
+  min-width: max-content;
+  flex: 0 0 auto;
+}

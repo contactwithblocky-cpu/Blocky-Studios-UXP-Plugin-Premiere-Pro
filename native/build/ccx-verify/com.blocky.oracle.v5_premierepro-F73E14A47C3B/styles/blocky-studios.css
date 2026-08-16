@@ -1,0 +1,1743 @@
+/*
+ * Blocky Studios for Premiere Pro
+ *
+ * One final, product-owned presentation layer sits above the preserved legacy
+ * compatibility selectors. Those selectors remain the stable wiring seam
+ * for saved projects, the paired Minecraft bridge, and the verified host
+ * controllers; every visible token and layout is owned here.
+ */
+
+:root {
+  --bs-font-display: "Samsung Sharp Sans";
+  --bs-font-control: "Samsung Sharp Sans";
+  --bs-font-body: "Samsung Sharp Sans";
+  --bs-dark-canvas: #101216;
+  --bs-light-canvas: #f5f3ee;
+  --bs-dark-border: #343a44;
+  --bs-light-border: #cbc7bd;
+  --bs-accent: var(--accent-color, #1d78c8);
+  --bs-focus: var(--focus-color, #ffffff);
+  --bs-danger: #e86b6b;
+  --bs-warning: #e6b85c;
+  --bs-success: #78c98f;
+  --bs-control-height: 36px;
+  --bs-control-compact: 30px;
+  --bs-space-1: 4px;
+  --bs-space-2: 8px;
+  --bs-space-3: 12px;
+  --bs-space-4: 16px;
+  --bs-space-5: 20px;
+  --bs-space-6: 24px;
+  --bs-radius-control: 3px;
+  --bs-radius-panel: 5px;
+  --bs-motion-fast: 100ms;
+  --bs-motion-panel: 160ms;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bs-canvas: var(--bs-dark-canvas);
+  --bs-canvas-secondary: #13161b;
+  --bs-header: #0c0e12;
+  --bs-surface: #181c22;
+  --bs-surface-raised: #20252d;
+  --bs-surface-hover: #292f39;
+  --bs-field: #0f1217;
+  --bs-text: #f5f7fa;
+  --bs-text-secondary: #bbc2cc;
+  --bs-text-quiet: #858f9c;
+  --bs-border: var(--bs-dark-border);
+  --bs-border-strong: #535c69;
+  --bs-control-highlight: rgba(255, 255, 255, 0.12);
+  --bs-control-shadow: #080a0d;
+  --bs-overlay: rgba(4, 6, 9, 0.78);
+  --bs-selection: rgba(var(--accent-rgb, 29, 120, 200), 0.14);
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --bs-canvas: var(--bs-light-canvas);
+  --bs-canvas-secondary: #efede7;
+  --bs-header: #fffdf8;
+  --bs-surface: #fffdf9;
+  --bs-surface-raised: #eeebe4;
+  --bs-surface-hover: #e4e1d9;
+  --bs-field: #ffffff;
+  --bs-text: #1d2025;
+  --bs-text-secondary: #555d68;
+  --bs-text-quiet: #7d838b;
+  --bs-border: var(--bs-light-border);
+  --bs-border-strong: #9b968b;
+  --bs-control-highlight: rgba(255, 255, 255, 0.88);
+  --bs-control-shadow: #aaa59a;
+  --bs-overlay: rgba(25, 28, 33, 0.48);
+  --bs-selection: rgba(var(--accent-rgb, 29, 120, 200), 0.12);
+  --bs-focus: var(--focus-color, #111318);
+}
+
+html[data-theme] {
+  --oracle-bg: var(--bs-canvas);
+  --oracle-header: var(--bs-header);
+  --oracle-surface: var(--bs-surface);
+  --oracle-surface-raised: var(--bs-surface-raised);
+  --oracle-surface-hover: var(--bs-surface-hover);
+  --oracle-border: var(--bs-border);
+  --oracle-border-strong: var(--bs-border-strong);
+  --oracle-text: var(--bs-text);
+  --oracle-muted: var(--bs-text-secondary);
+  --oracle-dim: var(--bs-text-quiet);
+  --oracle-danger: var(--bs-danger);
+  --oracle-font-heading: var(--bs-font-display);
+  --oracle-font-compact: var(--bs-font-control);
+  --oracle-font-body: var(--bs-font-body);
+}
+
+html,
+body {
+  background: var(--bs-canvas) !important;
+  color: var(--bs-text) !important;
+}
+
+html *,
+html *::before,
+html *::after {
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+option,
+output {
+  font-family: var(--bs-font-body) !important;
+  font-synthesis: none;
+  letter-spacing: 0 !important;
+}
+
+h1,
+h2,
+.oracle-heading,
+.curves-go-button,
+.recent-exports-title {
+  font-family: var(--bs-font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+
+h3,
+h4,
+.oracle-kicker,
+.navigation-item,
+.preferences-tabs,
+.quick-apply-scope,
+.replay-view-tab,
+.curves-native-pill,
+.replay-indicator {
+  font-family: var(--bs-font-control) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+}
+
+button,
+input,
+select,
+textarea {
+  min-width: 0;
+  color: var(--bs-text);
+}
+
+button,
+.oracle-button,
+.oracle-icon-button,
+.profile-button,
+.curves-icon-button,
+.curves-new-preset,
+.curves-go-button,
+.quick-apply-scope,
+.replay-view-tab,
+.navigation-item,
+.color-token {
+  min-height: var(--bs-control-height);
+  border: 1px solid var(--bs-border-strong) !important;
+  border-radius: var(--bs-radius-control) !important;
+  background: var(--bs-surface-raised) !important;
+  color: var(--bs-text-secondary) !important;
+  box-shadow:
+    inset 0 1px 0 var(--bs-control-highlight),
+    inset 0 -2px 0 var(--bs-control-shadow) !important;
+  appearance: none;
+  -webkit-appearance: none;
+  transition:
+    background-color var(--bs-motion-fast) linear,
+    border-color var(--bs-motion-fast) linear,
+    color var(--bs-motion-fast) linear,
+    transform var(--bs-motion-fast) linear;
+}
+
+button:hover:not(:disabled),
+.oracle-button:hover:not(:disabled),
+.oracle-icon-button:hover:not(:disabled),
+.profile-button:hover:not(:disabled),
+.curves-icon-button:hover:not(:disabled),
+.curves-new-preset:hover:not(:disabled),
+.quick-apply-scope:hover:not(:disabled),
+.replay-view-tab:hover:not(:disabled),
+.navigation-item:hover:not(:disabled),
+.color-token:hover:not(:disabled) {
+  color: var(--bs-text) !important;
+  border-color: var(--bs-accent) !important;
+  background: var(--bs-surface-hover) !important;
+}
+
+button:active:not(:disabled),
+.oracle-button:active:not(:disabled),
+.oracle-icon-button:active:not(:disabled),
+.profile-button:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: inset 0 1px 0 var(--bs-control-shadow) !important;
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed !important;
+  opacity: 0.48 !important;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--bs-focus) !important;
+  outline-offset: 2px !important;
+}
+
+.oracle-button--primary,
+.curves-go-button,
+.quick-apply-apply {
+  border-color: var(--bs-accent) !important;
+  background: var(--bs-accent) !important;
+  color: var(--accent-foreground, #071018) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+.oracle-button--danger,
+.oracle-context-menu__danger {
+  color: var(--bs-danger) !important;
+}
+
+input:not([type="checkbox"]):not([type="range"]):not([type="color"]),
+select,
+textarea {
+  width: 100%;
+  min-height: var(--bs-control-height);
+  padding: 8px 10px;
+  border: 1px solid var(--bs-border-strong) !important;
+  border-radius: var(--bs-radius-control) !important;
+  background: var(--bs-field) !important;
+  color: var(--bs-text) !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.18) !important;
+  user-select: text;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--bs-text-quiet) !important;
+  opacity: 1;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  margin: 0;
+  accent-color: var(--bs-accent);
+}
+
+input[type="range"] {
+  min-height: 24px;
+  accent-color: var(--bs-accent);
+}
+
+/* Shared shell and exact supplied branding. */
+.oracle-panel,
+.blocky-studios-panel {
+  background: var(--bs-canvas) !important;
+  color: var(--bs-text) !important;
+}
+
+.oracle-header {
+  min-height: 62px !important;
+  flex: 0 0 62px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bs-space-3) !important;
+  padding: 5px 14px !important;
+  border-top: 2px solid var(--bs-accent) !important;
+  border-bottom: 1px solid var(--bs-border) !important;
+  background: var(--bs-header) !important;
+}
+
+.oracle-header__side {
+  min-width: 0;
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.oracle-header__side--start { justify-content: flex-start; }
+.oracle-header__side--end { justify-content: flex-end; }
+
+.blocky-brand {
+  min-width: 0;
+  flex: 0 1 132px;
+  margin: 0 auto;
+  display: block !important;
+}
+
+.blocky-brand__crop {
+  width: 132px !important;
+  height: 52px !important;
+  min-width: 132px !important;
+  min-height: 52px !important;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+.blocky-brand__asset,
+.oracle-logo.blocky-brand__asset {
+  width: 132px !important;
+  height: 52px !important;
+  display: block !important;
+  position: relative;
+  overflow: hidden;
+  border: 0 !important;
+  background: none !important;
+  image-rendering: auto;
+}
+
+.blocky-brand__asset img {
+  width: 132px;
+  height: 132px;
+  max-width: none;
+  display: block;
+  position: absolute;
+  top: -42px;
+  left: 0;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.oracle-brand__emblem {
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.oracle-icon-button,
+.profile-button,
+.curves-icon-button {
+  width: var(--bs-control-height);
+  height: var(--bs-control-height);
+  min-width: var(--bs-control-height);
+  flex: 0 0 var(--bs-control-height);
+  padding: 0 !important;
+}
+
+.oracle-icon-button--compact {
+  width: var(--bs-control-compact);
+  height: var(--bs-control-compact);
+  min-width: var(--bs-control-compact);
+  min-height: var(--bs-control-compact);
+  flex-basis: var(--bs-control-compact);
+}
+
+.profile-button {
+  border-radius: 50% !important;
+  overflow: hidden;
+}
+
+.profile-button__initials {
+  color: var(--bs-text) !important;
+  font-family: var(--bs-font-control) !important;
+  font-size: 10px !important;
+}
+
+.bridge-status {
+  width: 16px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bridge-status__dot {
+  width: 8px !important;
+  height: 8px !important;
+  border: 1px solid var(--bs-border-strong);
+  border-radius: 1px !important;
+  background: var(--bs-text-quiet) !important;
+  box-shadow: none !important;
+}
+
+.bridge-status--connected .bridge-status__dot {
+  border-color: var(--bs-success);
+  background: var(--bs-success) !important;
+}
+
+.bridge-status--waiting .bridge-status__dot,
+.bridge-status--connecting .bridge-status__dot {
+  border-color: var(--bs-warning);
+  background: var(--bs-warning) !important;
+}
+
+.bridge-status--error .bridge-status__dot {
+  border-color: var(--bs-danger);
+  background: var(--bs-danger) !important;
+}
+
+.hamburger-icon,
+.hamburger-icon::before,
+.hamburger-icon::after {
+  background: var(--bs-text) !important;
+}
+
+.oracle-layer-backdrop,
+.replay-lifecycle-backdrop {
+  background: var(--bs-overlay) !important;
+}
+
+.navigation-drawer {
+  width: min(292px, calc(100vw - 20px)) !important;
+  padding: 0 !important;
+  border-right: 1px solid var(--bs-border-strong) !important;
+  background: var(--bs-header) !important;
+  color: var(--bs-text) !important;
+  box-shadow: 12px 0 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.navigation-drawer__header {
+  min-height: 142px !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: flex-end;
+  gap: 4px !important;
+  padding: 18px !important;
+  border-bottom: 1px solid var(--bs-border) !important;
+  background: var(--bs-canvas-secondary) !important;
+}
+
+.blocky-drawer-brand {
+  margin-bottom: 8px;
+}
+
+.navigation-drawer__header strong {
+  color: var(--bs-text) !important;
+  font-family: var(--bs-font-display) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.oracle-kicker {
+  color: var(--bs-accent) !important;
+  font-size: 9px !important;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.navigation-drawer__items {
+  display: flex !important;
+  flex-direction: column;
+  gap: 8px !important;
+  padding: 14px !important;
+}
+
+.navigation-item {
+  width: 100%;
+  min-height: 44px !important;
+  display: flex !important;
+  align-items: center;
+  gap: 10px !important;
+  padding: 7px 10px !important;
+  text-align: left;
+}
+
+.navigation-item > .navigation-item__icon {
+  flex: 0 0 22px;
+}
+
+.navigation-item > span:not(.navigation-item__icon) {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.navigation-item > small {
+  flex: 0 0 auto;
+}
+
+.navigation-item.is-active,
+.navigation-item[aria-current="page"] {
+  border-color: var(--bs-accent) !important;
+  background: var(--bs-selection) !important;
+  color: var(--bs-text) !important;
+  box-shadow:
+    inset 3px 0 0 var(--bs-accent),
+    inset 0 1px 0 var(--bs-control-highlight),
+    inset 0 -2px 0 var(--bs-control-shadow) !important;
+}
+
+.navigation-item small {
+  color: var(--bs-text-quiet) !important;
+  font-family: var(--bs-font-body) !important;
+  font-size: 9px !important;
+}
+
+.navigation-drawer__status {
+  margin: auto 14px 14px !important;
+  padding: 12px !important;
+  border: 1px solid var(--bs-border) !important;
+  background: var(--bs-canvas-secondary) !important;
+  color: var(--bs-text-quiet) !important;
+  font-size: 10px !important;
+  line-height: 1.5;
+}
+
+/* Startup is a real system state, not a decorative splash. */
+.oracle-startup-state {
+  background: var(--bs-canvas) !important;
+}
+
+.oracle-startup-state__card,
+.empty-state__surface {
+  width: min(520px, calc(100% - 32px)) !important;
+  padding: 24px !important;
+  border: 1px solid var(--bs-border-strong) !important;
+  border-radius: var(--bs-radius-panel) !important;
+  background: var(--bs-surface) !important;
+  box-shadow: inset 0 3px 0 var(--bs-accent) !important;
+}
+
+.oracle-startup-state__card h2,
+.empty-state h2 {
+  margin: 8px 0 !important;
+  color: var(--bs-text) !important;
+}
+
+.oracle-startup-state__card p,
+.empty-state p {
+  color: var(--bs-text-secondary) !important;
+  line-height: 1.55 !important;
+}
+
+/* Preferences: bounded, scrollable, and usable at Premiere dock sizes. */
+.oracle-dialog,
+.replay-lifecycle-dialog,
+.oracle-color-picker {
+  border: 1px solid var(--bs-border-strong) !important;
+  border-radius: var(--bs-radius-panel) !important;
+  background: var(--bs-surface) !important;
+  color: var(--bs-text) !important;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.3) !important;
+}
+
+.preferences-dialog {
+  width: min(920px, calc(100vw - 24px)) !important;
+  height: min(760px, calc(100vh - 24px)) !important;
+  max-width: none !important;
+  max-height: none !important;
+  top: 12px !important;
+  right: 12px !important;
+  bottom: 12px !important;
+  left: auto !important;
+  transform: translateX(24px) !important;
+}
+
+.preferences-dialog.is-open {
+  transform: translateX(0) !important;
+}
+
+.oracle-dialog__header,
+.oracle-dialog__footer,
+.replay-lifecycle-dialog__header,
+.replay-lifecycle-dialog__footer {
+  flex: 0 0 auto;
+  border-color: var(--bs-border) !important;
+  background: var(--bs-header) !important;
+}
+
+.oracle-dialog__header {
+  min-height: 76px !important;
+  padding: 14px 16px !important;
+}
+
+.oracle-dialog__header h2,
+.replay-lifecycle-dialog__header h2 {
+  margin: 4px 0 0 !important;
+  color: var(--bs-text) !important;
+  font-size: 20px !important;
+}
+
+.oracle-dialog__header p {
+  margin-top: 5px !important;
+  color: var(--bs-text-secondary) !important;
+  font-size: 10px !important;
+}
+
+.preferences-dialog__body {
+  min-height: 0;
+  flex: 1 1 auto;
+  display: flex !important;
+  overflow: hidden !important;
+}
+
+.preferences-tabs {
+  min-width: 0;
+  flex: 0 0 188px;
+  display: flex !important;
+  flex-direction: column;
+  gap: 6px !important;
+  padding: 12px !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  border-right: 1px solid var(--bs-border) !important;
+  background: var(--bs-canvas-secondary) !important;
+}
+
+.preferences-tabs button {
+  width: 100%;
+  min-height: 38px !important;
+  padding: 7px 10px !important;
+  text-align: left !important;
+  white-space: normal !important;
+}
+
+.preferences-tabs button[aria-selected="true"] {
+  border-color: var(--bs-accent) !important;
+  background: var(--bs-selection) !important;
+  color: var(--bs-text) !important;
+  box-shadow: inset 3px 0 0 var(--bs-accent) !important;
+}
+
+.preferences-sections {
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  background: var(--bs-canvas) !important;
+}
+
+.preferences-section {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  padding: 22px !important;
+}
+
+.preference-heading {
+  margin-bottom: 18px !important;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--bs-border);
+}
+
+.preference-heading h3 {
+  margin: 5px 0 !important;
+  color: var(--bs-text) !important;
+  font-family: var(--bs-font-display) !important;
+  font-size: 18px !important;
+}
+
+.preference-heading p,
+.preference-subsection small,
+.contrast-status,
+.storage-summary {
+  color: var(--bs-text-secondary) !important;
+  line-height: 1.55 !important;
+}
+
+.preference-theme-mode {
+  width: min(360px, 100%);
+  margin-bottom: 14px;
+}
+
+.preference-grid {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 12px !important;
+}
+
+.preference-grid > * {
+  min-width: 0;
+  flex: 1 1 calc(50% - 6px);
+}
+
+.preference-grid--three > * {
+  flex-basis: calc(33.333333% - 8px);
+}
+
+.oracle-field {
+  min-width: 0;
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 7px !important;
+  color: var(--bs-text-secondary) !important;
+}
+
+.oracle-field > span {
+  font-family: var(--bs-font-control) !important;
+  font-size: 9px !important;
+  line-height: 1.25;
+}
+
+.oracle-field output {
+  color: var(--bs-accent);
+}
+
+.oracle-check,
+.preference-subsection,
+.storage-summary,
+.contrast-status {
+  border: 1px solid var(--bs-border) !important;
+  border-radius: var(--bs-radius-control) !important;
+  background: var(--bs-surface) !important;
+}
+
+.oracle-check {
+  min-height: 38px;
+  display: flex !important;
+  align-items: center;
+  gap: 9px !important;
+  padding: 9px 10px !important;
+}
+
+.preference-subsection {
+  min-width: 0;
+  padding: 12px !important;
+  gap: 12px !important;
+}
+
+.color-token-grid {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 10px !important;
+}
+
+.color-token-grid > * {
+  min-width: 0;
+  flex: 1 1 calc(50% - 5px);
+}
+
+.color-token {
+  min-width: 0;
+  min-height: 52px !important;
+  display: flex !important;
+  align-items: center;
+  gap: 10px !important;
+  padding: 8px 10px !important;
+  text-align: left !important;
+}
+
+.color-token > span:last-child {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.color-token__swatch {
+  width: 28px !important;
+  height: 28px !important;
+  border: 1px solid var(--bs-border-strong) !important;
+  border-radius: 1px !important;
+  background: var(--swatch-color) !important;
+}
+
+.color-token small {
+  overflow-wrap: anywhere;
+  color: var(--bs-text-quiet) !important;
+}
+
+.profile-editor {
+  min-width: 0;
+  display: flex !important;
+  align-items: center;
+  gap: 16px !important;
+  margin-bottom: 16px;
+}
+
+.profile-editor__preview {
+  width: 112px !important;
+  height: 112px !important;
+  flex: 0 0 112px !important;
+  border: 1px solid var(--bs-border-strong) !important;
+  border-radius: 3px !important;
+  background: var(--bs-surface-raised) !important;
+}
+
+.profile-editor__actions,
+.preference-actions {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 8px !important;
+}
+
+.profile-editor__actions {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.preference-list li,
+.diagnostics-list li {
+  border-color: var(--bs-border) !important;
+  background: var(--bs-surface) !important;
+  color: var(--bs-text-secondary) !important;
+}
+
+.preferences-error,
+.oracle-dialog__error {
+  margin: 0 12px 10px !important;
+  border: 1px solid var(--bs-danger) !important;
+  background: rgba(232, 107, 107, 0.1) !important;
+  color: var(--bs-danger) !important;
+}
+
+.oracle-dialog__footer {
+  min-height: 58px !important;
+  padding: 10px 14px !important;
+}
+
+.oracle-color-picker {
+  max-width: calc(100% - 24px);
+  padding: 12px !important;
+}
+
+/* Replay library. */
+.replay-scroller,
+.recent-exports,
+.recent-exports__content {
+  background: var(--bs-canvas) !important;
+}
+
+.replay-scroller {
+  scrollbar-color: var(--bs-border-strong) var(--bs-canvas-secondary);
+}
+
+.recent-exports__header {
+  min-height: 58px !important;
+  padding: 14px 18px 10px !important;
+  border-bottom: 0 !important;
+  background: var(--bs-canvas) !important;
+}
+
+.recent-exports-title {
+  color: var(--bs-text) !important;
+  font-size: 24px !important;
+}
+
+.replay-workspace {
+  margin: 0 14px 14px !important;
+  padding: 12px !important;
+  gap: 10px !important;
+  border: 1px solid var(--bs-border) !important;
+  border-radius: var(--bs-radius-panel) !important;
+  background: var(--bs-surface) !important;
+}
+
+.replay-workspace__primary {
+  gap: 10px !important;
+}
+
+.replay-workspace__tabs {
+  gap: 5px !important;
+}
+
+.replay-view-tab,
+.quick-apply-scope {
+  min-height: 32px !important;
+  padding: 5px 10px !important;
+  font-size: 9px !important;
+}
+
+.replay-view-tab[aria-selected="true"],
+.quick-apply-scope.is-active,
+.quick-apply-scope[aria-pressed="true"] {
+  border-color: var(--bs-accent) !important;
+  background: var(--bs-selection) !important;
+  color: var(--bs-text) !important;
+  box-shadow: inset 0 -3px 0 var(--bs-accent) !important;
+}
+
+.grid-scale {
+  border-color: var(--bs-border) !important;
+  background: var(--bs-canvas-secondary) !important;
+  color: var(--bs-text-secondary) !important;
+}
+
+.replay-search,
+.quick-apply-search {
+  border: 1px solid var(--bs-border-strong) !important;
+  border-radius: var(--bs-radius-control) !important;
+  background: var(--bs-field) !important;
+}
+
+.replay-search input,
+.quick-apply-search input {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.replay-collection-nav,
+.replay-tag-chip,
+.replay-indicator {
+  border-color: var(--bs-border) !important;
+  background: var(--bs-surface-raised) !important;
+  color: var(--bs-text-secondary) !important;
+}
+
+.replay-grid-container {
+  padding: 0 14px 24px !important;
+}
+
+.replay-card {
+  border: 1px solid var(--bs-border) !important;
+  border-radius: var(--bs-radius-panel) !important;
+  background: var(--bs-surface) !important;
+  color: var(--bs-text) !important;
+  box-shadow: 0 2px 0 var(--bs-control-shadow) !important;
+}
+
+.replay-card:hover,
+.replay-card:focus-visible {
+  border-color: var(--bs-border-strong) !important;
+  background: var(--bs-surface-hover) !important;
+}
+
+.replay-card[aria-selected="true"] {
+  border-color: var(--bs-accent) !important;
+  box-shadow: inset 0 0 0 1px var(--bs-accent) !important;
+}
+
+.replay-thumbnail,
+.replay-thumbnail__fallback {
+  border-color: var(--bs-border) !important;
+  background: var(--bs-field) !important;
+}
+
+.replay-title {
+  color: var(--bs-text) !important;
+  font-family: var(--bs-font-control) !important;
+}
+
+.replay-details,
+.replay-card__metadata,
+.replay-specs {
+  color: var(--bs-text-secondary) !important;
+}
+
+.replay-date-heading {
+  color: var(--bs-text-quiet) !important;
+  border-color: var(--bs-border) !important;
+}
+
+.replay-batch-bar,
+.replay-filtered-empty {
+  border-color: var(--bs-border-strong) !important;
+  background: var(--bs-canvas-secondary) !important;
+}
+
+.empty-state {
+  padding: 20px !important;
+  background: var(--bs-canvas) !important;
+}
+
+.empty-state__mark,
+.oracle-startup-state__pixel {
+  border-color: var(--bs-accent) !important;
+  background: var(--bs-surface-raised) !important;
+}
+
+.empty-state__hint {
+  border-color: var(--bs-border) !important;
+  color: var(--bs-text-secondary) !important;
+}
+
+.oracle-context-menu,
+.replay-viewer__rate-menu {
+  padding: 5px !important;
+  border: 1px solid var(--bs-border-strong) !important;
+  border-radius: var(--bs-radius-control) !important;
+  background: var(--bs-surface-raised) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.32) !important;
+}
+
+.oracle-context-menu button,
+.replay-viewer__rate-menu button {
+  width: 100%;
+  min-height: 34px !important;
+  border-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--bs-text) !important;
+  text-align: left;
+}
+
+.replay-lifecycle-dialog {
+  width: min(620px, calc(100vw - 24px)) !important;
+  max-height: calc(100vh - 24px) !important;
+}
+
+.replay-lifecycle-dialog__body {
+  background: var(--bs-canvas) !important;
+}
+
+.replay-operation-result,
+.replay-collection-manager-row,
+.replay-collection-create,
+.replay-relink-result {
+  border-color: var(--bs-border) !important;
+  background: var(--bs-surface) !important;
+}
+
+/* Media viewer. */
+.replay-viewer {
+  border-top: 1px solid var(--bs-border-strong) !important;
+  background: var(--bs-header) !important;
+  color: var(--bs-text) !important;
+}
+
+.replay-viewer__body,
+.replay-viewer__transport {
+  background: var(--bs-surface) !important;
+}
+
+.replay-viewer__media {
+  border: 1px solid var(--bs-border) !important;
+  background: #06080b !important;
+}
+
+.replay-viewer__identity h2 {
+  color: var(--bs-text) !important;
+  font-family: var(--bs-font-display) !important;
+}
+
+.replay-viewer__mode {
+  border-color: var(--bs-accent) !important;
+  background: var(--bs-selection) !important;
+  color: var(--bs-accent) !important;
+}
+
+.replay-viewer__support,
+.replay-viewer__status,
+.replay-viewer__frame {
+  color: var(--bs-text-secondary) !important;
+}
+
+/* Curves workspace. */
+.curves-workspace,
+.curves-workspace__content,
+.curves-workspace__apply-bar {
+  background: var(--bs-canvas) !important;
+  color: var(--bs-text) !important;
+}
+
+.curves-editor {
+  padding: 12px !important;
+}
+
+.curves-graph-card {
+  border: 1px solid var(--bs-border) !important;
+  border-radius: var(--bs-radius-panel) !important;
+  background: var(--bs-field) !important;
+}
+
+.curves-graph__background {
+  fill: var(--bs-field) !important;
+}
+
+.curves-graph__grid line,
+.curves-graph__axis,
+.curves-graph__reference {
+  stroke: var(--bs-border) !important;
+}
+
+.curves-graph__curve,
+.curves-preset-card__preview path {
+  stroke: var(--bs-accent) !important;
+}
+
+.curves-graph__handle-line {
+  stroke: var(--bs-text-secondary) !important;
+}
+
+.curves-graph__handle,
+.curves-graph__endpoint {
+  fill: var(--bs-accent) !important;
+  stroke: var(--bs-text) !important;
+}
+
+.curves-zoom-controls {
+  border-color: var(--bs-border-strong) !important;
+  background: var(--bs-surface-raised) !important;
+}
+
+.curves-zoom-controls button {
+  min-height: 30px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.curves-resize-handle {
+  border-color: var(--bs-border) !important;
+  background: var(--bs-header) !important;
+}
+
+.curves-resize-handle:hover,
+.curves-resize-handle:focus-visible {
+  background: var(--bs-accent) !important;
+}
+
+.curves-inspector {
+  width: var(--curves-inspector-width, 224px);
+  min-width: 170px !important;
+  max-width: 360px !important;
+  border-left: 1px solid var(--bs-border) !important;
+  background: var(--bs-surface) !important;
+}
+
+.curves-inspector__header,
+.curves-detected,
+.curves-preset-actions {
+  border-color: var(--bs-border) !important;
+  background: var(--bs-canvas-secondary) !important;
+}
+
+.curves-inspector__header {
+  min-height: 44px !important;
+  padding: 6px 7px 6px 11px !important;
+}
+
+.curves-inspector__header h3 {
+  color: var(--bs-text) !important;
+  font-family: var(--bs-font-display) !important;
+  font-size: 13px !important;
+}
+
+.curves-native-pill {
+  border-color: var(--bs-accent) !important;
+  border-radius: 2px !important;
+  background: var(--bs-selection) !important;
+  color: var(--bs-accent) !important;
+}
+
+.curves-preset-card,
+.curves-detected-property,
+.quick-apply-result,
+.quick-apply-recipe-step,
+.quick-apply-recipe-catalog__item {
+  border-color: var(--bs-border) !important;
+  background: var(--bs-surface) !important;
+  color: var(--bs-text-secondary) !important;
+  box-shadow: none !important;
+}
+
+.curves-preset-card:hover,
+.curves-detected-property:hover,
+.quick-apply-result:hover,
+.quick-apply-recipe-catalog__item:hover {
+  border-color: var(--bs-border-strong) !important;
+  background: var(--bs-surface-hover) !important;
+  color: var(--bs-text) !important;
+}
+
+.curves-preset-card[aria-selected="true"],
+.curves-detected-property[aria-pressed="true"],
+.quick-apply-result.is-selected {
+  border-color: var(--bs-accent) !important;
+  background: var(--bs-selection) !important;
+  color: var(--bs-text) !important;
+  box-shadow: inset 3px 0 0 var(--bs-accent) !important;
+}
+
+.curves-preset-card__preview {
+  border-color: var(--bs-border) !important;
+  background: var(--bs-field) !important;
+}
+
+.curves-new-preset {
+  border-right: 0 !important;
+  border-left: 0 !important;
+}
+
+.curves-preset-actions .oracle-button {
+  min-height: 30px !important;
+  padding: 6px 8px !important;
+  font-size: 9px !important;
+  line-height: 1.2 !important;
+}
+
+.curves-go-button {
+  min-width: 92px !important;
+  min-height: 36px !important;
+  font-size: 10px !important;
+}
+
+.curves-workspace__apply-bar {
+  min-height: 52px !important;
+  flex-basis: 52px !important;
+  padding: 7px 10px !important;
+  border-top: 1px solid var(--bs-border-strong) !important;
+}
+
+.curves-workspace__apply-status {
+  color: var(--bs-text-secondary) !important;
+  font-size: 9px !important;
+}
+
+.curves-workspace__key-proof {
+  color: var(--bs-success) !important;
+}
+
+.curves-settings {
+  width: min(340px, calc(100% - 24px)) !important;
+  max-width: 340px !important;
+  top: 12px !important;
+  right: 12px !important;
+  max-height: calc(100% - 24px) !important;
+  border: 1px solid var(--bs-border-strong) !important;
+  border-radius: var(--bs-radius-panel) !important;
+  background: var(--bs-surface) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.32) !important;
+}
+
+.curves-settings__header,
+.curves-settings__section,
+.curves-settings__advanced {
+  border-color: var(--bs-border) !important;
+  background: var(--bs-surface) !important;
+}
+
+.curves-settings__header {
+  background: var(--bs-header) !important;
+}
+
+/* Quick Apply. */
+.quick-apply-workspace,
+.quick-apply-content {
+  background: var(--bs-canvas) !important;
+  color: var(--bs-text) !important;
+}
+
+.quick-apply-workspace__header {
+  min-height: 74px !important;
+  padding: 14px 16px !important;
+  border-bottom: 1px solid var(--bs-border) !important;
+  background: var(--bs-header) !important;
+}
+
+.quick-apply-workspace__identity h2 {
+  color: var(--bs-text) !important;
+  font-family: var(--bs-font-display) !important;
+  font-size: 20px !important;
+}
+
+.quick-apply-workspace__header-note {
+  max-width: 440px !important;
+  color: var(--bs-text-secondary) !important;
+  font-size: 10px !important;
+  line-height: 1.5 !important;
+}
+
+.quick-apply-state {
+  border-color: var(--bs-border) !important;
+  background: var(--bs-surface) !important;
+}
+
+.quick-apply-content {
+  gap: 12px !important;
+  padding: 12px !important;
+}
+
+.quick-apply-browser,
+.quick-apply-inspector {
+  border: 1px solid var(--bs-border) !important;
+  border-radius: var(--bs-radius-panel) !important;
+  background: var(--bs-surface) !important;
+}
+
+.quick-apply-browser {
+  padding: 12px !important;
+}
+
+.quick-apply-inspector {
+  min-width: 220px !important;
+  max-width: 340px !important;
+}
+
+.quick-apply-inspector__section {
+  border-color: var(--bs-border) !important;
+}
+
+.quick-apply-inspector__section h3,
+.quick-apply-result__name,
+.quick-apply-recipe-step__identity strong {
+  color: var(--bs-text) !important;
+}
+
+.quick-apply-selection-summary,
+.quick-apply-result-group__heading,
+.quick-apply-empty,
+.quick-apply-result__category,
+.quick-apply-result__compatibility {
+  color: var(--bs-text-secondary) !important;
+  border-color: var(--bs-border) !important;
+}
+
+.quick-apply-results,
+.quick-apply-results-wrap {
+  background: var(--bs-canvas-secondary) !important;
+}
+
+.quick-apply-result {
+  margin-bottom: 6px;
+  border: 1px solid var(--bs-border) !important;
+  border-radius: var(--bs-radius-control) !important;
+}
+
+.quick-apply-result__badge {
+  border-color: var(--bs-border) !important;
+  background: var(--bs-surface-raised) !important;
+}
+
+.quick-apply-status {
+  border-color: var(--bs-border) !important;
+  background: var(--bs-canvas-secondary) !important;
+}
+
+.quick-apply-recipe-dialog {
+  width: min(760px, calc(100vw - 24px)) !important;
+  height: min(680px, calc(100vh - 24px)) !important;
+}
+
+.quick-apply-recipe-dialog__body,
+.quick-apply-recipe-stage,
+.quick-apply-recipe-catalog,
+.quick-apply-recipe-parameters {
+  background: var(--bs-canvas) !important;
+}
+
+/* Dedicated entrypoints reuse the exact workspace surface without a second
+ * host controller. Their density marker is produced by the existing bounded
+ * ResizeObserver and only changes layout. */
+.oracle-panel--entrypoint {
+  border-top: 2px solid var(--bs-accent) !important;
+  background: var(--bs-canvas) !important;
+}
+
+.oracle-panel-entrypoint__content {
+  background: var(--bs-canvas) !important;
+}
+
+.toast {
+  border: 1px solid var(--bs-border-strong) !important;
+  border-radius: var(--bs-radius-control) !important;
+  background: var(--bs-surface-raised) !important;
+  color: var(--bs-text) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28) !important;
+}
+
+.toast--success { border-left: 4px solid var(--bs-success) !important; }
+.toast--error { border-left: 4px solid var(--bs-danger) !important; }
+
+@media (max-width: 720px) {
+  .oracle-header {
+    min-height: 56px !important;
+    flex-basis: 56px !important;
+    padding-inline: 10px !important;
+  }
+
+  .blocky-brand__crop,
+  .blocky-brand__asset,
+  .oracle-logo.blocky-brand__asset {
+    width: 116px !important;
+    min-width: 116px !important;
+    height: 46px !important;
+    min-height: 46px !important;
+  }
+
+  .blocky-brand__asset img {
+    width: 116px;
+    height: 116px;
+    top: -37px;
+  }
+
+  .preferences-dialog__body {
+    display: flex !important;
+  }
+
+  .preferences-tabs {
+    flex-basis: 154px;
+  }
+
+  .preferences-tabs {
+    padding: 8px !important;
+  }
+
+  .preferences-section {
+    padding: 16px !important;
+  }
+
+  .color-token-grid,
+  .preference-grid,
+  .preference-grid--three {
+    flex-direction: column;
+  }
+
+  .color-token-grid > *,
+  .preference-grid > *,
+  .preference-grid--three > * {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .quick-apply-content {
+    flex-direction: column !important;
+    overflow-y: auto !important;
+  }
+
+  .quick-apply-browser,
+  .quick-apply-inspector {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+  }
+
+  .quick-apply-browser {
+    min-height: 310px;
+  }
+
+  .quick-apply-inspector {
+    flex: 0 0 auto !important;
+  }
+
+  .curves-editor {
+    padding: 8px !important;
+  }
+
+  .curves-inspector {
+    min-width: 150px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --bs-control-height: 34px;
+    --bs-control-compact: 28px;
+  }
+
+  .oracle-header {
+    gap: 6px !important;
+    padding-inline: 7px !important;
+  }
+
+  .blocky-brand {
+    flex-basis: 102px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .blocky-brand__crop,
+  .blocky-brand__asset,
+  .oracle-logo.blocky-brand__asset {
+    width: 102px !important;
+    min-width: 102px !important;
+    height: 41px !important;
+    min-height: 41px !important;
+  }
+
+  .blocky-brand__asset img {
+    width: 102px;
+    height: 102px;
+    top: -32.5px;
+  }
+
+  .bridge-status {
+    display: none !important;
+  }
+
+  .navigation-drawer {
+    width: min(280px, calc(100vw - 12px)) !important;
+  }
+
+  .preferences-dialog {
+    width: calc(100vw - 12px) !important;
+    height: calc(100vh - 12px) !important;
+    top: 6px !important;
+    right: 6px !important;
+    bottom: 6px !important;
+  }
+
+  .oracle-dialog__header {
+    min-height: 64px !important;
+    padding: 10px !important;
+  }
+
+  .oracle-dialog__header p {
+    display: none;
+  }
+
+  .preferences-dialog__body {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .preferences-tabs {
+    min-height: 0;
+    flex: 0 0 auto;
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px !important;
+    padding: 7px !important;
+    overflow: visible !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--bs-border) !important;
+  }
+
+  .preferences-tabs button {
+    width: auto;
+    min-width: 0;
+    flex: 1 1 calc(50% - 3px);
+    min-height: 34px !important;
+    text-align: center !important;
+  }
+
+  .preferences-tabs button[aria-selected="true"] {
+    box-shadow: inset 0 -3px 0 var(--bs-accent) !important;
+  }
+
+  .preferences-sections {
+    flex: 1 1 auto;
+  }
+
+  .preferences-section {
+    padding: 14px !important;
+  }
+
+  .profile-editor {
+    display: flex !important;
+  }
+
+  .profile-editor__preview {
+    width: 88px !important;
+    height: 88px !important;
+    flex-basis: 88px !important;
+  }
+
+  .oracle-dialog__footer {
+    min-height: 52px !important;
+    padding: 7px !important;
+    gap: 6px !important;
+  }
+
+  .oracle-dialog__footer .oracle-button {
+    min-width: 0 !important;
+    padding-inline: 8px !important;
+  }
+
+  .recent-exports__header {
+    padding-inline: 10px !important;
+  }
+
+  .replay-workspace {
+    margin: 0 8px 8px !important;
+    padding: 8px !important;
+  }
+
+  .replay-workspace__tabs {
+    width: 100%;
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+
+  .replay-workspace__tabs .replay-view-tab {
+    min-width: 0;
+    flex: 1 1 calc(25% - 4px);
+  }
+
+  .replay-view-tab {
+    padding-inline: 4px !important;
+    white-space: normal !important;
+  }
+
+  .replay-grid-container {
+    padding: 0 8px 16px !important;
+  }
+
+  .curves-inspector {
+    width: min(var(--curves-inspector-width, 148px), 43vw) !important;
+    min-width: 136px !important;
+  }
+
+  .curves-preset-actions .oracle-button {
+    flex-basis: 100% !important;
+  }
+
+  .curves-preset-card__kind {
+    display: none !important;
+  }
+
+  .curves-workspace__apply-bar {
+    min-height: 48px !important;
+    flex-basis: 48px !important;
+  }
+
+  .curves-workspace__apply-status {
+    white-space: normal !important;
+  }
+
+  .quick-apply-workspace__header {
+    min-height: 58px !important;
+    padding: 10px !important;
+  }
+
+  .quick-apply-workspace__header-note {
+    display: none !important;
+  }
+
+  .quick-apply-content {
+    padding: 8px !important;
+  }
+
+  .quick-apply-scopes {
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+
+  .quick-apply-scope {
+    width: auto;
+    min-width: 0;
+    flex: 1 1 calc(33.333333% - 4px);
+    padding-inline: 4px !important;
+  }
+
+  .quick-apply-recipe-dialog {
+    width: calc(100vw - 12px) !important;
+    height: calc(100vh - 12px) !important;
+  }
+}
+
+@media (max-height: 420px) {
+  .oracle-header {
+    min-height: 48px !important;
+    flex-basis: 48px !important;
+  }
+
+  .blocky-brand__crop,
+  .blocky-brand__asset,
+  .oracle-logo.blocky-brand__asset {
+    height: 38px !important;
+    min-height: 38px !important;
+  }
+
+  .preferences-dialog {
+    top: 4px !important;
+    right: 4px !important;
+    bottom: 4px !important;
+    width: calc(100vw - 8px) !important;
+    height: calc(100vh - 8px) !important;
+  }
+
+  .oracle-dialog__header {
+    min-height: 50px !important;
+    padding-block: 6px !important;
+  }
+
+  .oracle-dialog__header p,
+  .preference-heading p {
+    display: none;
+  }
+
+  .oracle-dialog__footer {
+    min-height: 46px !important;
+    padding-block: 5px !important;
+  }
+
+  .preferences-tabs {
+    flex-direction: row;
+  }
+
+  .preferences-tabs button {
+    flex-basis: calc(33.333333% - 4px);
+  }
+
+  .preferences-tabs button {
+    min-height: 32px !important;
+    padding: 4px !important;
+    font-size: 9px !important;
+    line-height: 1.15 !important;
+  }
+
+  .curves-workspace__apply-bar {
+    min-height: 44px !important;
+    flex-basis: 44px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-reduced-motion="system"] *,
+  html[data-reduced-motion="system"] *::before,
+  html[data-reduced-motion="system"] *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+html[data-reduced-motion="reduce"] *,
+html[data-reduced-motion="reduce"] *::before,
+html[data-reduced-motion="reduce"] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+
+@media (forced-colors: active) {
+  html[data-theme] {
+    --bs-canvas: Canvas;
+    --bs-canvas-secondary: Canvas;
+    --bs-header: Canvas;
+    --bs-surface: Canvas;
+    --bs-surface-raised: Canvas;
+    --bs-surface-hover: Canvas;
+    --bs-field: Field;
+    --bs-text: CanvasText;
+    --bs-text-secondary: CanvasText;
+    --bs-text-quiet: GrayText;
+    --bs-border: CanvasText;
+    --bs-border-strong: CanvasText;
+    --bs-control-highlight: transparent;
+    --bs-control-shadow: transparent;
+  }
+
+  button,
+  input,
+  select,
+  textarea,
+  .replay-card,
+  .oracle-dialog {
+    forced-color-adjust: auto;
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "source": "Oracle Mod Icon New (Animated).mov",
+  "frame_width": 128,
+  "frame_height": 128,
+  "columns": 20,
+  "rows": 15,
+  "frame_count": 300,
+  "fps": 60.0,
+  "frame_duration_ms": 16.666666666666668,
+  "loop_ms": 5000.0,
+  "atlas_width": 2560,
+  "atlas_height": 1920,
+  "transparency": "rgba"
+}

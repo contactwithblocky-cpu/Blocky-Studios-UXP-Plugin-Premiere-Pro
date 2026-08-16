@@ -1,0 +1,92 @@
+[OracleNativeDrag] request=1 monotonicMs=17399500 thread=25176 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=1 monotonicMs=17399500 thread=25176 stage=PATH_VALIDATED
+[OracleNativeDrag] request=1 monotonicMs=17399500 thread=25176 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=1 monotonicMs=17399500 thread=25176 stage=WORKER_QUEUED
+[OracleNativeDrag] request=1 monotonicMs=17399500 thread=23008 stage=WORKER_AWAKENED
+[OracleNativeDrag] request=1 monotonicMs=17399500 thread=23008 stage=OLE_INITIALIZED hresult=0x0
+[OracleNativeDrag] request=1 monotonicMs=17399500 thread=23008 stage=SHELL_DATA_OBJECT_CREATED hresult=0x0
+[OracleNativeDrag] request=1 monotonicMs=17399500 thread=23008 stage=DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=1 monotonicMs=17399500 thread=23008 stage=SHELL_DROP_SOURCE_SELECTED
+[OracleNativeDrag] request=1 monotonicMs=17399500 thread=23008 stage=SH_DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=2 monotonicMs=17400890 thread=25176 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=3 monotonicMs=17402421 thread=25176 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=1 monotonicMs=17686562 thread=41056 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=1 monotonicMs=17686562 thread=41056 stage=PATH_VALIDATED
+[OracleNativeDrag] request=1 monotonicMs=17686562 thread=41056 stage=LEFT_BUTTON_NOT_HELD hresult=0x800704C7
+[OracleNativeDrag] request=2 monotonicMs=17686562 thread=41056 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=2 monotonicMs=17686562 thread=41056 stage=REQUEST_REJECTED hresult=0x80004004
+[OracleNativeDrag] request=1 monotonicMs=17715406 thread=27968 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=1 monotonicMs=17715406 thread=27968 stage=PATH_VALIDATED
+[OracleNativeDrag] request=1 monotonicMs=17715406 thread=27968 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=1 monotonicMs=17715421 thread=27968 stage=WORKER_QUEUED
+[OracleNativeDrag] request=1 monotonicMs=17715421 thread=35984 stage=WORKER_AWAKENED
+[OracleNativeDrag] request=1 monotonicMs=17715421 thread=35984 stage=OLE_INITIALIZED hresult=0x0
+[OracleNativeDrag] request=1 monotonicMs=17715421 thread=35984 stage=SHELL_DATA_OBJECT_CREATED hresult=0x0
+[OracleNativeDrag] request=1 monotonicMs=17715421 thread=35984 stage=DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=1 monotonicMs=17715421 thread=35984 stage=SHELL_DROP_SOURCE_SELECTED
+[OracleNativeDrag] request=1 monotonicMs=17715421 thread=35984 stage=INPUT_QUEUES_ATTACHED hresult=0x0
+[OracleNativeDrag] request=1 monotonicMs=17715421 thread=35984 stage=SH_DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=1 monotonicMs=17716484 thread=35984 stage=SH_DO_DRAG_DROP_RETURNED hresult=0x40100
+[OracleNativeDrag] request=1 monotonicMs=17716484 thread=35984 stage=INPUT_QUEUES_DETACHED hresult=0x0
+[OracleNativeDrag] request=1 monotonicMs=17716484 thread=35984 stage=DO_DRAG_DROP_RETURNED hresult=0x40100
+[OracleNativeDrag] request=1 monotonicMs=17716500 thread=27968 stage=PROMISE_RESOLVED
+[OracleNativeDrag] request=2 monotonicMs=17717421 thread=27968 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=2 monotonicMs=17717421 thread=27968 stage=PATH_VALIDATED
+[OracleNativeDrag] request=2 monotonicMs=17717421 thread=27968 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=2 monotonicMs=17717421 thread=27968 stage=WORKER_QUEUED
+[OracleNativeDrag] request=2 monotonicMs=17717421 thread=35984 stage=WORKER_AWAKENED
+[OracleNativeDrag] request=2 monotonicMs=17717421 thread=35984 stage=OLE_INITIALIZED hresult=0x0
+[OracleNativeDrag] request=2 monotonicMs=17717421 thread=35984 stage=SHELL_DATA_OBJECT_CREATED hresult=0x0
+[OracleNativeDrag] request=2 monotonicMs=17717421 thread=35984 stage=DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=2 monotonicMs=17717421 thread=35984 stage=SHELL_DROP_SOURCE_SELECTED
+[OracleNativeDrag] request=2 monotonicMs=17717421 thread=35984 stage=INPUT_QUEUES_ATTACHED hresult=0x0
+[OracleNativeDrag] request=2 monotonicMs=17717421 thread=35984 stage=SH_DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=2 monotonicMs=17717546 thread=35984 stage=SH_DO_DRAG_DROP_RETURNED hresult=0x40100
+[OracleNativeDrag] request=2 monotonicMs=17717562 thread=35984 stage=INPUT_QUEUES_DETACHED hresult=0x0
+[OracleNativeDrag] request=2 monotonicMs=17717562 thread=35984 stage=DO_DRAG_DROP_RETURNED hresult=0x40100
+[OracleNativeDrag] request=2 monotonicMs=17717562 thread=27968 stage=PROMISE_RESOLVED
+[OracleNativeDrag] request=3 monotonicMs=17720156 thread=27968 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=3 monotonicMs=17720156 thread=27968 stage=PATH_VALIDATED
+[OracleNativeDrag] request=3 monotonicMs=17720156 thread=27968 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=3 monotonicMs=17720156 thread=27968 stage=WORKER_QUEUED
+[OracleNativeDrag] request=3 monotonicMs=17720156 thread=35984 stage=WORKER_AWAKENED
+[OracleNativeDrag] request=3 monotonicMs=17720156 thread=35984 stage=OLE_INITIALIZED hresult=0x0
+[OracleNativeDrag] request=3 monotonicMs=17720156 thread=35984 stage=SHELL_DATA_OBJECT_CREATED hresult=0x0
+[OracleNativeDrag] request=3 monotonicMs=17720156 thread=35984 stage=DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=3 monotonicMs=17720156 thread=35984 stage=SHELL_DROP_SOURCE_SELECTED
+[OracleNativeDrag] request=3 monotonicMs=17720156 thread=35984 stage=INPUT_QUEUES_ATTACHED hresult=0x0
+[OracleNativeDrag] request=3 monotonicMs=17720156 thread=35984 stage=SH_DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=3 monotonicMs=17721046 thread=35984 stage=SH_DO_DRAG_DROP_RETURNED hresult=0x40100
+[OracleNativeDrag] request=3 monotonicMs=17721046 thread=35984 stage=INPUT_QUEUES_DETACHED hresult=0x0
+[OracleNativeDrag] request=3 monotonicMs=17721046 thread=35984 stage=DO_DRAG_DROP_RETURNED hresult=0x40100
+[OracleNativeDrag] request=3 monotonicMs=17721046 thread=27968 stage=PROMISE_RESOLVED
+[OracleNativeDrag] request=4 monotonicMs=17721921 thread=27968 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=4 monotonicMs=17721937 thread=27968 stage=PATH_VALIDATED
+[OracleNativeDrag] request=4 monotonicMs=17721937 thread=27968 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=4 monotonicMs=17721937 thread=27968 stage=WORKER_QUEUED
+[OracleNativeDrag] request=4 monotonicMs=17721937 thread=35984 stage=WORKER_AWAKENED
+[OracleNativeDrag] request=4 monotonicMs=17721937 thread=35984 stage=OLE_INITIALIZED hresult=0x0
+[OracleNativeDrag] request=4 monotonicMs=17721937 thread=35984 stage=SHELL_DATA_OBJECT_CREATED hresult=0x0
+[OracleNativeDrag] request=4 monotonicMs=17721937 thread=35984 stage=DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=4 monotonicMs=17721937 thread=35984 stage=SHELL_DROP_SOURCE_SELECTED
+[OracleNativeDrag] request=4 monotonicMs=17721937 thread=35984 stage=INPUT_QUEUES_ATTACHED hresult=0x0
+[OracleNativeDrag] request=4 monotonicMs=17721937 thread=35984 stage=SH_DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=4 monotonicMs=17722031 thread=35984 stage=SH_DO_DRAG_DROP_RETURNED hresult=0x40100
+[OracleNativeDrag] request=4 monotonicMs=17722031 thread=35984 stage=INPUT_QUEUES_DETACHED hresult=0x0
+[OracleNativeDrag] request=4 monotonicMs=17722031 thread=35984 stage=DO_DRAG_DROP_RETURNED hresult=0x40100
+[OracleNativeDrag] request=4 monotonicMs=17722046 thread=27968 stage=PROMISE_RESOLVED
+[OracleNativeDrag] request=5 monotonicMs=17723500 thread=27968 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=5 monotonicMs=17723500 thread=27968 stage=PATH_VALIDATED
+[OracleNativeDrag] request=5 monotonicMs=17723500 thread=27968 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=5 monotonicMs=17723500 thread=27968 stage=WORKER_QUEUED
+[OracleNativeDrag] request=5 monotonicMs=17723500 thread=35984 stage=WORKER_AWAKENED
+[OracleNativeDrag] request=5 monotonicMs=17723500 thread=35984 stage=OLE_INITIALIZED hresult=0x0
+[OracleNativeDrag] request=5 monotonicMs=17723500 thread=35984 stage=SHELL_DATA_OBJECT_CREATED hresult=0x0
+[OracleNativeDrag] request=5 monotonicMs=17723500 thread=35984 stage=DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=5 monotonicMs=17723500 thread=35984 stage=SHELL_DROP_SOURCE_SELECTED
+[OracleNativeDrag] request=5 monotonicMs=17723515 thread=35984 stage=INPUT_QUEUES_ATTACHED hresult=0x0
+[OracleNativeDrag] request=5 monotonicMs=17723515 thread=35984 stage=SH_DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=5 monotonicMs=17724546 thread=35984 stage=SH_DO_DRAG_DROP_RETURNED hresult=0x40100
+[OracleNativeDrag] request=5 monotonicMs=17724546 thread=35984 stage=INPUT_QUEUES_DETACHED hresult=0x0
+[OracleNativeDrag] request=5 monotonicMs=17724546 thread=35984 stage=DO_DRAG_DROP_RETURNED hresult=0x40100
+[OracleNativeDrag] request=5 monotonicMs=17724562 thread=27968 stage=PROMISE_RESOLVED

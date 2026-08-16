@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en" data-oracle-ui="2.0.14">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oracle</title>
+    <link rel="stylesheet" href="style.css?oracle-ui=2.0.14-m9-9" />
+    <link rel="stylesheet" href="styles/overdrive-m1.css?oracle-ui=2.0.14-m9-9" />
+    <link rel="stylesheet" href="styles/overdrive-m2.css?oracle-ui=2.0.14-m9-9" />
+    <link rel="stylesheet" href="styles/overdrive-m3.css?oracle-ui=2.0.14-m9-9" />
+    <link rel="stylesheet" href="styles/overdrive-m4.css?oracle-ui=2.0.14-m9-9" />
+    <link rel="stylesheet" href="styles/overdrive-m5.css?oracle-ui=2.0.14-m9-9" />
+    <link rel="stylesheet" href="styles/overdrive-m6.css?oracle-ui=2.0.14-m9-9" />
+    <link rel="stylesheet" href="styles/overdrive-m7.css?oracle-ui=2.0.14-m9-9" />
+  </head>
+  <body>
+    <div class="oracle-panel" data-oracle-panel-root="oraclePanel" data-oracle-panel-kind="main">
+      <header class="oracle-header">
+        <div class="oracle-header__side oracle-header__side--start">
+          <button
+            id="navigationToggle"
+            class="oracle-icon-button"
+            type="button"
+            aria-label="Open Oracle navigation"
+            aria-controls="navigationDrawer"
+            aria-expanded="false"
+            title="Navigation"
+          >
+            <span class="hamburger-icon" aria-hidden="true">&#9776;</span>
+          </button>
+        </div>
+
+        <div class="oracle-brand" aria-label="Oracle">
+          <div class="oracle-brand__emblem">
+            <div id="oracleLogo" class="oracle-logo" role="img" aria-label="Oracle logo"></div>
+          </div>
+          <h1>Oracle</h1>
+        </div>
+
+        <div class="oracle-header__side oracle-header__side--end">
+          <span
+            id="bridgeStatusIndicator"
+            class="bridge-status bridge-status--disconnected"
+            role="status"
+            aria-label="Listening for the local Oracle bridge"
+            title="Waiting for the local Oracle bridge"
+          >
+            <span class="bridge-status__dot" aria-hidden="true"></span>
+          </span>
+          <button
+            id="preferencesToggle"
+            class="profile-button"
+            type="button"
+            aria-label="Open Oracle profile and preferences"
+            aria-controls="preferencesPanel"
+            aria-expanded="false"
+            title="Profile and Preferences"
+          >
+            <img id="profileAvatarImage" class="profile-button__image" alt="" hidden />
+            <span id="profileAvatarInitials" class="profile-button__initials" aria-hidden="true">OR</span>
+          </button>
+        </div>
+      </header>
+
+      <section id="oracleStartupState" class="oracle-startup-state" role="status" aria-live="polite" data-state="loading">
+        <div class="oracle-startup-state__card">
+          <div class="oracle-startup-state__pixel" aria-hidden="true"><span></span></div>
+          <span class="oracle-kicker">Oracle workspace</span>
+          <h2 data-oracle-startup-title>Loading cinematic tools</h2>
+          <p data-oracle-startup-message>Connecting the replay library, native file services, and Premiere workspace.</p>
+        </div>
+      </section>
+
+      <button
+        id="navigationBackdrop"
+        class="oracle-layer-backdrop oracle-layer-backdrop--navigation"
+        type="button"
+        aria-label="Close Oracle navigation"
+        tabindex="-1"
+        hidden
+      ></button>
+      <nav id="navigationDrawer" class="navigation-drawer" aria-label="Oracle workspaces" tabindex="-1" hidden>
+        <header class="navigation-drawer__header">
+          <span class="oracle-kicker">Workspace</span>
+          <strong>Oracle tools</strong>
+        </header>
+        <div class="navigation-drawer__items">
+          <button class="navigation-item is-active" type="button" data-oracle-route="replays" aria-current="page">
+            <span class="navigation-item__icon navigation-item__icon--replays" aria-hidden="true"></span>
+            <span>Replays</span>
+          </button>
+          <button
+            class="navigation-item"
+            type="button"
+            data-oracle-route="curves"
+            title="Edit supported Premiere keyframe interpolation"
+          >
+            <span class="navigation-item__icon navigation-item__icon--curves" aria-hidden="true"></span>
+            <span>Curves</span>
+            <small>Premiere</small>
+          </button>
+          <button
+            class="navigation-item"
+            type="button"
+            data-oracle-route="quick-apply"
+            title="Search and apply host-supported Premiere effects and Oracle Recipes"
+          >
+            <span class="navigation-item__icon navigation-item__icon--quick" aria-hidden="true"></span>
+            <span>Quick Apply</span>
+            <small>Premiere</small>
+          </button>
+        </div>
+        <p class="navigation-drawer__status" role="note">Oracle workspaces share one verified project state.</p>
+      </nav>
+
+      <button
+        id="preferencesBackdrop"
+        class="oracle-layer-backdrop oracle-layer-backdrop--dialog"
+        type="button"
+        aria-label="Cancel and close Oracle preferences"
+        tabindex="-1"
+        hidden
+      ></button>
+
+      <section
+        id="preferencesPanel"
+        class="oracle-dialog preferences-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="preferencesTitle"
+        aria-describedby="preferencesDescription"
+        hidden
+      >
+        <header class="oracle-dialog__header">
+          <div>
+            <span class="oracle-kicker">Oracle workspace</span>
+            <h2 id="preferencesTitle">Preferences</h2>
+            <p id="preferencesDescription">Changes preview locally and persist only after Apply.</p>
+          </div>
+          <button
+            id="preferencesClose"
+            class="oracle-icon-button oracle-icon-button--compact"
+            type="button"
+            aria-label="Cancel and close preferences"
+            title="Cancel and close"
+          ><span class="pixel-close" aria-hidden="true"></span></button>
+        </header>
+
+        <div class="preferences-dialog__body">
+          <div class="preferences-tabs" role="tablist" aria-label="Preference sections">
+            <button id="preferencesTabProfile" type="button" role="tab" data-preferences-tab="profile" aria-controls="preferencesSectionProfile" aria-selected="true">Profile</button>
+            <button id="preferencesTabAppearance" type="button" role="tab" data-preferences-tab="appearance" aria-controls="preferencesSectionAppearance" aria-selected="false" tabindex="-1">Appearance</button>
+            <button id="preferencesTabReplays" type="button" role="tab" data-preferences-tab="replays" aria-controls="preferencesSectionReplays" aria-selected="false" tabindex="-1">Replay Library</button>
+            <button id="preferencesTabCurves" type="button" role="tab" data-preferences-tab="curves" aria-controls="preferencesSectionCurves" aria-selected="false" tabindex="-1">Curves</button>
+            <button id="preferencesTabQuickApply" type="button" role="tab" data-preferences-tab="quickApply" aria-controls="preferencesSectionQuickApply" aria-selected="false" tabindex="-1">Quick Apply</button>
+            <button id="preferencesTabData" type="button" role="tab" data-preferences-tab="data" aria-controls="preferencesSectionData" aria-selected="false" tabindex="-1">Data &amp; Diagnostics</button>
+          </div>
+
+          <div class="preferences-sections">
+            <section id="preferencesSectionProfile" class="preferences-section" role="tabpanel" aria-labelledby="preferencesTabProfile" data-preferences-section="profile">
+              <div class="preference-heading">
+                <span class="oracle-kicker">Identity</span>
+                <h3>Profile</h3>
+                <p>Your optimized avatar copy stays in Oracle's private plugin data.</p>
+              </div>
+              <div class="profile-editor">
+                <div class="profile-editor__preview" aria-label="Square avatar crop preview">
+                  <img data-avatar-preview-image alt="Avatar crop preview" hidden />
+                  <span data-avatar-preview-initials aria-hidden="true">OR</span>
+                </div>
+                <div class="profile-editor__actions">
+                  <button class="oracle-button" type="button" data-preferences-action="choose-avatar">Choose / Replace</button>
+                  <button class="oracle-button oracle-button--quiet" type="button" data-preferences-action="remove-avatar" disabled>Remove</button>
+                </div>
+              </div>
+              <label class="oracle-field">
+                <span>Display name</span>
+                <input type="text" maxlength="40" data-pref="profile.displayName" autocomplete="off" />
+              </label>
+              <div class="preference-grid preference-grid--three">
+                <label class="oracle-field oracle-field--range"><span>Zoom <output data-value-for="profile.zoom">1</output></span><input type="range" min="1" max="3" step="0.05" data-pref="profile.zoom" /></label>
+                <label class="oracle-field oracle-field--range"><span>Pan X <output data-value-for="profile.panX">0</output></span><input type="range" min="-1" max="1" step="0.05" data-pref="profile.panX" /></label>
+                <label class="oracle-field oracle-field--range"><span>Pan Y <output data-value-for="profile.panY">0</output></span><input type="range" min="-1" max="1" step="0.05" data-pref="profile.panY" /></label>
+              </div>
+            </section>
+
+            <section id="preferencesSectionAppearance" class="preferences-section" role="tabpanel" aria-labelledby="preferencesTabAppearance" data-preferences-section="appearance" hidden>
+              <div class="preference-heading"><span class="oracle-kicker">Minecraft UI</span><h3>Appearance</h3><p>One reusable picker controls every color token.</p></div>
+              <div class="color-token-grid">
+                <button class="color-token" type="button" data-color-token="appearance.accent"><span class="color-token__swatch"></span><span><strong>Accent</strong><small data-color-value></small></span></button>
+                <button class="color-token" type="button" data-color-token="appearance.background"><span class="color-token__swatch"></span><span><strong>Background</strong><small data-color-value></small></span></button>
+                <button class="color-token" type="button" data-color-token="appearance.border"><span class="color-token__swatch"></span><span><strong>Border</strong><small data-color-value></small></span></button>
+                <button class="color-token" type="button" data-color-token="appearance.focus"><span class="color-token__swatch"></span><span><strong>Focus</strong><small data-color-value></small></span></button>
+              </div>
+              <p class="contrast-status" data-contrast-status role="status"></p>
+              <div class="preference-grid">
+                <label class="oracle-field oracle-field--range"><span>Interface scale <output data-value-for="appearance.fontScale">1</output></span><input type="range" min="0.85" max="1.3" step="0.05" data-pref="appearance.fontScale" /></label>
+                <label class="oracle-field"><span>Motion</span><select data-pref="appearance.reducedMotion"><option value="system">Follow system</option><option value="reduce">Reduce motion</option><option value="allow">Allow motion</option></select></label>
+              </div>
+              <div class="preference-actions"><button class="oracle-button" type="button" data-preferences-action="import-theme">Import Theme</button><button class="oracle-button" type="button" data-preferences-action="export-theme">Export Theme</button></div>
+            </section>
+
+            <section id="preferencesSectionReplays" class="preferences-section" role="tabpanel" aria-labelledby="preferencesTabReplays" data-preferences-section="replays" hidden>
+              <div class="preference-heading"><span class="oracle-kicker">Library</span><h3>Replay Library</h3><p>Grid, metadata, and the bounded permanent thumbnail cache use these shared settings.</p></div>
+              <div class="preference-grid">
+                <label class="oracle-field oracle-field--range"><span>Grid columns <output data-value-for="replay.gridColumns">3</output></span><input type="range" min="1" max="6" step="1" data-pref="replay.gridColumns" /></label>
+                <label class="oracle-field oracle-field--range"><span>Thumbnail frame <output data-value-for="replay.thumbnailPosition">0.5</output></span><input type="range" min="0.1" max="0.9" step="0.05" data-pref="replay.thumbnailPosition" /></label>
+                <label class="oracle-field"><span>Cache limit (MB)</span><input type="number" min="64" max="4096" step="64" data-pref="replay.cacheLimitMb" /></label>
+                <label class="oracle-field"><span>Date format</span><select data-pref="replay.dateFormat"><option value="system">System</option><option value="long">Long</option><option value="short">Short</option><option value="iso">ISO</option></select></label>
+                <label class="oracle-field"><span>Time format</span><select data-pref="replay.timeFormat"><option value="system">System</option><option value="12">12 hour</option><option value="24">24 hour</option></select></label>
+              </div>
+              <div class="preference-subsection"><div><strong>Replay roots</strong><small>Configured roots use bounded native watching; known replay parents are watched without scanning entire drives.</small></div><button class="oracle-button" type="button" data-preferences-action="add-replay-root">Add Root</button></div>
+              <ul class="preference-list" data-replay-roots></ul>
+              <p class="contrast-status" data-replay-watcher-status role="status">Native replay watcher is starting.</p>
+              <div class="preference-subsection"><div><strong>Relink search roots</strong><small>Optional manual-relink searches are limited to these explicit folders (maximum 8); Oracle never scans entire drives.</small></div><button class="oracle-button" type="button" data-preferences-action="add-relink-root">Add Relink Root</button></div>
+              <ul class="preference-list" data-relink-roots></ul>
+              <label class="oracle-check"><input type="checkbox" data-pref="replay.archiveNew" /><span>Archive new replays by default</span></label>
+              <label class="oracle-check"><input type="checkbox" data-pref="replay.deleteFromDisk" /><span>Offer source-file Recycle Bin option during confirmed delete</span></label>
+              <button class="oracle-button" type="button" data-preferences-action="clear-thumbnail-cache">Clear thumbnail cache</button>
+            </section>
+
+            <section id="preferencesSectionCurves" class="preferences-section" role="tabpanel" aria-labelledby="preferencesTabCurves" data-preferences-section="curves" hidden>
+              <div class="preference-heading"><span class="oracle-kicker">Graph defaults</span><h3>Curves</h3><p>Saved now for the verified Premiere Curves workspace.</p></div>
+              <div class="preference-grid">
+                <label class="oracle-check"><input type="checkbox" data-pref="curves.gridVisible" /><span>Show grid</span></label>
+                <label class="oracle-check"><input type="checkbox" data-pref="curves.snapping" /><span>Enable snapping</span></label>
+                <label class="oracle-field"><span>Subdivisions</span><input type="number" min="2" max="12" data-pref="curves.subdivisions" /></label>
+                <label class="oracle-field"><span>Handle size</span><input type="number" min="8" max="24" data-pref="curves.handleSize" /></label>
+                <label class="oracle-field"><span>Default mode</span><select data-pref="curves.defaultMode"><option value="native">Native interpolation</option><option value="baked">Baked Oracle curve</option></select></label>
+                <label class="oracle-field"><span>Sample budget</span><input type="number" min="8" max="240" data-pref="curves.sampleBudget" /></label>
+                <label class="oracle-field"><span>Warning threshold</span><input type="number" min="16" max="1000" data-pref="curves.warningThreshold" /></label>
+              </div>
+              <div class="color-token-grid">
+                <button class="color-token" type="button" data-color-token="curves.gridColor"><span class="color-token__swatch"></span><span><strong>Grid color</strong><small data-color-value></small></span></button>
+                <button class="color-token" type="button" data-color-token="curves.curveColor"><span class="color-token__swatch"></span><span><strong>Curve color</strong><small data-color-value></small></span></button>
+              </div>
+              <p class="contrast-status" data-curves-contrast-status role="status"></p>
+            </section>
+
+            <section id="preferencesSectionQuickApply" class="preferences-section" role="tabpanel" aria-labelledby="preferencesTabQuickApply" data-preferences-section="quickApply" hidden>
+              <div class="preference-heading"><span class="oracle-kicker">Effect defaults</span><h3>Quick Apply</h3><p>Control the verified Premiere effect index, duplicate handling, and recipe defaults.</p></div>
+              <div class="preference-grid">
+                <label class="oracle-check"><input type="checkbox" data-pref="quickApply.favoritesFirst" /><span>Favorites first</span></label>
+                <label class="oracle-field"><span>Grouping</span><select data-pref="quickApply.grouping"><option value="type">Video / Audio</option><option value="category">Category</option><option value="none">None</option></select></label>
+                <label class="oracle-field"><span>Default media</span><select data-pref="quickApply.defaultMedia"><option value="auto">Automatic</option><option value="video">Video</option><option value="audio">Audio</option></select></label>
+                <label class="oracle-field"><span>Recent history</span><input type="number" min="5" max="100" data-pref="quickApply.recentLimit" /></label>
+              </div>
+              <div class="preference-subsection" role="note"><div><strong>Premiere command</strong><small>Use Window &gt; UXP Plugins &gt; Oracle &gt; Open Oracle Quick Apply. Premiere 26.3 does not expose assignable UXP shortcuts.</small></div></div>
+            </section>
+
+            <section id="preferencesSectionData" class="preferences-section" role="tabpanel" aria-labelledby="preferencesTabData" data-preferences-section="data" hidden>
+              <div class="preference-heading"><span class="oracle-kicker">Private by default</span><h3>Data &amp; Diagnostics</h3><p>Settings and support exports exclude avatar bytes, thumbnails, media, and full private paths.</p></div>
+              <p class="storage-summary" data-storage-summary></p>
+              <div class="preference-subsection"><div><strong>Runtime diagnostics</strong><small data-diagnostics-summary role="status">No retained diagnostics.</small></div></div>
+              <ol class="preference-list diagnostics-list" data-diagnostics-records aria-label="Recent privacy-safe Oracle diagnostics"><li class="preference-list__empty">No retained diagnostics.</li></ol>
+              <div class="preference-actions"><button class="oracle-button" type="button" data-preferences-action="import-settings">Import Settings</button><button class="oracle-button" type="button" data-preferences-action="export-settings">Export Settings</button><button class="oracle-button" type="button" data-preferences-action="support-bundle">Support Bundle</button></div>
+              <div class="preference-subsection"><div><strong>Replay library metadata</strong><small>Explicit metadata exports include replay source paths, collections, Curves presets, and Quick Apply state. They never include media, thumbnail image bytes, or avatar bytes. Import replaces the current metadata only after confirmation.</small></div></div>
+              <div class="preference-actions"><button class="oracle-button" type="button" data-preferences-action="import-metadata">Import &amp; Replace Metadata</button><button class="oracle-button" type="button" data-preferences-action="export-metadata">Export Metadata</button></div>
+            </section>
+          </div>
+        </div>
+
+        <div id="preferencesError" class="preferences-error" role="alert" hidden></div>
+        <footer class="oracle-dialog__footer">
+          <button
+            class="oracle-button oracle-button--quiet"
+            type="button"
+            data-preferences-action="reset-section"
+            aria-label="Reset current preference section"
+            title="Reset current preference section"
+          >Reset</button>
+          <span class="oracle-dialog__footer-spacer"></span>
+          <button id="preferencesCancel" class="oracle-button" type="button">Cancel</button>
+          <button id="preferencesApply" class="oracle-button oracle-button--primary" type="button">Apply</button>
+        </footer>
+
+        <div id="colorPickerPopover" class="oracle-color-picker" role="dialog" aria-label="Color picker" hidden>
+          <div class="oracle-color-picker__plane" data-color-plane role="img" aria-label="Color plane preview"><span data-color-thumb aria-hidden="true"></span></div>
+          <div class="oracle-color-picker__axis-grid">
+            <label class="oracle-field oracle-field--range"><span>Saturation <output data-color-saturation-value>0%</output></span><input type="range" min="0" max="100" step="1" data-color-saturation /></label>
+            <label class="oracle-field oracle-field--range"><span>Brightness <output data-color-brightness-value>100%</output></span><input type="range" min="0" max="100" step="1" data-color-brightness /></label>
+          </div>
+          <label class="oracle-field oracle-field--range"><span>Hue</span><input type="range" min="0" max="359" step="1" data-color-hue /></label>
+          <label class="oracle-field"><span>Hex</span><input type="text" maxlength="7" data-color-hex /></label>
+          <div class="oracle-color-picker__rgb"><label class="oracle-field"><span>R</span><input type="number" min="0" max="255" data-color-red /></label><label class="oracle-field"><span>G</span><input type="number" min="0" max="255" data-color-green /></label><label class="oracle-field"><span>B</span><input type="number" min="0" max="255" data-color-blue /></label></div>
+          <div class="oracle-color-picker__actions">
+            <button class="oracle-button oracle-button--quiet" type="button" data-color-reset>Reset</button>
+            <span class="oracle-dialog__footer-spacer"></span>
+            <button class="oracle-button" type="button" data-color-cancel>Cancel</button>
+            <button class="oracle-button oracle-button--primary" type="button" data-color-done>Apply</button>
+          </div>
+        </div>
+      </section>
+
+      <main id="replayScroller" class="replay-scroller" data-oracle-view="replays">
+        <section id="recentExports" class="recent-exports" aria-labelledby="recentExportsTitle" hidden>
+          <header class="recent-exports__header">
+            <div class="recent-exports__identity">
+              <span class="recent-exports__label" aria-hidden="true"></span>
+              <h2 id="recentExportsTitle" class="recent-exports-title"><span>Recent Exports</span><span class="recent-exports__count-wrap" aria-hidden="true">(<span id="exportCount" class="recent-exports__count">0</span>)</span></h2>
+            </div>
+            <div class="recent-exports__inventory">
+              <label class="grid-scale" for="gridScale"><span class="grid-scale__label">Grid <span id="gridColumnCount" class="grid-scale__count">3</span></span><input id="gridScale" type="range" min="1" max="6" step="1" value="3" aria-label="Replay grid columns" /></label>
+            </div>
+          </header>
+          <div id="replayToolbar" class="replay-workspace" aria-label="Replay library controls">
+            <div class="replay-workspace__tabs" role="tablist" aria-label="Replay views">
+              <button class="replay-view-tab is-active" type="button" role="tab" aria-selected="true" data-replay-view="all">All</button>
+              <button class="replay-view-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-replay-view="recent" title="Exports from the last 30 days">Recent</button>
+              <button class="replay-view-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-replay-view="most-used" title="Replays used most often in Oracle and Premiere">Most used</button>
+              <button class="replay-view-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-replay-view="collections">Collections</button>
+              <button class="replay-view-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-replay-view="favorites">Favorites</button>
+              <button class="replay-view-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-replay-view="archived">Archived</button>
+              <button class="replay-view-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-replay-view="missing">Missing</button>
+            </div>
+            <div class="replay-workspace__search-row">
+              <label class="replay-search"><span class="sr-only">Search replays</span><input id="replaySearch" type="search" autocomplete="off" placeholder="Search replays, tags, notes, or path" /></label>
+              <button id="replaySearchClear" class="oracle-button oracle-button--quiet replay-search__clear" type="button" data-replay-search-clear disabled>Clear</button>
+              <button id="replayFilterToggle" class="oracle-button replay-filter-toggle" type="button" aria-expanded="false" aria-controls="replayFilterPanel" data-replay-filter-toggle>Filters</button>
+              <span id="replayResultSummary" class="replay-workspace__summary" role="status">0 replays</span>
+            </div>
+            <div id="replayFilterPanel" class="replay-filter-panel" hidden>
+              <label class="oracle-field"><span>Collection</span><select data-replay-filter="collection" disabled title="No collections are available yet"><option value="">All collections</option></select></label>
+              <label class="oracle-field"><span>Tag</span><select data-replay-filter="tag" disabled title="No tags are available yet"><option value="">All tags</option></select></label>
+              <label class="oracle-field"><span>Path root</span><select data-replay-filter="root" disabled title="No path roots are available yet"><option value="">All path roots</option></select></label>
+              <label class="oracle-field"><span>From date</span><input type="date" data-replay-filter="date-from" /></label>
+              <label class="oracle-field"><span>To date</span><input type="date" data-replay-filter="date-to" /></label>
+              <label class="oracle-field"><span>Minimum duration (seconds)</span><input type="number" min="0" step="0.01" inputmode="decimal" data-replay-filter="duration-min" /></label>
+              <label class="oracle-field"><span>Maximum duration (seconds)</span><input type="number" min="0" step="0.01" inputmode="decimal" data-replay-filter="duration-max" /></label>
+              <label class="oracle-check"><input type="checkbox" data-replay-filter="favorite" /><span>Favorites only</span></label>
+              <button class="oracle-button oracle-button--quiet replay-filter-panel__reset" type="button" data-replay-filter-reset>Reset filters</button>
+            </div>
+            <div id="replayBatchBar" class="replay-batch-bar" role="region" aria-label="Selected replay actions" hidden>
+              <strong id="replaySelectionSummary">0 selected</strong>
+              <div class="replay-batch-bar__actions">
+                <button class="oracle-button oracle-button--quiet" type="button" data-replay-batch-action="collections">Collections</button>
+                <button class="oracle-button oracle-button--quiet" type="button" data-replay-batch-action="tags">Tags</button>
+                <button class="oracle-button oracle-button--quiet" type="button" data-replay-batch-action="favorite">Favorite</button>
+                <button class="oracle-button oracle-button--quiet" type="button" data-replay-batch-action="archive">Archive</button>
+                <button class="oracle-button oracle-button--quiet" type="button" data-replay-batch-action="relink">Relink</button>
+                <button class="oracle-button oracle-button--quiet" type="button" data-replay-batch-action="clear">Clear</button>
+              </div>
+            </div>
+            <div id="replayFilteredEmpty" class="replay-filtered-empty" hidden><span>No replays match this view or filter.</span><button class="oracle-button oracle-button--quiet" type="button" data-replay-filter-reset>Clear filters</button></div>
+          </div>
+          <div class="recent-exports__content"><section id="replayGrid" class="replay-grid-container" role="grid" aria-label="Completed Oracle exports" aria-multiselectable="true"></section></div>
+        </section>
+
+        <section id="emptyState" class="empty-state" aria-live="polite">
+          <div class="empty-state__surface">
+            <div class="empty-state__mark" aria-hidden="true"><span></span></div>
+            <span class="oracle-kicker">Live import queue</span>
+            <h2>Waiting for an export</h2>
+            <p>Completed Oracle renders will sync into Premiere and appear here automatically.</p>
+            <div class="empty-state__hint"><span class="empty-state__hint-light" aria-hidden="true"></span><span>No manual relinking required</span></div>
+          </div>
+        </section>
+      </main>
+
+      <section
+        id="curvesWorkspace"
+        class="curves-workspace"
+        data-oracle-view="curves"
+        aria-labelledby="curvesWorkspaceTitle"
+        tabindex="-1"
+        hidden
+      >
+        <header class="curves-workspace__header">
+          <div class="curves-workspace__identity">
+            <span class="oracle-kicker">Premiere keyframes</span>
+            <h2 id="curvesWorkspaceTitle">Curves</h2>
+          </div>
+          <p class="curves-workspace__header-note">Preview locally, then commit with verified readback and one Premiere Undo step.</p>
+        </header>
+
+        <div id="curvesWorkspaceState" class="curves-workspace__state" data-state="loading" role="status" aria-live="polite">
+          <span class="curves-workspace__state-mark" aria-hidden="true"></span>
+          <div class="curves-workspace__state-copy">
+            <strong id="curvesStateTitle">Loading Curves</strong>
+            <span id="curvesStateMessage">Inspecting the active sequence and selected clips.</span>
+          </div>
+          <button id="curvesRefresh" class="oracle-button oracle-button--quiet" type="button">Refresh</button>
+        </div>
+
+        <div id="curvesWorkspaceContent" class="curves-workspace__content" hidden>
+          <div class="curves-editor">
+            <div class="curves-selector-bar" aria-label="Curve target">
+              <label class="oracle-field"><span>Clip</span><select id="curvesClipSelect"><option value="__all__">All selected clips</option></select></label>
+              <label class="oracle-field"><span>Component</span><select id="curvesComponentSelect"><option value="">Choose component</option></select></label>
+              <label class="oracle-field"><span>Property</span><select id="curvesPropertySelect"><option value="">Choose property</option></select></label>
+            </div>
+
+            <section class="curves-graph-card" aria-labelledby="curvesGraphTitle">
+              <div class="curves-graph-card__toolbar">
+                <div class="curves-mode-switch" role="group" aria-label="Curve apply mode">
+                  <button id="curvesModeNative" class="oracle-button oracle-button--quiet is-active" type="button" aria-pressed="true">Native</button>
+                  <button id="curvesModeBaked" class="oracle-button oracle-button--quiet" type="button" aria-pressed="false">Baked</button>
+                  <label class="oracle-field"><span class="sr-only">Native interpolation</span><select id="curvesNativeInterpolation" aria-label="Native interpolation"><option value="LINEAR">Linear</option><option value="BEZIER">Bezier</option><option value="HOLD">Hold</option></select></label>
+                </div>
+                <button id="curvesZoomOut" class="oracle-button oracle-button--quiet" type="button" aria-label="Zoom out" title="Zoom out">−</button>
+                <button id="curvesZoomIn" class="oracle-button oracle-button--quiet" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+                <button id="curvesFit" class="oracle-button oracle-button--quiet" type="button">Fit</button>
+                <button id="curvesReset" class="oracle-button oracle-button--quiet" type="button">Reset</button>
+                <button id="curvesMirror" class="oracle-button oracle-button--quiet" type="button">Mirror</button>
+                <button id="curvesReverse" class="oracle-button oracle-button--quiet" type="button">Reverse</button>
+                <button id="curvesCopy" class="oracle-button oracle-button--quiet" type="button">Copy</button>
+                <button id="curvesPaste" class="oracle-button oracle-button--quiet" type="button" disabled>Paste</button>
+              </div>
+
+              <div class="curves-graph-wrap">
+                <h3 id="curvesGraphTitle" class="sr-only">Cubic curve editor</h3>
+                <p id="curvesGraphDescription" class="sr-only">Graphical curve preview. Use the four labeled point value fields after the graph for precise keyboard and assistive-technology control.</p>
+                <svg id="curvesGraph" class="curves-graph" viewBox="-5 -25 110 150" role="img" aria-labelledby="curvesGraphTitle" aria-describedby="curvesGraphDescription">
+                  <rect class="curves-graph__background" x="-1000" y="-1000" width="2000" height="2000"></rect>
+                  <g id="curvesGraphGrid" class="curves-graph__grid" aria-hidden="true">
+                    <line x1="0" y1="0" x2="0" y2="100"></line><line x1="25" y1="0" x2="25" y2="100"></line><line x1="50" y1="0" x2="50" y2="100"></line><line x1="75" y1="0" x2="75" y2="100"></line><line x1="100" y1="0" x2="100" y2="100"></line>
+                    <line x1="0" y1="0" x2="100" y2="0"></line><line x1="0" y1="25" x2="100" y2="25"></line><line x1="0" y1="50" x2="100" y2="50"></line><line x1="0" y1="75" x2="100" y2="75"></line><line x1="0" y1="100" x2="100" y2="100"></line>
+                  </g>
+                  <line class="curves-graph__axis" x1="0" y1="100" x2="100" y2="100"></line>
+                  <line class="curves-graph__axis" x1="0" y1="100" x2="0" y2="0"></line>
+                  <g id="curvesOverlayGroup" aria-hidden="true"></g>
+                  <path id="curvesGraphPath" class="curves-graph__curve" d="M 0 100 C 25 75 75 25 100 0"></path>
+                  <line id="curvesHandleOneLine" class="curves-graph__handle-line" x1="0" y1="100" x2="25" y2="75"></line>
+                  <line id="curvesHandleTwoLine" class="curves-graph__handle-line" x1="100" y1="0" x2="75" y2="25"></line>
+                  <circle class="curves-graph__endpoint" cx="0" cy="100" r="2.5"></circle>
+                  <circle class="curves-graph__endpoint" cx="100" cy="0" r="2.5"></circle>
+                  <circle id="curvesHandleOne" class="curves-graph__handle" cx="25" cy="75" r="4" aria-hidden="true" focusable="false"></circle>
+                  <circle id="curvesHandleTwo" class="curves-graph__handle" cx="75" cy="25" r="4" aria-hidden="true" focusable="false"></circle>
+                  <text class="curves-graph__axis-label" x="1" y="108">Start</text>
+                  <text class="curves-graph__axis-label" x="88" y="108">End</text>
+                </svg>
+              </div>
+
+              <div class="curves-numeric-points" aria-label="Control point values">
+                <label class="oracle-field"><span>Point 1 X</span><input id="curvesPointOneX" type="number" min="0" max="1" step="0.001" value="0.25" /></label>
+                <label class="oracle-field"><span>Point 1 Y</span><input id="curvesPointOneY" type="number" min="-8" max="8" step="0.001" value="0.25" /></label>
+                <label class="oracle-field"><span>Point 2 X</span><input id="curvesPointTwoX" type="number" min="0" max="1" step="0.001" value="0.75" /></label>
+                <label class="oracle-field"><span>Point 2 Y</span><input id="curvesPointTwoY" type="number" min="-8" max="8" step="0.001" value="0.75" /></label>
+              </div>
+            </section>
+
+            <div class="curves-workspace__apply-bar">
+              <p id="curvesStatus" class="curves-workspace__apply-status" role="status">Preview is local until Apply.</p>
+              <span id="curvesSamplePreview" class="curves-workspace__apply-status">No generated keys in Native mode</span>
+              <button id="curvesApply" class="oracle-button oracle-button--primary" type="button" disabled>Apply to 0</button>
+            </div>
+          </div>
+
+          <aside class="curves-inspector" aria-label="Curve details and presets">
+            <section class="curves-inspector__section">
+              <h3>Property details</h3>
+              <dl class="curves-property-summary">
+                <div class="curves-property-summary__row"><dt>Clip</dt><dd id="curvesClipSummary">—</dd></div>
+                <div class="curves-property-summary__row"><dt>Component</dt><dd id="curvesComponentSummary">—</dd></div>
+                <div class="curves-property-summary__row"><dt>Property</dt><dd id="curvesPropertySummary">—</dd></div>
+                <div class="curves-property-summary__row"><dt>Endpoints</dt><dd id="curvesEndpointsSummary">—</dd></div>
+                <div class="curves-property-summary__row"><dt>Interpolation</dt><dd id="curvesInterpolationSummary">—</dd></div>
+                <div class="curves-property-summary__row"><dt>Targets</dt><dd id="curvesCompatibilitySummary">No compatible target</dd></div>
+              </dl>
+              <p id="curvesBakedReason" class="curves-baked-reason">Baked curves are enabled only after exact host readback and Undo proof.</p>
+            </section>
+
+            <section class="curves-inspector__section">
+              <h3>Curve presets</h3>
+              <div class="curves-preset-tabs" role="tablist" aria-label="Curve preset source">
+                <button id="curvesPresetBuiltInTab" class="oracle-button oracle-button--quiet" type="button" role="tab" aria-selected="true">Built-in</button>
+                <button id="curvesPresetUserTab" class="oracle-button oracle-button--quiet" type="button" role="tab" aria-selected="false" tabindex="-1">User</button>
+              </div>
+              <label class="curves-preset-search"><span class="sr-only">Search curve presets</span><input id="curvesPresetSearch" type="search" autocomplete="off" placeholder="Search curves" /></label>
+              <div class="curves-preset-organization" aria-label="User preset organization">
+                <label class="oracle-field"><span>Folder</span><select id="curvesPresetFolder" disabled><option value="">Unfiled</option></select></label>
+                <label class="oracle-field"><span>Tags</span><input id="curvesPresetTags" type="text" maxlength="1200" autocomplete="off" placeholder="hero, impact" disabled /></label>
+                <button id="curvesPresetMetadata" class="oracle-button" type="button" disabled>Save Tags &amp; Folder</button>
+                <div class="curves-preset-folder-actions" aria-label="Curve folder actions">
+                  <button id="curvesPresetFolderCreate" class="oracle-button oracle-button--quiet" type="button">New Folder</button>
+                  <button id="curvesPresetFolderRename" class="oracle-button oracle-button--quiet" type="button" disabled>Rename Folder</button>
+                  <button id="curvesPresetFolderDelete" class="oracle-button oracle-button--quiet" type="button" disabled>Delete Folder</button>
+                </div>
+              </div>
+              <div id="curvesPresetList" class="curves-preset-list" role="listbox" aria-label="Curve presets"></div>
+              <p id="curvesPresetEmpty" class="curves-preset-empty" hidden>No curve presets match this search.</p>
+              <div class="curves-preset-actions">
+                <button id="curvesPresetCreate" class="oracle-button" type="button">New</button>
+                <button id="curvesPresetSaveAs" class="oracle-button" type="button">Save As</button>
+                <button id="curvesPresetOverwrite" class="oracle-button oracle-button--quiet" type="button">Overwrite</button>
+                <button id="curvesPresetRename" class="oracle-button oracle-button--quiet" type="button">Rename</button>
+                <button id="curvesPresetDuplicate" class="oracle-button oracle-button--quiet" type="button">Duplicate</button>
+                <button id="curvesPresetDelete" class="oracle-button oracle-button--quiet" type="button">Delete</button>
+                <button id="curvesPresetMoveUp" class="oracle-button oracle-button--quiet" type="button" aria-label="Move preset up">Move Up</button>
+                <button id="curvesPresetMoveDown" class="oracle-button oracle-button--quiet" type="button" aria-label="Move preset down">Move Down</button>
+                <button id="curvesPresetFavorite" class="oracle-button oracle-button--quiet" type="button" aria-pressed="false">Favorite</button>
+                <button id="curvesPresetImport" class="oracle-button" type="button">Import JSON</button>
+                <button id="curvesPresetExport" class="oracle-button" type="button">Export JSON</button>
+              </div>
+              <p class="curves-json-note">Oracle curves use versioned JSON. Premiere .prfpset files are intentionally unsupported.</p>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <section
+        id="quickApplyWorkspace"
+        class="quick-apply-workspace"
+        data-oracle-view="quick-apply"
+        aria-labelledby="quickApplyWorkspaceTitle"
+        tabindex="-1"
+        hidden
+      >
+        <header class="quick-apply-workspace__header">
+          <div class="quick-apply-workspace__identity">
+            <span class="oracle-kicker">Premiere effects</span>
+            <h2 id="quickApplyWorkspaceTitle">Quick Apply</h2>
+          </div>
+          <p class="quick-apply-workspace__header-note">Host-supported effects and ordered Oracle Recipes, committed only after verified Premiere readback.</p>
+        </header>
+
+        <div id="quickApplyState" class="quick-apply-state" data-state="loading" role="status" aria-live="polite">
+          <span class="quick-apply-state__mark" aria-hidden="true"></span>
+          <div class="quick-apply-state__copy">
+            <strong id="quickApplyStateTitle">Indexing Premiere effects</strong>
+            <span id="quickApplyStateMessage">Reading the installed video and audio effect factories.</span>
+          </div>
+          <button id="quickApplyRefresh" class="oracle-button oracle-button--quiet" type="button">Refresh</button>
+        </div>
+
+        <div id="quickApplyContent" class="quick-apply-content" hidden>
+          <section class="quick-apply-browser" aria-label="Supported effects and recipes">
+            <div class="quick-apply-search-row">
+              <label class="quick-apply-search"><span class="sr-only">Search supported effects and Oracle Recipes</span><input id="quickApplySearch" type="search" autocomplete="off" placeholder="Search Premiere effects or Oracle Recipes" /></label>
+              <button id="quickApplySearchClear" class="oracle-button oracle-button--quiet" type="button" disabled>Clear</button>
+            </div>
+            <div class="quick-apply-scopes" role="toolbar" aria-label="Quick Apply result scope">
+              <button class="quick-apply-scope is-active" type="button" data-quick-apply-scope="all" aria-pressed="true">All</button>
+              <button class="quick-apply-scope" type="button" data-quick-apply-scope="video" aria-pressed="false" tabindex="-1">Video</button>
+              <button class="quick-apply-scope" type="button" data-quick-apply-scope="audio" aria-pressed="false" tabindex="-1">Audio</button>
+              <button class="quick-apply-scope" type="button" data-quick-apply-scope="favorites" aria-pressed="false" tabindex="-1">Favorites</button>
+              <button class="quick-apply-scope" type="button" data-quick-apply-scope="recent" aria-pressed="false" tabindex="-1">Recent</button>
+              <button class="quick-apply-scope" type="button" data-quick-apply-scope="recipes" aria-pressed="false" tabindex="-1">Recipes</button>
+            </div>
+            <div class="quick-apply-selection-summary">
+              <span id="quickApplySelectionSummary">Choose one or more timeline clips.</span>
+              <span id="quickApplyResultsSummary" role="status">0 results</span>
+            </div>
+            <div class="quick-apply-results-wrap">
+              <div id="quickApplyResults" class="quick-apply-results" role="listbox" aria-label="Quick Apply results"></div>
+              <p id="quickApplyEmpty" class="quick-apply-empty">No supported result is available in this view.</p>
+            </div>
+          </section>
+
+          <aside class="quick-apply-inspector" aria-label="Quick Apply actions and Oracle Recipes">
+            <section class="quick-apply-inspector__section">
+              <h3>Selected result</h3>
+              <div class="quick-apply-actions">
+                <button id="quickApplyApply" class="oracle-button oracle-button--primary quick-apply-apply" type="button" disabled>Apply</button>
+                <button id="quickApplyFavorite" class="oracle-button oracle-button--quiet" type="button" aria-pressed="false" disabled>Favorite</button>
+              </div>
+            </section>
+            <section class="quick-apply-inspector__section">
+              <h3>Oracle Recipes</h3>
+              <div class="quick-apply-recipe-actions">
+                <button id="quickApplyRecipeCreate" class="oracle-button" type="button">New</button>
+                <button id="quickApplyRecipeAddEffect" class="oracle-button" type="button" disabled>Add Effect</button>
+                <button id="quickApplyRecipeRename" class="oracle-button oracle-button--quiet" type="button" disabled>Rename</button>
+                <button id="quickApplyRecipeDuplicate" class="oracle-button oracle-button--quiet" type="button" disabled>Duplicate</button>
+                <button id="quickApplyRecipeMoveUp" class="oracle-button oracle-button--quiet" type="button" disabled>Move Up</button>
+                <button id="quickApplyRecipeMoveDown" class="oracle-button oracle-button--quiet" type="button" disabled>Move Down</button>
+                <button id="quickApplyRecipeDelete" class="oracle-button oracle-button--quiet" type="button" disabled>Delete</button>
+                <button id="quickApplyRecipeImport" class="oracle-button" type="button">Import JSON</button>
+                <button id="quickApplyRecipeExport" class="oracle-button" type="button" disabled>Export JSON</button>
+              </div>
+              <p class="curves-json-note">Recipes use Oracle's versioned JSON. Premiere .prfpset files are intentionally unsupported.</p>
+            </section>
+            <section class="quick-apply-inspector__section">
+              <h3>Verified result</h3>
+              <p id="quickApplyStatus" class="quick-apply-status" role="status" aria-live="polite" hidden></p>
+            </section>
+          </aside>
+        </div>
+
+        <button id="quickApplyRecipeBackdrop" class="oracle-layer-backdrop oracle-layer-backdrop--dialog" type="button" aria-label="Cancel and close Oracle Recipe editor" tabindex="-1" hidden></button>
+        <section id="quickApplyRecipeEditor" class="oracle-dialog quick-apply-recipe-dialog" role="dialog" aria-modal="true" aria-labelledby="quickApplyRecipeEditorTitle" tabindex="-1" hidden>
+          <header class="oracle-dialog__header">
+            <div><span class="oracle-kicker">Oracle Recipe</span><h2 id="quickApplyRecipeEditorTitle">Create recipe</h2></div>
+            <button id="quickApplyRecipeCancel" class="oracle-icon-button" type="button" aria-label="Cancel and close Oracle Recipe editor">×</button>
+          </header>
+          <div class="quick-apply-recipe-dialog__body">
+            <div class="quick-apply-recipe-dialog__identity">
+              <label class="oracle-field"><span>Name</span><input id="quickApplyRecipeName" type="text" maxlength="256" autocomplete="off" /></label>
+              <label class="oracle-check"><input id="quickApplyRecipeApplyOnce" type="checkbox" checked /><span>Apply each effect once</span></label>
+            </div>
+            <p id="quickApplyRecipeStageLabel" class="quick-apply-recipe-stage-label">Step 1 of 2 · Effects</p>
+            <section id="quickApplyRecipeStageEffects" class="quick-apply-recipe-stage" aria-label="Recipe effect stack">
+              <h3 class="sr-only">Ordered recipe effects</h3>
+              <div id="quickApplyRecipeStack" class="quick-apply-recipe-stack" role="list"></div>
+              <label><span class="sr-only">Search effects to add</span><input id="quickApplyRecipeCatalogSearch" class="quick-apply-recipe-catalog-search" type="search" autocomplete="off" placeholder="Search effects to add" /></label>
+              <div id="quickApplyRecipeCatalog" class="quick-apply-recipe-catalog" role="listbox" aria-label="Supported effects to add"></div>
+            </section>
+            <section id="quickApplyRecipeStageParameters" class="quick-apply-recipe-stage" aria-label="Supported recipe parameters" hidden>
+              <div id="quickApplyRecipeParameterList" class="quick-apply-recipe-parameters"></div>
+            </section>
+            <p id="quickApplyRecipeEditorStatus" class="quick-apply-recipe-editor-status" role="status" aria-live="polite" hidden></p>
+          </div>
+          <footer class="oracle-dialog__footer">
+            <button id="quickApplyRecipeBack" class="oracle-button oracle-button--quiet" type="button" disabled>Back</button>
+            <span class="oracle-dialog__footer-spacer"></span>
+            <button id="quickApplyRecipeNext" class="oracle-button" type="button">Parameters</button>
+            <button id="quickApplyRecipeSave" class="oracle-button oracle-button--primary" type="button">Save Recipe</button>
+          </footer>
+        </section>
+      </section>
+
+      <section
+        id="replayViewerTray"
+        class="replay-viewer"
+        role="region"
+        aria-labelledby="replayViewerTitle"
+        aria-describedby="replayViewerSupport"
+        tabindex="-1"
+        hidden
+      >
+        <header class="replay-viewer__header">
+          <div class="replay-viewer__identity">
+            <span class="replay-viewer__eyebrow">Replay viewer</span>
+            <h2 id="replayViewerTitle">No replay open</h2>
+          </div>
+          <span id="replayViewerMode" class="replay-viewer__mode" role="status">Premiere Source Monitor</span>
+          <button id="replayViewerClose" class="oracle-icon-button replay-viewer__close" type="button" aria-label="Close replay viewer" title="Close replay viewer">×</button>
+        </header>
+
+        <div class="replay-viewer__body">
+          <div class="replay-viewer__host-preview" aria-hidden="true">
+            <img id="replayViewerPoster" alt="" hidden />
+            <span class="replay-viewer__host-mark"><span></span></span>
+            <span>Preview in Premiere</span>
+          </div>
+
+          <div class="replay-viewer__transport">
+            <div class="replay-viewer__primary-controls">
+              <button id="replayViewerPlayPause" class="oracle-button oracle-button--primary replay-viewer__play" type="button" aria-label="Play replay" aria-pressed="false">Play</button>
+              <button id="replayViewerStepBack" class="oracle-button oracle-button--quiet replay-viewer__compact" type="button" aria-label="Step backward one frame" title="Frame stepping requires a known frame rate" disabled aria-disabled="true">−1f</button>
+              <button id="replayViewerStepForward" class="oracle-button oracle-button--quiet replay-viewer__compact" type="button" aria-label="Step forward one frame" title="Frame stepping requires a known frame rate" disabled aria-disabled="true">+1f</button>
+              <output id="replayViewerTime" class="replay-viewer__time" aria-label="Replay time"><span id="replayViewerCurrentTime">00:00</span> / <span id="replayViewerDuration">--:--</span></output>
+            </div>
+
+            <label class="replay-viewer__scrub" for="replayViewerScrub">
+              <span class="sr-only">Replay position</span>
+              <input id="replayViewerScrub" type="range" min="0" max="1" step="0.001" value="0" disabled aria-disabled="true" title="Scrubbing requires replay duration metadata" />
+            </label>
+
+            <div class="replay-viewer__secondary-controls">
+              <button id="replayViewerMute" class="oracle-button oracle-button--quiet replay-viewer__compact" type="button" aria-label="Mute replay" title="Premiere Source Monitor does not expose mute control" disabled aria-disabled="true">Mute</button>
+              <label class="replay-viewer__volume"><span class="sr-only">Replay volume</span><input id="replayViewerVolume" type="range" min="0" max="1" step="0.05" value="1" title="Premiere Source Monitor does not expose volume control" disabled aria-disabled="true" /></label>
+              <label class="replay-viewer__rate"><span>Speed</span><select id="replayViewerRate" title="Premiere Source Monitor does not expose reliable speed readback" disabled aria-disabled="true"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+              <button id="replayViewerLoop" class="oracle-button oracle-button--quiet replay-viewer__compact" type="button" aria-label="Loop replay" title="Premiere Source Monitor does not expose loop control" disabled aria-disabled="true">Loop</button>
+            </div>
+
+            <p id="replayViewerStatus" class="replay-viewer__status" role="status" aria-live="polite">Opening the replay in Premiere Source Monitor…</p>
+            <p id="replayViewerError" class="replay-viewer__error" role="alert" hidden></p>
+            <p id="replayViewerSupport" class="replay-viewer__support">Oracle uses Premiere Source Monitor for this codec. Volume, loop, and speed stay disabled because Premiere does not expose reliable controls for them.</p>
+          </div>
+        </div>
+      </section>
+
+      <div id="replayContextMenu" class="oracle-context-menu" role="menu" aria-label="Replay actions" hidden>
+        <button type="button" role="menuitem" data-replay-context-action="play-pause">Play / Pause</button>
+        <button type="button" role="menuitem" data-replay-context-action="open">Open in Source Monitor</button>
+        <button type="button" role="menuitem" data-replay-context-action="import">Import to Project</button>
+        <button type="button" role="menuitem" data-replay-context-action="reveal">Reveal in Explorer</button>
+        <span class="oracle-context-menu__separator" role="separator"></span>
+        <button type="button" role="menuitem" data-replay-context-action="rename-display">Rename display name</button>
+        <button type="button" role="menuitem" data-replay-context-action="rename-source">Rename source file…</button>
+        <button type="button" role="menuitem" data-replay-context-action="collections">Add / move to collection…</button>
+        <button type="button" role="menuitem" data-replay-context-action="tags">Edit tags…</button>
+        <button type="button" role="menuitem" data-replay-context-action="favorite">Add to favorites</button>
+        <button type="button" role="menuitem" data-replay-context-action="rating-notes">Rating and notes…</button>
+        <button type="button" role="menuitem" data-replay-context-action="relink">Relink source…</button>
+        <span class="oracle-context-menu__separator" role="separator"></span>
+        <button type="button" role="menuitem" data-replay-context-action="archive">Archive</button>
+        <button class="oracle-context-menu__danger" type="button" role="menuitem" data-replay-context-action="delete">Delete…</button>
+      </div>
+
+      <div id="replayLifecycleBackdrop" class="replay-lifecycle-backdrop" hidden>
+        <section id="replayLifecycleDialog" class="replay-lifecycle-dialog" role="dialog" aria-modal="true" aria-labelledby="replayLifecycleTitle" tabindex="-1">
+          <header class="replay-lifecycle-dialog__header">
+            <div><span id="replayLifecycleKicker" class="oracle-kicker">Replay library</span><h2 id="replayLifecycleTitle">Replay action</h2></div>
+            <button id="replayLifecycleClose" class="oracle-icon-button" type="button" aria-label="Close replay action">×</button>
+          </header>
+          <div id="replayLifecycleBody" class="replay-lifecycle-dialog__body"></div>
+          <p id="replayLifecycleError" class="oracle-dialog__error" role="alert" hidden></p>
+          <footer class="replay-lifecycle-dialog__footer">
+            <button id="replayLifecycleSecondary" class="oracle-button oracle-button--quiet" type="button" hidden></button>
+            <span class="oracle-dialog__footer-spacer"></span>
+            <button id="replayLifecycleCancel" class="oracle-button" type="button">Cancel</button>
+            <button id="replayLifecycleApply" class="oracle-button oracle-button--primary" type="button">Apply</button>
+          </footer>
+        </section>
+      </div>
+
+      <div id="curvesPresetDialogBackdrop" class="replay-lifecycle-backdrop" hidden>
+        <section id="curvesPresetDialog" class="replay-lifecycle-dialog" role="dialog" aria-modal="true" aria-labelledby="curvesPresetDialogTitle" tabindex="-1">
+          <header class="replay-lifecycle-dialog__header">
+            <div><span id="oraclePromptDialogKicker" class="oracle-kicker">Curve presets</span><h2 id="curvesPresetDialogTitle">Save curve preset</h2></div>
+            <button id="curvesPresetDialogClose" class="oracle-icon-button" type="button" aria-label="Close curve preset dialog">×</button>
+          </header>
+          <div class="replay-lifecycle-dialog__body">
+            <p id="curvesPresetDialogMessage">Choose a name for this Oracle curve.</p>
+            <label id="curvesPresetDialogField" class="oracle-field"><span>Name</span><input id="curvesPresetDialogInput" type="text" maxlength="100" autocomplete="off" /></label>
+          </div>
+          <p id="curvesPresetDialogError" class="oracle-dialog__error" role="alert" hidden></p>
+          <footer class="replay-lifecycle-dialog__footer">
+            <span class="oracle-dialog__footer-spacer"></span>
+            <button id="curvesPresetDialogCancel" class="oracle-button" type="button">Cancel</button>
+            <button id="curvesPresetDialogApply" class="oracle-button oracle-button--primary" type="button">Save</button>
+          </footer>
+        </section>
+      </div>
+
+      <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+      <div id="screenReaderStatus" class="sr-only" aria-live="polite"></div>
+    </div>
+
+    <script src="src/core/oracle-diagnostics.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/app/oracle-shell.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/app/oracle-panel-dom.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/app/oracle-runtime-registry.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/settings/oracle-preferences.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/data/oracle-data-schema.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/data/oracle-migrations.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/replays/oracle-replay-library.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/replays/oracle-replay-workspace.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/replays/oracle-replay-organization.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/replays/oracle-replay-lifecycle-ui.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/replays/oracle-replay-viewer.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/curves/oracle-curve-math.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/curves/oracle-curve-presets.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/curves/oracle-premiere-curves-adapter.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/curves/oracle-curves-workspace.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/quick-apply/oracle-effect-index.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/quick-apply/oracle-premiere-effects-adapter.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/quick-apply/oracle-quick-apply-domain.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="src/quick-apply/oracle-quick-apply-workspace.js?oracle-ui=2.0.14-m9-9"></script>
+    <script src="main.js?oracle-ui=2.0.14-m9-9"></script>
+  </body>
+</html>

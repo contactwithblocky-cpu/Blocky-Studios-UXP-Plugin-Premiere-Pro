@@ -1,0 +1,98 @@
+ORACLE PAIRED MOD JAVA 21 CLEAN BUILD
+START_UTC=
+2026-07-16T16:40:04.5000639Z
+WORKSPACE=
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle
+JAVA_HOME=
+C:\Program Files\Eclipse Adoptium\jdk-21.0.11.10-hotspot
+COMMAND=.\gradlew.bat --no-daemon clean build --stacktrace --console=plain
+openjdk version "21.0.11" 2026-04-21 LTS
+OpenJDK Runtime Environment Temurin-21.0.11+10 (build 21.0.11+10-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.11+10 (build 21.0.11+10-LTS, mixed mode, sharing)
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>if "Windows_NT" == "Windows_NT" setlocal
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>set DIRNAME=D:\Blocky HQ\Oracle Mod by Blocky\Oracle\ 
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>if "D:\Blocky HQ\Oracle Mod by Blocky\Oracle\" == "" set DIRNAME=. 
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>set APP_BASE_NAME=gradlew 
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>set APP_HOME=D:\Blocky HQ\Oracle Mod by Blocky\Oracle\ 
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>for %i in ("D:\Blocky HQ\Oracle Mod by Blocky\Oracle\") do set APP_HOME=%~fi 
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>set APP_HOME=D:\Blocky HQ\Oracle Mod by Blocky\Oracle\ 
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m" 
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>if defined JAVA_HOME goto findJavaFromJavaHome 
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>set JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-21.0.11.10-hotspot 
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>set JAVA_EXE=C:\Program Files\Eclipse Adoptium\jdk-21.0.11.10-hotspot/bin/java.exe 
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>if exist "C:\Program Files\Eclipse Adoptium\jdk-21.0.11.10-hotspot/bin/java.exe" goto execute 
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>"C:\Program Files\Eclipse Adoptium\jdk-21.0.11.10-hotspot/bin/java.exe" "-Xmx64m" "-Xms64m"   "-Dorg.gradle.appname=gradlew" -jar "D:\Blocky HQ\Oracle Mod by Blocky\Oracle\\gradle\wrapper\gradle-wrapper.jar" --no-daemon clean build --stacktrace --console=plain 
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.4.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Fabric Loom: 1.16.3
+
+> Task :clean
+
+> Task :compileJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :processResources
+> Task :classes
+> Task :jar
+> Task :processIncludeJars
+> Task :shadowJar
+> Task :sourcesJar
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+> Task :remapJar
+> Task :remapSourcesJar
+> Task :test
+> Task :validateAccessWidener UP-TO-DATE
+> Task :check
+Cannot remap extractBackground because it does not exist in any of the targets [net/minecraft/client/gui/contextualbar/ExperienceBarRenderer]
+Cannot remap extractBackground because it does not exist in any of the targets [net/minecraft/client/gui/contextualbar/ExperienceBarRenderer]
+Cannot remap renderBlockEntities because it does not exist in any of the targets [net/caffeinemc/mods/sodium/client/render/SodiumWorldRenderer]
+> Task :assemble
+> Task :build
+
+[Incubating] Problems report is available at: file:///D:/Blocky%20HQ/Oracle%20Mod%20by%20Blocky/Oracle/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.4.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 2m 6s
+12 actionable tasks: 11 executed, 1 up-to-date
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>if 0 EQU 0 goto mainEnd 
+
+D:\Blocky HQ\Oracle Mod by Blocky\Oracle>if "Windows_NT" == "Windows_NT" endlocal
+EXIT_CODE=0 END_UTC=2026-07-16T16:42:11.7464408Z ELAPSED_SECONDS=127.246
+
+POST_BUILD_VERIFICATION
+JAR_PATH=D:\Blocky HQ\Oracle Mod by Blocky\Oracle\build\libs\oracle-0.40.0.jar
+JAR_SIZE_BYTES=219970864
+JAR_SHA256=785252F0AE853626F736809776ABE71196129E5675A73C45D6FCE4150C5700F1
+TEST_SUITES=76
+TESTS=520
+FAILURES=0
+ERRORS=0
+SKIPPED=0
+BUILD_LOG_FATAL_MARKERS=0
+RUNTIME_PROOF=D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\evidence\m9-final-2026-07-16\paired-mod-runtime-proof.log

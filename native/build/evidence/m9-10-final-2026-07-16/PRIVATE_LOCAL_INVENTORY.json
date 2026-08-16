@@ -1,0 +1,266 @@
+{
+    "schema":  "com.blocky.oracle.private-ccx-inventory",
+    "version":  2,
+    "releaseEligible":  false,
+    "distribution":  "PRIVATE LOCAL ACCEPTANCE ONLY - DO NOT DISTRIBUTE",
+    "pluginId":  "com.blocky.oracle.v5",
+    "pluginVersion":  "2.0.14",
+    "generatedAt":  "2026-07-16T18:01:11.8556033Z",
+    "nativeAddon":  {
+                        "path":  "win/x64/oracle-native-drag.uxpaddon",
+                        "size":  553984,
+                        "sha256":  "FAB8477C6273EF1AA4690B9F1A284155ACC61E00FB702574DBAF67ED5FE92407"
+                    },
+    "files":  [
+                  {
+                      "path":  "assets/fonts/Minecraft Regular.ttf",
+                      "size":  21636,
+                      "sha256":  "314F1C8BE13A733603C72C1F852A2E1E597473E30413246137A13E76EA46267D"
+                  },
+                  {
+                      "path":  "assets/fonts/minecraft_five.otf",
+                      "size":  20480,
+                      "sha256":  "AFD068F97CACAE7D1B08D01719FEB6C00C177B3B7D1CB04D27A032417B0E4C29"
+                  },
+                  {
+                      "path":  "assets/fonts/minecraft_ten.ttf",
+                      "size":  43148,
+                      "sha256":  "4339B776FC9056AD622EC85DFDB0008BFA6C4610F05035EBD3441C0D9E0CA85C"
+                  },
+                  {
+                      "path":  "assets/icons/settings_icon.svg",
+                      "size":  365,
+                      "sha256":  "409A2172E7DC417243721FEB494092008B410A69C99074F720B3CF35B23C7B6B"
+                  },
+                  {
+                      "path":  "assets/logo/oracle_logo_anim.json",
+                      "size":  303,
+                      "sha256":  "2172E5DE0C94F73642A8D080974D70D3E19D845FEEB1277E71452F6D319BCD1A"
+                  },
+                  {
+                      "path":  "assets/logo/oracle_logo_anim.png",
+                      "size":  4713527,
+                      "sha256":  "D4A4BF8C5EC47BF740BDAADEC1DCC171A896788FEDCDEAD53E82BFC26334405B"
+                  },
+                  {
+                      "path":  "icons/dark.png",
+                      "size":  1037,
+                      "sha256":  "FD141F7DAD3892CE00B96CFBA1986DA89386B27A1C02D0BDACFA7A932374883E"
+                  },
+                  {
+                      "path":  "icons/dark@1x.png",
+                      "size":  1037,
+                      "sha256":  "FD141F7DAD3892CE00B96CFBA1986DA89386B27A1C02D0BDACFA7A932374883E"
+                  },
+                  {
+                      "path":  "icons/dark@2x.png",
+                      "size":  2047,
+                      "sha256":  "F84D509B0AF7FF8AA2C3D91739E38823793252A6A745FB974BA77952E73E1FCC"
+                  },
+                  {
+                      "path":  "icons/light.png",
+                      "size":  996,
+                      "sha256":  "A98A77B8DDDD51C218BDEC9DFF5074D797ED45FC385DAA83FF5BD17FB1A800F6"
+                  },
+                  {
+                      "path":  "icons/light@1x.png",
+                      "size":  996,
+                      "sha256":  "A98A77B8DDDD51C218BDEC9DFF5074D797ED45FC385DAA83FF5BD17FB1A800F6"
+                  },
+                  {
+                      "path":  "icons/light@2x.png",
+                      "size":  2149,
+                      "sha256":  "4E9653E7D7B4CE8FFCD326B574AD7E5572BB517A91E4EC9ED8D45E925DA42090"
+                  },
+                  {
+                      "path":  "icons/plugin@1x.png",
+                      "size":  888,
+                      "sha256":  "17D5BAADB121AF1CE74A9FAAE6E67C22AC8A8F0B696369E9434144C60D7349CE"
+                  },
+                  {
+                      "path":  "icons/plugin@2x.png",
+                      "size":  2621,
+                      "sha256":  "225DDA06CBCAEBFB609E3978C718F60C2959BFAFF9EB39BC7AF25608224B7146"
+                  },
+                  {
+                      "path":  "icons/plugin-icon.png",
+                      "size":  888,
+                      "sha256":  "17D5BAADB121AF1CE74A9FAAE6E67C22AC8A8F0B696369E9434144C60D7349CE"
+                  },
+                  {
+                      "path":  "icons/plugin-icon@2x.png",
+                      "size":  2621,
+                      "sha256":  "225DDA06CBCAEBFB609E3978C718F60C2959BFAFF9EB39BC7AF25608224B7146"
+                  },
+                  {
+                      "path":  "index.html",
+                      "size":  61699,
+                      "sha256":  "F4EA6CD62C583291662792CE3368C8E4F1CECD0CB42A1268315DB57ECF74EA96"
+                  },
+                  {
+                      "path":  "main.js",
+                      "size":  454128,
+                      "sha256":  "8604BAFD9FF3E92E96B50B41DDA9D6DE2F367841E0FBAE2B3FF2449034A20F34"
+                  },
+                  {
+                      "path":  "manifest.json",
+                      "size":  2435,
+                      "sha256":  "D0CA40C84FF64A1A88C94D1F9E50F28578C2F821D65B7DB848BE2980E4865B58"
+                  },
+                  {
+                      "path":  "PRIVATE_LOCAL_ACCEPTANCE_ONLY.txt",
+                      "size":  344,
+                      "sha256":  "DA82AF68297291E3FB8C1A7535A32C52385DE36D952A9F14B93F48C813B63340"
+                  },
+                  {
+                      "path":  "src/app/oracle-panel-dom.js",
+                      "size":  15907,
+                      "sha256":  "B6536FD7ECB311B848DE10EF6372CE2CC4CFC47BACED5235376ECE7D632DDE32"
+                  },
+                  {
+                      "path":  "src/app/oracle-runtime-registry.js",
+                      "size":  21064,
+                      "sha256":  "246F50D384CFAE67E99D8D33E282C3A3DAED89EBA5C9297954D89936A19AA104"
+                  },
+                  {
+                      "path":  "src/app/oracle-shell.js",
+                      "size":  9904,
+                      "sha256":  "8979215189B743232C7BE4B566EDE7FED0016B90D90A16E25C2788D32672DB64"
+                  },
+                  {
+                      "path":  "src/core/oracle-diagnostics.js",
+                      "size":  6585,
+                      "sha256":  "8D01BE0CA3A1232FA414A0DD68A00D08316649B36E908E81315791C629317C1E"
+                  },
+                  {
+                      "path":  "src/curves/oracle-curve-math.js",
+                      "size":  19410,
+                      "sha256":  "018155DE4EACFF56A9DBCC6DEB24FBD2CE54BB6EEB7D72C04BA61004D7EAA0B0"
+                  },
+                  {
+                      "path":  "src/curves/oracle-curve-presets.js",
+                      "size":  37322,
+                      "sha256":  "D6F4DE74A15231719FD692087E5F402E714B54B313B2E2B4CF510E3A366978FE"
+                  },
+                  {
+                      "path":  "src/curves/oracle-curves-workspace.js",
+                      "size":  99481,
+                      "sha256":  "6B846815F184B0E0D3AF863A9A9D0C40C50BBEADFA9C0C9F193038AC639BD678"
+                  },
+                  {
+                      "path":  "src/curves/oracle-premiere-curves-adapter.js",
+                      "size":  92288,
+                      "sha256":  "552F90C88CC195CD87B3FF205F317627B34679FE2DBC2382649F95920B6C3EB3"
+                  },
+                  {
+                      "path":  "src/data/oracle-data-schema.js",
+                      "size":  13315,
+                      "sha256":  "D8B4EE4B423B5BF1FE4EFD666670B07E722098E3630B4D304E3242DA38DBAF16"
+                  },
+                  {
+                      "path":  "src/data/oracle-migrations.js",
+                      "size":  20418,
+                      "sha256":  "E02782BE181E765A63639ED3AF39B5122A3159C266BB8AC6C88D3E38F9B99C95"
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-effect-index.js",
+                      "size":  13829,
+                      "sha256":  "88340E3B50F92AD0540A2C06654572B7D0A7036DA80014267B3359B1C59C412B"
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-premiere-effects-adapter.js",
+                      "size":  83039,
+                      "sha256":  "708CBD5BBFDA207CFA7F3CF3526F61E7ED26A1A35E6776A1BFB468591B3797AA"
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-quick-apply-domain.js",
+                      "size":  66263,
+                      "sha256":  "FB7BD64E293DF5734A9EE61532735F67885BBA3AABA67A1CB0A5955BFD6884C5"
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-quick-apply-workspace.js",
+                      "size":  54256,
+                      "sha256":  "2D9D9C7B2FFC8E07C10AAAE4CBB8ADCF8679E136CBCF05EAFC9AB7EED1D814E4"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-library.js",
+                      "size":  90833,
+                      "sha256":  "3FF00F21AFEB0E2CC023CD6DD1BBBC5E9888EBA7D42C547A78C25CEE368BDBA6"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-lifecycle-ui.js",
+                      "size":  69985,
+                      "sha256":  "545867ECC8342D949556B70516E713580B27B8F85A68DD14A1B44BBC804C71FC"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-organization.js",
+                      "size":  74365,
+                      "sha256":  "4244A274F0333763F70E3F1420907A4F2990D165CA3AECFDABD7DAAE16C45A22"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-viewer.js",
+                      "size":  38398,
+                      "sha256":  "178E8640A31074F3481BD4157D833A3A9873938AE4CC68EE83B422F39E05F2E0"
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-workspace.js",
+                      "size":  12387,
+                      "sha256":  "5E82E57B43EC8D4DC1F7D850A628AE7DA4BB691774D4375A3849A4EB854BAF67"
+                  },
+                  {
+                      "path":  "src/settings/oracle-preferences.js",
+                      "size":  90335,
+                      "sha256":  "B1A97DFFADB330908A4636180711498FFF5A74C79BF346CCF2EFE8043DB160CD"
+                  },
+                  {
+                      "path":  "style.css",
+                      "size":  19026,
+                      "sha256":  "EC2195811F7A2D102E11086E7651E33DF867CC377E095B4D2C41DC884A0B3A24"
+                  },
+                  {
+                      "path":  "styles/overdrive-m1.css",
+                      "size":  23591,
+                      "sha256":  "56833292DCB831AE3CC3E69D2DDBE73A85D00916622C91D58E29D0D60F9C2084"
+                  },
+                  {
+                      "path":  "styles/overdrive-m2.css",
+                      "size":  7563,
+                      "sha256":  "7DD1D416F625275702C683BCA59AAE862498EEB2D994383168EEF949E7B985FE"
+                  },
+                  {
+                      "path":  "styles/overdrive-m3.css",
+                      "size":  10211,
+                      "sha256":  "57D6859F08A67395DA98D6B2AAEE61EEB62A82D7845CB3AB67B0079596F4452F"
+                  },
+                  {
+                      "path":  "styles/overdrive-m4.css",
+                      "size":  6620,
+                      "sha256":  "7CA0FEE5E64522A8C97D4D1D5BA6E6EADEC35B0DAE9375AACB8B2E5FEED3FB38"
+                  },
+                  {
+                      "path":  "styles/overdrive-m5.css",
+                      "size":  16868,
+                      "sha256":  "98FC50D0F216603C018578EE2F9D07BCBAC195221E7262C947F6D472A379981E"
+                  },
+                  {
+                      "path":  "styles/overdrive-m6.css",
+                      "size":  17628,
+                      "sha256":  "CDAB78490F001B261F961BA78121A5B6824DC18A34CC73CE3E0FD0271E8EF454"
+                  },
+                  {
+                      "path":  "styles/overdrive-m7.css",
+                      "size":  2458,
+                      "sha256":  "9DDF14100E77077BAFBBD632881FBE3C16520777676E4FA3BE8914F34380BE30"
+                  },
+                  {
+                      "path":  "win/x64/oracle-native-drag.uxpaddon",
+                      "size":  553984,
+                      "sha256":  "FAB8477C6273EF1AA4690B9F1A284155ACC61E00FB702574DBAF67ED5FE92407"
+                  }
+              ],
+    "blockers":  [
+                     "Font redistribution/commercial-use rights are undocumented.",
+                     "Oracle logo/icon redistribution rights are undocumented.",
+                     "Final semantic version requires project-owner confirmation."
+                 ]
+}

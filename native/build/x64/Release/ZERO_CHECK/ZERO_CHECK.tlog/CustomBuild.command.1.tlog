@@ -1,0 +1,10 @@
+^D:\BLOCKY HQ\ORACLE PLUGIN (PREMIERE PRO)\COM.BLOCKY.ORACLE.V5\NATIVE\BUILD\CMAKEFILES\F371FD4926C384B80D90049369CF23C7\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native" "-BD:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/oracle_native_drag.slnx"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

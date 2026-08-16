@@ -1,0 +1,30 @@
+
+> oracle-premiere-uxp@2.0.14 native:test
+> powershell -NoProfile -ExecutionPolicy Bypass -File native/build.ps1 -Action Test
+
+MSBuild version 18.8.2+ce25c0108 for .NET Framework
+
+  oracle-atomic-file-tests.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\Release\oracle-atomic-file-tests.exe
+  oracle-packaged-font-registration-tests.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\Release\oracle-packaged-font-registration-tests.exe
+  oracle-file-operation-tests.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\Release\oracle-file-operation-tests.exe
+  oracle-native-drag-harness.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\Release\oracle-native-drag-harness.exe
+  oracle-directory-watch-tests.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\Release\oracle-directory-watch-tests.exe
+  oracle-native-drag.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\stage\win\x64\oracle-native-drag.uxpaddon
+  oracle-native-drag-tests.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\Release\oracle-native-drag-tests.exe
+Test project D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build
+    Start 1: oracle-native-drag-tests
+1/6 Test #1: oracle-native-drag-tests ..................   Passed    1.21 sec
+    Start 2: oracle-native-release-trace-guard
+2/6 Test #2: oracle-native-release-trace-guard .........   Passed    0.20 sec
+    Start 3: oracle-atomic-file-tests
+3/6 Test #3: oracle-atomic-file-tests ..................   Passed    0.07 sec
+    Start 4: oracle-file-operation-tests
+4/6 Test #4: oracle-file-operation-tests ...............   Passed    0.24 sec
+    Start 5: oracle-directory-watch-tests
+5/6 Test #5: oracle-directory-watch-tests ..............   Passed    8.60 sec
+    Start 6: oracle-packaged-font-registration-tests
+6/6 Test #6: oracle-packaged-font-registration-tests ...   Passed    0.09 sec
+
+100% tests passed, 0 tests failed out of 6
+
+Total Test time (real) =  10.41 sec

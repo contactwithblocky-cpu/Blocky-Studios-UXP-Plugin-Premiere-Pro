@@ -1,0 +1,8 @@
+oracle-native-drag-tests 103 0.011562
+oracle-atomic-file-tests 73 0.000851494
+oracle-file-operation-tests 73 0.00356199
+oracle-directory-watch-tests 77 0.108648
+oracle-packaged-font-registration-tests 51 0.000843927
+oracle-native-release-trace-guard 39 0.00256774
+oracle-replay-media-tests 23 0.0237502
+---

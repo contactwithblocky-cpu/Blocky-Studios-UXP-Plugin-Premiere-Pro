@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "strict": false,
+    "target": "ES2020",
+    "module": "commonjs",
+    "paths": {
+      "premierepro": ["./node_modules/@adobe/premierepro/src/premierepro.d.ts"]
+    }
+  },
+  "exclude": ["node_modules", "bridge", "release", "m1.shell-preferences.test.cjs", "m2.replay-library.test.cjs", "m2.replay-workspace.test.cjs", "m3.replay-organization.test.cjs", "m3.replay-lifecycle-ui.test.cjs", "m3.main-controller-acceptance.test.cjs", "m4.replay-viewer.test.cjs", "m4.main-controller-acceptance.test.cjs", "m5.curve-math.test.cjs", "m5.curve-presets.test.cjs", "m5.curves-adapter.test.cjs", "m5.curves-workspace.test.cjs", "m5.main-controller-acceptance.test.cjs", "m6.effect-index.test.cjs", "m6.premiere-effects-adapter.test.cjs", "m6.quick-apply-domain.test.cjs", "m6.quick-apply-workspace.test.cjs", "m6.main-controller-acceptance.test.cjs", "main.performance.test.cjs", "main.history.test.cjs", "main.watcher.test.cjs", "main.native-drag.test.cjs", "main.ui.test.cjs", "oracle-overdrive.m0.test.cjs", "native/build"]
+}

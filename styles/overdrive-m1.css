@@ -1,0 +1,1071 @@
+:root {
+  --accent-color: #2167e8;
+  --accent-rgb: 33, 103, 232;
+  --focus-color: #ffffff;
+  --user-border-color: rgba(255, 255, 255, 0.09);
+  --oracle-font-scale: 1;
+  --font-size-compact: calc(10px * var(--oracle-font-scale));
+  --font-size-body: calc(12px * var(--oracle-font-scale));
+  --font-size-ui: calc(14px * var(--oracle-font-scale));
+  --accent-foreground: #ffffff;
+  --font-display: "Samsung Sharp Sans";
+  --font-control: "Samsung Sharp Sans";
+  --font-copy: "Samsung Sharp Sans";
+  --oracle-font-heading: var(--font-display);
+  --oracle-font-body: var(--font-copy);
+  --oracle-font-compact: var(--font-control);
+  --oracle-bg: var(--bg-color, #111318);
+  --oracle-header: #15181d;
+  --oracle-surface: #1a1d23;
+  --oracle-surface-raised: #22262d;
+  --oracle-surface-hover: #292e36;
+  --oracle-border: var(--user-border-color, rgba(255, 255, 255, 0.09));
+  --oracle-border-strong: rgba(255, 255, 255, 0.16);
+  --oracle-text: #f4f5f7;
+  --oracle-muted: #b5bac3;
+  --oracle-dim: #89909b;
+  --oracle-danger: #ed817b;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --control-sm: 32px;
+  --control-md: 40px;
+  --control-lg: 40px;
+  --radius-sm: 9px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --motion-fast: 140ms;
+  --motion-standard: 240ms;
+  --replay-grid-gap: 16px;
+}
+
+html.oracle-fonts-ready {
+  --font-display: "Samsung Sharp Sans";
+  --font-control: "Samsung Sharp Sans";
+  --font-copy: "Samsung Sharp Sans";
+}
+
+/* Keep the exact product family when it is already installed in the host. */
+html.oracle-fonts-installed-compatible {
+  --font-display: "Samsung Sharp Sans";
+  --font-control: "Samsung Sharp Sans";
+  --font-copy: "Samsung Sharp Sans";
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--oracle-font-body);
+  letter-spacing: 0;
+}
+
+html * {
+  letter-spacing: 0 !important;
+}
+
+body {
+  font-size: calc(14px * var(--oracle-font-scale));
+}
+
+h1,
+h2,
+.oracle-heading {
+  font-family: var(--oracle-font-heading);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+h3,
+.oracle-kicker,
+.preferences-tabs,
+.navigation-item,
+.color-token strong {
+  font-family: var(--oracle-font-compact);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--focus-color) !important;
+  outline-offset: 2px;
+}
+
+.oracle-header {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 6px var(--space-3);
+}
+
+.oracle-header__side {
+  min-width: 0;
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.oracle-header__side--start {
+  justify-content: flex-start;
+}
+
+.oracle-header__side--end {
+  justify-content: flex-end;
+}
+
+.oracle-brand {
+  min-width: 0;
+  flex: 0 1 auto;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.oracle-brand h1 {
+  font-family: var(--oracle-font-heading);
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.oracle-brand__emblem {
+  width: 34px;
+  height: 34px;
+  flex-basis: 34px;
+}
+
+.oracle-logo {
+  width: 32px;
+  height: 32px;
+  flex-basis: 32px;
+}
+
+.profile-button {
+  width: 34px;
+  height: 34px;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.profile-button__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.profile-button__initials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--oracle-text);
+  background: rgba(var(--accent-rgb), 0.22);
+  font-family: var(--oracle-font-compact);
+  font-size: 11px;
+}
+
+.oracle-layer-backdrop {
+  position: absolute;
+  inset: 52px 0 0;
+  z-index: 35;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.58);
+  border: 0;
+  border-radius: 0;
+  opacity: 0;
+  cursor: default;
+  pointer-events: none;
+  transition: opacity var(--motion-standard) linear;
+}
+
+.oracle-layer-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*
+ * Premiere's UXP compositor can promote native form controls above ordinary
+ * z-index layers. Keep the routed workspace inert and suppress those promoted
+ * controls for the full lifetime of a shell overlay, including its exit
+ * transition, so they cannot paint through or intercept drawer/dialog input.
+ */
+.oracle-layer-backdrop:not([hidden]) ~ [data-oracle-view] {
+  pointer-events: none;
+}
+
+.oracle-layer-backdrop:not([hidden]) ~ [data-oracle-view] input,
+.oracle-layer-backdrop:not([hidden]) ~ [data-oracle-view] select,
+.oracle-layer-backdrop:not([hidden]) ~ [data-oracle-view] textarea {
+  display: none !important;
+}
+
+.oracle-layer-backdrop--dialog {
+  inset: 0;
+  z-index: 50;
+}
+
+.navigation-drawer {
+  width: min(286px, calc(100% - 48px));
+  position: absolute;
+  top: 52px;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4);
+  color: var(--oracle-text);
+  background: var(--oracle-header);
+  border-right: 1px solid var(--oracle-border-strong);
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+  pointer-events: none;
+  overflow-y: auto;
+}
+
+.navigation-drawer.is-open {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  pointer-events: auto;
+}
+
+.navigation-drawer__header {
+  padding: 2px var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--oracle-border);
+}
+
+.navigation-drawer__header strong {
+  display: block;
+  margin-top: var(--space-1);
+  font-family: var(--oracle-font-heading);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.oracle-kicker {
+  display: block;
+  color: var(--oracle-dim);
+  font-size: 10px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.navigation-drawer__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-block: var(--space-4);
+}
+
+.navigation-item {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 9px 11px;
+  line-height: 1.2;
+  text-align: left;
+  transition: none;
+}
+
+.navigation-item > span:not(.navigation-item__icon) {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow-wrap: anywhere;
+}
+
+.navigation-item > small {
+  flex: 0 0 auto;
+}
+
+.navigation-item.is-active {
+  color: var(--oracle-text);
+  background: rgba(var(--accent-rgb), 0.14);
+  border-color: var(--accent-color);
+}
+
+.navigation-item small {
+  color: var(--oracle-dim);
+  font-size: 9px;
+}
+
+.navigation-item__icon {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  flex: 0 0 18px;
+  display: block;
+  border: 1px solid currentColor;
+}
+
+.navigation-item__icon--curves::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-left: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: skewY(-24deg);
+}
+
+.navigation-item__icon--quick::before,
+.navigation-item__icon--quick::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+}
+
+.navigation-item__icon--quick::before { width: 8px; height: 2px; top: 7px; left: 4px; }
+.navigation-item__icon--quick::after { width: 2px; height: 8px; top: 4px; left: 7px; }
+
+.navigation-drawer__status {
+  margin: auto 0 0;
+  padding: var(--space-3);
+  color: var(--oracle-dim);
+  border-top: 1px solid var(--oracle-border);
+  font-size: 10px;
+}
+
+@media (max-height: 420px) {
+  .navigation-drawer {
+    padding: var(--space-2);
+  }
+
+  .navigation-drawer__header {
+    padding: 2px var(--space-2) var(--space-2);
+  }
+
+  .navigation-drawer__items {
+    flex: 0 0 auto;
+    gap: 6px;
+    padding-block: var(--space-2);
+  }
+
+  .navigation-item {
+    min-height: 38px;
+    padding: 7px 9px;
+    line-height: 1.15;
+  }
+
+  .navigation-drawer__status {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: var(--space-2);
+    line-height: 1.25;
+  }
+}
+
+.oracle-dialog {
+  width: min(780px, calc(100% - 24px));
+  height: min(720px, calc(100% - 24px));
+  min-width: 0;
+  min-height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  color: var(--oracle-text);
+  background: var(--oracle-surface);
+  border: 1px solid var(--oracle-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.46);
+  opacity: 0;
+  transform: translate3d(-50%, calc(-50% - 6px), 0);
+  pointer-events: none;
+  transition:
+    opacity var(--motion-standard) linear,
+    transform var(--motion-standard) ease-out;
+}
+
+.oracle-dialog.is-open {
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0);
+  pointer-events: auto;
+}
+
+.oracle-dialog__header,
+.oracle-dialog__footer {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.oracle-dialog__header {
+  justify-content: space-between;
+  border-bottom: 1px solid var(--oracle-border);
+}
+
+.oracle-dialog__header h2 {
+  margin: 3px 0 0;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.oracle-dialog__header p {
+  margin: var(--space-1) 0 0;
+  color: var(--oracle-dim);
+  font-size: 11px;
+}
+
+.oracle-dialog__footer {
+  border-top: 1px solid var(--oracle-border);
+}
+
+.oracle-dialog__footer-spacer {
+  flex: 1 1 auto;
+}
+
+.preferences-dialog__body {
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 auto;
+  display: flex;
+  overflow: hidden;
+}
+
+.preferences-tabs {
+  min-width: 0;
+  flex: 0 0 172px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  overflow-y: auto;
+  background: var(--oracle-header);
+  border-right: 1px solid var(--oracle-border);
+}
+
+.preferences-tabs button {
+  min-height: 36px;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.preferences-tabs button.is-active,
+.preferences-tabs button[aria-selected="true"] {
+  color: var(--oracle-text);
+  background: rgba(var(--accent-rgb), 0.13);
+  border-color: var(--accent-color);
+}
+
+.preferences-sections {
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+.preferences-section {
+  min-width: 0;
+  padding: var(--space-5);
+}
+
+.preference-heading {
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--oracle-border);
+}
+
+.preference-heading h3 {
+  margin: var(--space-1) 0 0;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.preference-heading p {
+  margin: var(--space-2) 0 0;
+  color: var(--oracle-dim);
+  font-size: 11px;
+}
+
+.preference-grid {
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.preference-grid > * {
+  min-width: 0;
+  flex: 0 1 calc(50% - var(--space-2));
+}
+
+.preference-grid--three > * {
+  flex-basis: calc(33.333333% - 11px);
+}
+
+.oracle-field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--oracle-muted);
+  font-size: var(--font-size-body);
+}
+
+.oracle-field > span {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.oracle-field input,
+.oracle-field select,
+.oracle-color-picker input {
+  width: 100%;
+  min-width: 0;
+  min-height: var(--control-md);
+  padding: 6px 9px;
+  color: var(--oracle-text);
+  background: var(--oracle-header);
+  border: 1px solid var(--oracle-border-strong);
+  border-radius: var(--radius-sm);
+}
+
+.oracle-field input[type="range"] {
+  min-height: 18px;
+  padding: 0;
+  accent-color: var(--accent-color);
+}
+
+.oracle-check,
+.preference-subsection {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  color: var(--oracle-muted);
+  background: var(--oracle-header);
+  border: 1px solid var(--oracle-border);
+  border-radius: var(--radius-sm);
+}
+
+.oracle-check {
+  margin-block: var(--space-2);
+}
+
+.oracle-check input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent-color);
+}
+
+.preference-subsection {
+  justify-content: space-between;
+  margin-block: var(--space-3);
+}
+
+.preference-subsection small {
+  display: block;
+  margin-top: var(--space-1);
+  color: var(--oracle-dim);
+  font-size: 10px;
+}
+
+.profile-editor {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.profile-editor__preview {
+  width: 132px;
+  height: 132px;
+  position: relative;
+  flex: 0 0 132px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--oracle-text);
+  background: rgba(var(--accent-rgb), 0.15);
+  border: 1px solid var(--oracle-border-strong);
+  border-radius: var(--radius-lg);
+  font-family: var(--oracle-font-heading);
+  font-size: 30px;
+}
+
+.profile-editor__preview img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  transform-origin: center;
+}
+
+.profile-editor__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.color-token-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.color-token-grid > * {
+  min-width: 0;
+  flex: 0 1 calc(50% - 6px);
+}
+
+.color-token {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 10px;
+  text-align: left;
+}
+
+.color-token__swatch {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  background: var(--swatch-color);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: var(--radius-sm);
+}
+
+.color-token strong,
+.color-token small {
+  display: block;
+}
+
+.color-token small {
+  margin-top: 3px;
+  color: var(--oracle-dim);
+  font-size: 10px;
+}
+
+.contrast-status,
+.storage-summary {
+  padding: 10px 12px;
+  color: var(--oracle-muted);
+  background: var(--oracle-header);
+  border: 1px solid var(--oracle-border);
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+}
+
+.contrast-status.is-invalid,
+.preferences-error {
+  color: #ffd9dc;
+  border-color: var(--oracle-danger);
+}
+
+.preference-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.preference-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  list-style: none;
+}
+
+.preference-list li {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: var(--oracle-header);
+  border: 1px solid var(--oracle-border);
+}
+
+.preference-list li span {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--oracle-muted);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.diagnostics-list {
+  max-height: 168px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.diagnostics-list li[data-level="error"] {
+  border-color: var(--oracle-danger);
+}
+
+.diagnostics-list li[data-level="warn"] {
+  border-color: var(--accent-color);
+}
+
+.preferences-error {
+  margin: 0 var(--space-4);
+  padding: 9px 11px;
+  background: rgba(120, 18, 28, 0.28);
+  border: 1px solid var(--oracle-danger);
+  font-size: 11px;
+}
+
+.oracle-color-picker {
+  width: 268px;
+  position: absolute;
+  z-index: 75;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  max-height: calc(100% - 16px);
+  overflow-y: auto;
+  color: var(--oracle-text);
+  background: var(--oracle-surface-raised);
+  border: 1px solid var(--oracle-border-strong);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.46);
+}
+
+.oracle-color-picker__plane {
+  --picker-hue: hsl(0, 100%, 50%);
+  height: 154px;
+  position: relative;
+  cursor: crosshair;
+  background:
+    linear-gradient(to top, #000000, transparent),
+    linear-gradient(to right, #ffffff, transparent),
+    var(--picker-hue);
+  border: 1px solid var(--oracle-border-strong);
+  border-radius: var(--radius-sm);
+  touch-action: none;
+}
+
+.oracle-color-picker__plane span {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #000000;
+  pointer-events: none;
+}
+
+.oracle-color-picker__axis-grid {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.oracle-color-picker__axis-grid > * {
+  min-width: 0;
+  flex: 1 1 0;
+}
+
+.oracle-color-picker__rgb {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.oracle-color-picker__rgb > * {
+  min-width: 0;
+  flex: 1 1 0;
+}
+
+.oracle-color-picker__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.replay-scroller[data-oracle-view] {
+  min-width: 0;
+  min-height: 0;
+}
+
+.replay-grid-container {
+  --replay-card-basis: calc(33.333333% - 13.333333px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--replay-grid-gap);
+  align-items: flex-start;
+  transform: none;
+  backface-visibility: visible;
+  will-change: auto;
+}
+
+.replay-grid-container[style*="--replay-grid-columns: 1"],
+.replay-grid-container[style*="--replay-grid-columns:1"] {
+  --replay-card-basis: 100%;
+}
+
+.replay-grid-container[style*="--replay-grid-columns: 2"],
+.replay-grid-container[style*="--replay-grid-columns:2"] {
+  --replay-card-basis: calc(50% - 10px);
+}
+
+.replay-grid-container[style*="--replay-grid-columns: 3"],
+.replay-grid-container[style*="--replay-grid-columns:3"] {
+  --replay-card-basis: calc(33.333333% - 13.333333px);
+}
+
+.replay-grid-container[style*="--replay-grid-columns: 4"],
+.replay-grid-container[style*="--replay-grid-columns:4"] {
+  --replay-card-basis: calc(25% - 15px);
+}
+
+.replay-grid-container[style*="--replay-grid-columns: 5"],
+.replay-grid-container[style*="--replay-grid-columns:5"] {
+  --replay-card-basis: calc(20% - 16px);
+}
+
+.replay-grid-container[style*="--replay-grid-columns: 6"],
+.replay-grid-container[style*="--replay-grid-columns:6"] {
+  --replay-card-basis: calc(16.666667% - 16.666667px);
+}
+
+.replay-card {
+  width: var(--replay-card-basis);
+  min-width: 0;
+  max-width: none;
+  flex: 0 0 var(--replay-card-basis);
+  border-radius: var(--radius-md);
+  will-change: auto;
+}
+
+.replay-thumbnail {
+  box-sizing: content-box;
+  height: 0;
+  min-width: 0;
+  min-height: 0;
+  padding-top: 56.25%;
+}
+
+.replay-thumbnail img {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.replay-title,
+.recent-exports__identity h2,
+.empty-state h2 {
+  font-family: var(--oracle-font-heading);
+  letter-spacing: 0;
+}
+
+.replay-specs,
+.replay-details,
+.replay-timecode-badge,
+.grid-scale__label,
+.grid-scale__count,
+.recent-exports__count-wrap,
+.recent-exports__count {
+  font-family: var(--oracle-font-body) !important;
+}
+
+.section-kicker {
+  font-family: var(--oracle-font-compact);
+  letter-spacing: 0;
+}
+
+html[data-reduced-motion="reduce"] *,
+html[data-reduced-motion="reduce"] *::before,
+html[data-reduced-motion="reduce"] *::after {
+  scroll-behavior: auto !important;
+  animation-duration: 1ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 1ms !important;
+}
+
+@media (max-width: 620px) {
+  .oracle-brand__emblem {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .oracle-brand h1 {
+    font-size: 21px;
+  }
+
+  .oracle-dialog {
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+  }
+
+  .preferences-dialog__body {
+    flex-direction: column;
+  }
+
+  .preferences-tabs {
+    flex: 0 0 auto;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-right: 0;
+    border-bottom: 1px solid var(--oracle-border);
+  }
+
+  .preferences-tabs button {
+    flex: 0 0 auto;
+    text-align: center;
+  }
+
+  .preference-grid > *,
+  .preference-grid--three > *,
+  .color-token-grid > * {
+    flex-basis: 100%;
+  }
+
+  .preferences-section {
+    padding: var(--space-4);
+  }
+}
+
+@media (max-width: 380px) {
+  .oracle-header {
+    padding-inline: var(--space-2);
+  }
+
+  .oracle-brand h1 {
+    max-width: 92px;
+  }
+
+  .bridge-status {
+    display: none;
+  }
+
+  .profile-editor {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .oracle-dialog__header p {
+    display: none;
+  }
+
+  .oracle-dialog__footer {
+    gap: 6px;
+    padding: var(--space-2);
+  }
+
+  .oracle-dialog__footer-spacer {
+    display: none;
+  }
+
+  .oracle-dialog__footer .oracle-button {
+    min-width: 0;
+    flex: 1 1 0;
+    padding: 7px 5px;
+    font-size: 10px;
+    line-height: 1.15;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navigation-drawer,
+  .oracle-layer-backdrop,
+  .oracle-dialog {
+    transition-duration: 1ms !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-reduced-motion="allow"] .navigation-drawer,
+  html[data-reduced-motion="allow"] .oracle-layer-backdrop,
+  html[data-reduced-motion="allow"] .oracle-dialog {
+    transition-duration: var(--motion-standard) !important;
+  }
+}
+
+@media (forced-colors: active) {
+  :root {
+    --accent-color: Highlight;
+    --accent-foreground: HighlightText;
+    --focus-color: Highlight;
+    --user-border-color: CanvasText;
+    --oracle-bg: Canvas;
+    --oracle-header: Canvas;
+    --oracle-surface: Canvas;
+    --oracle-surface-raised: Canvas;
+    --oracle-surface-hover: Canvas;
+    --oracle-border: CanvasText;
+    --oracle-border-strong: CanvasText;
+    --oracle-text: CanvasText;
+    --oracle-muted: CanvasText;
+    --oracle-dim: GrayText;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  button,
+  input,
+  select,
+  textarea,
+  [role="button"],
+  [role="option"],
+  [role="menuitem"] {
+    forced-color-adjust: auto;
+  }
+
+  [aria-selected="true"],
+  [aria-pressed="true"],
+  .is-selected,
+  .is-active {
+    border-color: Highlight !important;
+    outline: 1px solid Highlight;
+    outline-offset: -1px;
+  }
+
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid Highlight !important;
+    outline-offset: 2px !important;
+  }
+
+  :disabled,
+  [aria-disabled="true"] {
+    color: GrayText !important;
+    border-color: GrayText !important;
+  }
+}

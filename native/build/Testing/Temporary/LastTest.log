@@ -1,0 +1,116 @@
+Start testing: Aug 13 13:53 Eastern Daylight Time
+----------------------------------------------------------
+1/7 Testing: oracle-native-drag-tests
+1/7 Test: oracle-native-drag-tests
+Command: "D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/Release/oracle-native-drag-tests.exe"
+Directory: D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build
+"oracle-native-drag-tests" start time: Aug 13 13:53 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+UNC acceptance fixture unavailable; syntactic UNC guard still exercised
+nativeDispatchMs=0
+oracle-native-drag native tests passed
+<end of output>
+Test time =   1.19 sec
+----------------------------------------------------------
+Test Passed.
+"oracle-native-drag-tests" end time: Aug 13 13:53 Eastern Daylight Time
+"oracle-native-drag-tests" time elapsed: 00:00:01
+----------------------------------------------------------
+
+2/7 Testing: oracle-native-release-trace-guard
+2/7 Test: oracle-native-release-trace-guard
+Command: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe" "-DADDON_PATH=D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/stage/win/x64/oracle-native-drag.uxpaddon" "-DDUMPBIN_PATH=C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/dumpbin.exe" "-P" "D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/tests/VerifyNativeReleaseTrace.cmake"
+Directory: D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build
+"oracle-native-release-trace-guard" start time: Aug 13 13:53 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+-- Default Release addon contains no trace markers or trace API imports
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"oracle-native-release-trace-guard" end time: Aug 13 13:53 Eastern Daylight Time
+"oracle-native-release-trace-guard" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/7 Testing: oracle-atomic-file-tests
+3/7 Test: oracle-atomic-file-tests
+Command: "D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/Release/oracle-atomic-file-tests.exe"
+Directory: D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build
+"oracle-atomic-file-tests" start time: Aug 13 13:53 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+oracle atomic file service tests passed
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"oracle-atomic-file-tests" end time: Aug 13 13:53 Eastern Daylight Time
+"oracle-atomic-file-tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/7 Testing: oracle-file-operation-tests
+4/7 Test: oracle-file-operation-tests
+Command: "D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/Release/oracle-file-operation-tests.exe"
+Directory: D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build
+"oracle-file-operation-tests" start time: Aug 13 13:53 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+oracle file operation service tests passed
+<end of output>
+Test time =   0.26 sec
+----------------------------------------------------------
+Test Passed.
+"oracle-file-operation-tests" end time: Aug 13 13:53 Eastern Daylight Time
+"oracle-file-operation-tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/7 Testing: oracle-directory-watch-tests
+5/7 Test: oracle-directory-watch-tests
+Command: "D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/Release/oracle-directory-watch-tests.exe"
+Directory: D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build
+"oracle-directory-watch-tests" start time: Aug 13 13:53 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+oracle directory watch service tests passed
+<end of output>
+Test time =   8.37 sec
+----------------------------------------------------------
+Test Passed.
+"oracle-directory-watch-tests" end time: Aug 13 13:53 Eastern Daylight Time
+"oracle-directory-watch-tests" time elapsed: 00:00:08
+----------------------------------------------------------
+
+6/7 Testing: oracle-packaged-font-registration-tests
+6/7 Test: oracle-packaged-font-registration-tests
+Command: "D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/Release/oracle-packaged-font-registration-tests.exe" "D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/.."
+Directory: D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build
+"oracle-packaged-font-registration-tests" start time: Aug 13 13:53 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+oracle packaged font registration service tests passed
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"oracle-packaged-font-registration-tests" end time: Aug 13 13:53 Eastern Daylight Time
+"oracle-packaged-font-registration-tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/7 Testing: oracle-replay-media-tests
+7/7 Test: oracle-replay-media-tests
+Command: "D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build/Release/oracle-replay-media-tests.exe" "D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/third_party/ffmpeg/windows-x86_64"
+Directory: D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build
+"oracle-replay-media-tests" start time: Aug 13 13:53 Eastern Daylight Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.55 sec
+----------------------------------------------------------
+Test Passed.
+"oracle-replay-media-tests" end time: Aug 13 13:53 Eastern Daylight Time
+"oracle-replay-media-tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 13 13:53 Eastern Daylight Time

@@ -1,0 +1,666 @@
+
+> oracle-premiere-uxp@2.0.14 verify:release
+> npm run verify && npm run native:test && npm audit --omit=dev --audit-level=high && npm run benchmark:m9
+
+
+> oracle-premiere-uxp@2.0.14 verify
+> npm run check && npm test
+
+
+> oracle-premiere-uxp@2.0.14 check
+> node --check main.js && node --check src/app/oracle-shell.js && node --check src/app/oracle-panel-dom.js && node --check src/app/oracle-runtime-registry.js && node --check src/core/oracle-diagnostics.js && node --check src/settings/oracle-preferences.js && node --check src/data/oracle-data-schema.js && node --check src/data/oracle-migrations.js && node --check src/replays/oracle-replay-library.js && node --check src/replays/oracle-replay-workspace.js && node --check src/replays/oracle-replay-organization.js && node --check src/replays/oracle-replay-lifecycle-ui.js && node --check src/replays/oracle-replay-viewer.js && node --check src/curves/oracle-curve-math.js && node --check src/curves/oracle-curve-presets.js && node --check src/curves/oracle-premiere-curves-adapter.js && node --check src/curves/oracle-curves-workspace.js && node --check src/quick-apply/oracle-effect-index.js && node --check src/quick-apply/oracle-premiere-effects-adapter.js && node --check src/quick-apply/oracle-quick-apply-domain.js && node --check src/quick-apply/oracle-quick-apply-workspace.js && node --check m1.shell-preferences.test.cjs && node --check m2.replay-library.test.cjs && node --check m2.replay-workspace.test.cjs && node --check m3.replay-organization.test.cjs && node --check m3.replay-lifecycle-ui.test.cjs && node --check m3.main-controller-acceptance.test.cjs && node --check m4.replay-viewer.test.cjs && node --check m4.main-controller-acceptance.test.cjs && node --check m5.curve-math.test.cjs && node --check m5.curve-presets.test.cjs && node --check m5.curves-adapter.test.cjs && node --check m5.curves-workspace.test.cjs && node --check m5.main-controller-acceptance.test.cjs && node --check m6.effect-index.test.cjs && node --check m6.premiere-effects-adapter.test.cjs && node --check m6.quick-apply-domain.test.cjs && node --check m6.quick-apply-workspace.test.cjs && node --check m6.main-controller-acceptance.test.cjs && node --check m7.panel-dom.test.cjs && node --check m7.runtime-registry.test.cjs && node --check m7.multi-panel.test.cjs && node --check m8.quick-apply-command.test.cjs && node --check m9.diagnostics.test.cjs && node --check m9.release-staging.test.cjs && node --check m9.ccx-verifier.test.cjs && node --check release/run-m9-benchmarks.cjs && node --check main.ui.test.cjs && node --check main.watcher.test.cjs && node --check oracle-overdrive.m0.test.cjs && node --check src/core/feature-flags.js && node --check bridge/server.cjs && node --check bridge/publish.cjs && node --check bridge/server.test.cjs && tsc --noEmit -p jsconfig.json
+
+
+> oracle-premiere-uxp@2.0.14 test
+> node --test bridge/server.test.cjs m1.shell-preferences.test.cjs m2.replay-library.test.cjs m2.replay-workspace.test.cjs m3.replay-organization.test.cjs m3.replay-lifecycle-ui.test.cjs m3.main-controller-acceptance.test.cjs m4.replay-viewer.test.cjs m4.main-controller-acceptance.test.cjs m5.curve-math.test.cjs m5.curve-presets.test.cjs m5.curves-adapter.test.cjs m5.curves-workspace.test.cjs m5.main-controller-acceptance.test.cjs m6.effect-index.test.cjs m6.premiere-effects-adapter.test.cjs m6.quick-apply-domain.test.cjs m6.quick-apply-workspace.test.cjs m6.main-controller-acceptance.test.cjs m7.panel-dom.test.cjs m7.runtime-registry.test.cjs m7.multi-panel.test.cjs m8.quick-apply-command.test.cjs m9.diagnostics.test.cjs m9.release-staging.test.cjs m9.ccx-verifier.test.cjs main.performance.test.cjs main.history.test.cjs main.watcher.test.cjs main.native-drag.test.cjs main.ui.test.cjs oracle-overdrive.m0.test.cjs
+
+✔ inbound JPEG validation requires a bounded complete SOF frame (2.2793ms)
+✔ per-socket message queue serializes async work and applies pause/resume backpressure (3.3652ms)
+✔ per-socket message queue has hard message/byte bounds and drops queued work on overflow (0.4106ms)
+✔ HTTP health check identifies the bridge without a WebSocket (55.8665ms)
+✔ development bridge refuses non-loopback bind hosts (0.2181ms)
+✔ media path normalization preserves valid spaced, Unicode, long, and UNC Windows paths (0.4264ms)
+✔ development publisher refuses a non-loopback bridge URL (125.6141ms)
+✔ bridge hello advertises protocol 2 while retaining protocol 1 compatibility (15.3779ms)
+✔ protocol 2 subscribe validates schema, client, and bounded thumbnail request (5.0126ms)
+✔ publisher status messages are acknowledged without becoming renders (3.7713ms)
+✔ one socket preserves wire order across asynchronous render inspection and later status (16.789ms)
+✔ outputPath is accepted and a missing thumbnail remains non-fatal (8.0647ms)
+✔ render_complete is broadcast immediately and retained for reconnect (9.9684ms)
+✔ protocol 2 render metadata remains exact and repeated physical exports deduplicate (7.0441ms)
+✔ protocol 2 rejects wrong replay schema and stable event ID collisions (5.5834ms)
+✔ retained replay history is capped independently from imports (5.7485ms)
+✔ IMPORT_CLIP is forwarded immediately without requiring the file to exist yet (13.3943ms)
+✔ IMPORT_CLIP forwards an in-memory JPEG thumbnail without creating an image file (10.917ms)
+✔ IMPORT_CLIP rejects relative paths (4.568ms)
+✔ retained import history is bounded and repeated paths deduplicate (16.4543ms)
+✔ protocol 2 replay path reconciliation atomically updates guarded replay and import snapshots (10.7942ms)
+✔ replay path reconciliation requires a v2 subscriber and rejects schema, identity, and match failures (4.2255ms)
+✔ media validation rejects image sequences, directories, traversal, and alternate streams (7.0314ms)
+✔ malformed JSON values and binary frames are rejected without retention (4.3894ms)
+✔ WebSocket transport closes oversized messages at the 12 MB boundary (76.221ms)
+✔ normal development logs never include media paths or raw payloads (3.7258ms)
+✔ invalid render paths are rejected and never broadcast (2.4844ms)
+✔ M1 preferences defaults cover every product section with destructive behavior off (3.9423ms)
+✔ corrupt settings recover safely and legacy theme/grid values migrate once (0.8206ms)
+✔ saved preferences survive restart and validation rejects unsafe contrast (1.4972ms)
+✔ header grid changes commit through the same versioned Preferences repository (0.7547ms)
+✔ Data and Diagnostics exposes versioned metadata import, export, and confirmed reset without hiding private-path scope (0.4959ms)
+✔ malformed settings and metadata picker input remains transactional and restores the Preferences busy state (1.5428ms)
+✔ metadata picker actions route only versioned payloads through injected I/O and preserve cancel semantics (0.6432ms)
+✔ metadata import preflights UXP file size before reading and fails closed without trustworthy size metadata (0.5489ms)
+✔ normalization clamps inputs, deduplicates roots, and never persists an original avatar path (0.3467ms)
+✔ hostile numerics fall back deterministically and cannot be saved as NaN (0.5484ms)
+✔ replay roots accept absolute Windows locations and reject traversal, ADS, and relative input (0.3279ms)
+✔ Cancel restores the committed snapshot without persisting preview changes (0.3299ms)
+✔ avatar validation recognizes supported bytes, bounds dimensions, and computes square cover crop (0.65ms)
+✔ shared color utilities round-trip and preference validation catches curve and border errors (0.6301ms)
+✔ M9 supported themes prove text, control, focus, surface, and accent contrast and preview unsafe drafts through safe tokens (1.1855ms)
+✔ M9 custom accents are never used as small text foregrounds (0.3437ms)
+✔ M9 color picker exposes saturation and brightness as two native scalar controls (0.4148ms)
+✔ M9 high-contrast mode uses system colors and keeps selected and focused controls distinguishable (0.2353ms)
+✔ focus trap wraps both directions and does not touch ordinary keys (0.2716ms)
+✔ focus discovery excludes controls inside hidden tabpanels and nested hidden popovers (0.1411ms)
+✔ profile avatar replacement can commit or roll back without deleting the previous image (0.6371ms)
+✔ color-picker Cancel restores its opening value while Apply keeps the preview (0.1799ms)
+✔ color-picker anchors through its containing dialog when UXP omits offsetParent (0.3337ms)
+✔ dismissal respects an earlier gesture owner and closes only when Escape remains available (0.2919ms)
+✔ drawer restores focus only after promoted UXP inputs are visible again (0.2569ms)
+✔ shell routing is scoped to its inferred panel root and never hides a dedicated panel view (0.3319ms)
+✔ document-level shell keys are ignored while another panel root owns interaction (0.1786ms)
+✔ open Preferences never consumes keyboard input owned by a dedicated panel root (0.2882ms)
+✔ committing Preferences leaves Tab and Escape to a higher-priority modal dialog (0.2114ms)
+✔ shell markup exposes only real routes and keeps overlays outside replay input ownership (0.8752ms)
+✔ compact-height navigation keeps every real route reachable without status overlap (0.3158ms)
+✔ narrow Preferences keeps Reset, Cancel, and Apply inside the dialog footer (0.4716ms)
+✔ responsive geometry remains deterministic through narrow, wide, collapsed, and repeated resize states (2.4803ms)
+✔ M2 bridge ingest accepts valid local/UNC Unicode media and rejects unsafe paths and versions (8.5437ms)
+✔ v1 compatibility is explicit and malformed thumbnail data cannot enter v3 state (1.7669ms)
+✔ versioned replay metadata export deep-clones valid v3 state and excludes live-only thumbnail payloads (7.9081ms)
+✔ metadata export recursively strips raw thumbnail and image aliases without mutating permissive v3 fields (2.677ms)
+✔ replay metadata import preserves current v3 snapshots and completely migrates supported legacy state (4.6437ms)
+✔ replay metadata import rejects malformed, unsupported, incomplete, and lossy envelopes (21.4836ms)
+✔ metadata import rejects recursive raw image aliases with the exact offending path (3.1846ms)
+✔ metadata import rejects executable and non-replay paths but accepts every supported replay extension (4.7078ms)
+✔ ReplayLibraryStore uses immutable v3 records and deduplicates stable events and physical identity (4.9211ms)
+✔ same canonical path and stable file identity converge across later size and mtime observations (2.0275ms)
+✔ event ID reuse still rejects changed paths, identities, and unproven observations (1.3217ms)
+✔ domain patches validate by replay ID while runtime handles stay outside persistent state (3.1003ms)
+✔ panel subscriptions can skip eager O(n) presentation snapshots and identify domain fields (0.7063ms)
+✔ stable event replay after restart preserves user metadata and rejects event ID collisions (1.5726ms)
+✔ 5,000-record snapshot ingestion batches state and emits once (545.0872ms)
+✔ duration formatting preserves useful centiseconds across seconds, minutes, and hours (0.1638ms)
+✔ selectors cover views, filters, chronological groups, and 5,000-record search under 50 ms (77.4475ms)
+✔ virtual windows cap DOM work for 100, 1,000, and 5,000 records while retaining spacers (0.2852ms)
+✔ bounded task queue enforces concurrency and cancels pending work (5.9082ms)
+✔ thumbnail cache keys invalidate on identity/mtime/position changes and permanent JPEG bytes survive restart (2.473ms)
+✔ production thumbnail encoder decodes, center-crops, resamples, and emits verified JPEG bytes through the UXP canvas seam (0.7006ms)
+✔ thumbnail cache generates and verifies real requested 1x/high-DPI JPEG dimensions with reusable bounded variants (1.6692ms)
+✔ thumbnail variant encoding fails closed on unavailable UXP encoding, bad output dimensions, and unsafe requests (1.337ms)
+✔ thumbnail resampling observes clear/invalidation cancellation and cannot commit late variant bytes (1.1423ms)
+✔ thumbnail cache rejects missing, truncated, oversized, and decompression-bomb SOF dimensions before persistence (0.7332ms)
+✔ thumbnail index loading whitelists bounded canonical metadata and rejects aggregate poisoning (2.4528ms)
+✔ thumbnail cancellation removes staged bytes and cannot poison the permanent cache (0.5787ms)
+✔ v3 state writes stage, verify, rotate last-known-good, and recover primary on replace failure (2.2765ms)
+✔ all-present-invalid state candidates stop hydration and healing without any write or rotation (0.4226ms)
+✔ true first run remains writable and a valid backup can still heal the primary (0.5092ms)
+✔ native durable writer takes precedence and receives the validated staged state contract (0.1561ms)
+✔ M2 replay query normalization is bounded and preserves real filter semantics (1.6409ms)
+✔ replay workspace uses APG tabs, real facets, result status, and deterministic cleanup (4.0138ms)
+✔ M2 metadata stabilization requires a delayed second filesystem observation even when declared metadata matches (9.5584ms)
+✔ M2 metadata stabilization rejects a premature producer declaration that changes during observation (1.1866ms)
+✔ M2 metadata stabilization rejects continuously growing size within the bounded attempts (1.0992ms)
+✔ M2 metadata stabilization rejects changing modification time within the bounded attempts (1.057ms)
+✔ M3 processing epoch cannot apply old-file observations to a reused replay ID (1.2205ms)
+✔ M3 native watcher roots keep configured replay/relink roots recursive and known parents bounded (12.5549ms)
+✔ M3 watcher overlap merging upgrades exact roots to recursive and distinguishes nonrecursive descendants (1.0333ms)
+✔ M3 preference previews never restart native watching while committed root changes do (1.2053ms)
+✔ M3 archive, metadata removal, and recycle execute against the original modal confirmation (3.762ms)
+✔ M3 delete rejects a modal confirmation made stale by a path/state change (1.1794ms)
+✔ M3 source rename cancels processing, releases Source Monitor, and rechecks Premiere immediately before mutation (3.2255ms)
+✔ M3 final Premiere reference recheck blocks rename after handle release without touching the file (1.9837ms)
+✔ M3 metadata replacement validates before mutation and restores the exact prior state after an atomic write failure (4.5055ms)
+✔ M3 metadata replacement aborts on a native unregister result failure and restores partial registry changes (5.0225ms)
+✔ M3 metadata commit drains domain writes, refreshes every mount, discards stale drafts, and resumes watching once (3.1723ms)
+✔ M3 metadata poller epoch drops an in-flight old-directory scan after tracked files are replaced (2.9588ms)
+✔ M3 bridge snapshots wait for metadata commit or rollback before mutating replay state (1.0494ms)
+✔ M3 recycle cancels processing, releases Source Monitor, and revalidates the original confirmation before native deletion (1.863ms)
+✔ M3 bootstrap markup reserves a visible, announced Minecraft-styled loading or fatal state (0.657ms)
+✔ M3 bootstrap catches add-on, constructor, and asynchronous start failures into the visible fatal shell (4.7056ms)
+✔ M3 bootstrap keeps loading visible until controller start resolves, then reveals the real shell (10.0725ms)
+✔ M3 bootstrap treats UXP font rejection as a progressive fallback, never an empty or fatal panel (1.8445ms)
+✔ M3 hot reload awaits delayed referenced and event-registered teardown before the new runtime owns the DOM (1.9101ms)
+✔ M3 shared bootstrap gate lets only the newest UDT runtime finish asynchronous startup (1.1ms)
+✔ M3 bootstrap supersession waits for in-flight start and asynchronous controller retirement (1.9445ms)
+✔ M3 collection drafts stay manual when optional smart fields are blank and close date bounds include the full day (2.1504ms)
+✔ M3 source-name validation accepts every supported video extension while preserving it (0.5ms)
+✔ M3 modal chrome clears a prior rename blocker and smart membership is visibly rule-driven (4.1154ms)
+✔ M3 ambiguous relink confirmation exposes the exact source, candidate, score, and reason before apply (2.7993ms)
+✔ M3 existing smart collections show rule details and save every supported rule field and operator (17.8019ms)
+✔ M3 delete UI defaults to archive, opts into danger explicitly, and renders partial recycle results (0.7779ms)
+✔ M3 pending focus frames are canceled on close and destroy (0.3614ms)
+✔ M3 six-dot collection reorder commits the exact before/after order without invoking file work (12.4553ms)
+✔ M9 collection reorder handles support keyboard transactions, focus restoration, announcements, and rollback (3.2707ms)
+✔ M3 grid sends Ctrl/Shift clicks to selection and Escape never steals an open overlay (3.5541ms)
+✔ M3 replay FLIP motion honors the canonical reducedMotion preference (2.473ms)
+✔ M9 virtual replay grid exposes complete row and column position semantics (1.9367ms)
+✔ M3 replay reorder handles own their pointer sequence and never enter native OLE (1.5163ms)
+✔ M9 replay reorder buttons support keyboard placement and instructions without invoking import or native OLE (1.37ms)
+✔ M3 context-action inventory and parameterized routing cover every rendered command without OLE (2.0159ms)
+✔ M3 context menu exposes exact disabled reasons and labels, supports keyboard movement, Escape, and focus restoration (1.1389ms)
+✔ M3 right-click preserves a selected batch, selects an unselected card, and routes the exact selection (1.1974ms)
+✔ M3 context action capability states fail closed with exact reasons and enable only proven host adapters (2.8773ms)
+✔ M3 routed context actions invoke the exact viewer, gateway, organization, and lifecycle effects (1.6662ms)
+✔ M3 context menu remains viewport-bounded and OLE dispatch is absent from reorder and context handlers (0.4843ms)
+✔ M3 collection plans create, rename, recolor, reorder, duplicate, and delete immutably (11.2781ms)
+✔ M3 replay metadata and bounded batch actions preserve schema and case-insensitive tag identity (4.4432ms)
+✔ M3 collection replay order is deterministic and isolated from smart collections (4.2637ms)
+✔ M3 smart rules validate and evaluate every required user-visible field (0.6575ms)
+✔ M3 recent, persisted most-used, and saved-search helpers remain deterministic (19.4257ms)
+✔ M3 selection reducer covers plain, Ctrl, Shift, arrows, keyboard range, Ctrl+A, and Escape (0.8803ms)
+✔ M3 source rename plan preserves extension, guards exact identity, and requires Premiere warning (3.8257ms)
+✔ M3 relink scoring is root-bounded, deterministic, ambiguity-aware, and honest across volumes (1.6619ms)
+✔ M3 batch relink requires explicit unique mappings (1.6925ms)
+✔ M3 delete confirmation defaults to archive and recycle plans expose blocked and partial results (3.7829ms)
+✔ M3 metadata-only removal is limited to missing media and cleans collection order and usage (2.0294ms)
+✔ M4 Source Monitor adapter waits for exact host identity publication without trusting open success (2.4127ms)
+✔ M4 Source Monitor adapter leaves the editor's prior clip untouched when identity publication times out (2.6141ms)
+✔ M4 Source Monitor adapter owns the exact replay and exposes only physically supported controls (2.168ms)
+✔ M4 Source Monitor adapter never drives or closes a clip the editor selected afterward (0.958ms)
+✔ M4 Source Monitor adapter exposes actionable missing and codec recovery without fake conversion (2.1972ms)
+✔ M4 viewer tray is a docked replay-scroller sibling with honest bounded controls (1.3849ms)
+✔ M4 main integration preserves click-to-Source-Monitor and releases viewer before mutations (1.0944ms)
+✔ M4 missing-path release attempts every viewer mount without awaiting its own processing task (3.1378ms)
+✔ M4 integration clears the old poster before assigning a new replay poster (0.2891ms)
+✔ M4 production never silently transcodes or reads whole replay files into Blob memory (1.8049ms)
+✔ M4 viewer exports a bounded Source Monitor contract and precise time formatting (5.0156ms)
+✔ M4 viewer starts hidden, accepts integration element aliases, and explains every unsupported control (3.1141ms)
+✔ M4 viewer opens only a verified Source Monitor session and publishes honest capabilities (2.1808ms)
+✔ M4 viewer polls position only while its verified source is open and playing (1.1396ms)
+✔ M4 seek is duration-gated, clamps real host seeks, and coalesces rapid scrub input (1.3757ms)
+✔ M4 frame stepping is fps-gated, pauses playback, reads live position, and clamps bounds (0.7663ms)
+✔ M4 keyboard transport operates only while viewer focus is owned and ignores form controls (0.7238ms)
+✔ M4 rapid replay switching serializes host opens and releases the stale ownership token (0.5091ms)
+✔ M4 failed A-to-B switch cannot retain A ownership or poster under B state (0.8978ms)
+✔ M4 rejected switch preserves A only when its verified release itself fails (0.5684ms)
+✔ M4 releaseReplayIds closes only the matching active or in-flight replay with its ownership token (0.765ms)
+✔ M4 ownership loss fails closed and never asks the controller to close an unowned token (0.401ms)
+✔ M4 invalid, unavailable, and malformed sessions stay visible as actionable errors (0.5491ms)
+✔ M4 missing media and codec failures expose distinct recovery actions (0.5296ms)
+✔ M4 close and teardown clear poster sources and restore the focus that opened the tray (0.2828ms)
+✔ M4 teardown is idempotent, cancels polling/listeners, and releases before adapter destruction (0.2745ms)
+✔ M4 viewer implementation contains no fake media, object URL, transcode, grid, or UXP-unsafe child replacement path (0.5677ms)
+✔ cubic Bezier solver solves x before evaluating y, including flat slopes (1.3127ms)
+✔ numeric and PointF interpolation preserve endpoint types and reject unsafe types (0.8718ms)
+✔ TickTime comparison remains exact beyond Number.MAX_SAFE_INTEGER (0.3857ms)
+✔ keyframe bracketing is deterministic before, on, between, and after unsorted keys (4.7401ms)
+✔ tick quantization uses exact integer arithmetic and deterministic tie handling (0.228ms)
+✔ adaptive sample planning is bounded, quantized, deterministic, and collision free (1.6252ms)
+✔ short quantized ranges retain exact endpoints without duplicate TickTimes (0.2847ms)
+✔ baked samples preserve endpoints and occupied user keys (0.9968ms)
+✔ curve thumbnails are deterministic vector path data with no bitmap payload (0.5898ms)
+✔ built-in presets have the exact accepted names and are deeply immutable (2.4847ms)
+✔ user preset normalization validates curves and bounds settings, tags, and identity (3.4937ms)
+✔ CRUD is copy-on-write, confirms destructive operations, and preserves ordering (6.1205ms)
+✔ favorites keep built-ins immutable and user tags remain bounded (3.6004ms)
+✔ folder operations assign, reorder, and safely unfile presets on confirmed delete (2.0119ms)
+✔ user preset organization updates tags and folder in one bounded library revision (0.5277ms)
+✔ search keeps Built-in/User groups distinct and returns generated path thumbnails (4.6051ms)
+✔ legacy preset documents migrate to the current version (0.9109ms)
+✔ versioned JSON export is deterministic, excludes generated thumbnails, and rejects Premiere preset formats (0.8713ms)
+✔ import merge never overwrites colliding user presets and replace is explicit (0.7967ms)
+✔ preset JSON limits use true UTF-8 bytes and expose a fail-closed file preflight (3.9002ms)
+✔ source is a standalone UXP global plus Node module without fake baked mutation paths (2.6672ms)
+✔ exact TickTime ordering never loses precision and handles signed values (1.1858ms)
+✔ Premiere float arrays are normalized as readable PointF values (0.214ms)
+✔ bracketing is deterministic before, on, between, and after keys (0.6649ms)
+✔ a single exact key is not misrepresented as an editable segment (0.2614ms)
+✔ selection inspection uses matchName occurrence and parameter index/value kind identities (9.9411ms)
+✔ missing project and sequence produce reason-coded empty capabilities (0.9623ms)
+✔ observation is visible-only, adaptive, event-assisted, and fully detached on destroy (5.0033ms)
+✔ refresh requests coalesce and never overlap host selection reads (8.025ms)
+✔ native planning re-resolves the active selection and rejects a stale snapshot (3.3242ms)
+✔ nonzero start, trims, speed, and reverse all fail closed as unproven time bases (6.609ms)
+✔ native Apply creates all actions synchronously in one locked transaction and verifies readback (6.0454ms)
+✔ a no-change native plan avoids creating a meaningless Undo step (2.5374ms)
+✔ Apply rejects stale plans before entering lockedAccess (1.619ms)
+✔ compound addAction rejection and false transaction results are hard failures (5.3722ms)
+✔ readback mismatch is reported instead of being hidden (1.3349ms)
+✔ baked planning stays disabled without proof and explicitly rejects PointF interpolation readback (1.5202ms)
+✔ a validated numeric runtime proof enables one-transaction baked Apply and exact owned-key cleanup (2.3678ms)
+✔ baked planning requires the exact host ticks-per-frame grid (2.0418ms)
+✔ baked cleanup aborts all removals when any issued key no longer matches its ownership receipt (1.2885ms)
+✔ an identical-looking replacement key is not treated as Oracle-owned (1.4025ms)
+✔ cleanup cannot remove keys because no physically proven ownership receipt issuer exists (0.2273ms)
+✔ M5 workspace exposes a strict state model, integration aliases, and normalized graph utilities (2.3471ms)
+✔ M9 Curves keeps the SVG a visual preview and exposes four scalar numeric controls (1.1496ms)
+✔ M1 Curves color preferences normalize and update the real graph tokens (8.9182ms)
+✔ M5 baked mode requires the complete explicit runtime proof, never a hopeful capability boolean (0.2897ms)
+✔ M5 lifecycle activates host observation only while both route-visible and active (6.9396ms)
+✔ M5 ready state presents a stable property selector across multiple compatible clips (4.2876ms)
+✔ M5 loading, empty, unsupported, and error snapshots always leave an actionable visible state (2.56ms)
+✔ M5 pointer preview is pointer-captured, snapped, RAF-coalesced, and never mutates Premiere (9.2492ms)
+✔ M5 Alt modifier overrides snapping and keyboard/numeric edits remain precise and announced (7.2888ms)
+✔ M5 graph tools fit, reset, mirror, reverse, copy, and paste operate on local state (3.4891ms)
+✔ M5 native Apply plans once, preserves the selected bindings, and accepts only verified one-step readback (3.7204ms)
+✔ M5 baked controls stay disabled with the adapter's exact proof reason and cannot call host actions (2.1294ms)
+✔ M5 proven numeric baked mode generates exact frame-quantized samples before the adapter plan (6.3625ms)
+✔ M5 configurable graph subdivisions render real SVG grid lines and honor visibility (1.571ms)
+✔ M5 baked warning threshold requires explicit confirmation before any host plan (3.5898ms)
+✔ M5 built-in and user preset tabs remain distinct, load generated previews, and keep built-ins immutable (4.5679ms)
+✔ M5 user preset tags and folders render, edit atomically, and keep real management hooks gated (5.9036ms)
+✔ M5 user preset ordering uses a dedicated pointer-captured handle with persisted target index (9.8259ms)
+✔ M9 Curves preset tabs and listbox use APG roving focus with explicit keyboard activation (3.8876ms)
+✔ M5 destructive user-preset hooks require explicit confirmation and JSON hooks stay honest (5.768ms)
+✔ M5 hidden workspace cancels pending previews and teardown is idempotent without destroying a shared adapter (1.5395ms)
+✔ M5 workspace source contains no fake media, unsafe child replacement, CSS layout grid, Blob URL, or Premiere preset path (1.1723ms)
+✔ M5 stable revision loads every Curves dependency before main with one cachebuster (2.6446ms)
+✔ M5 Curves route remains real as later routes advance (2.3021ms)
+✔ M5 workspace markup exposes every wired selector, graph, action, and nonblank state (1.5423ms)
+✔ M5 controller uses the real Premiere adapter, strict baked proof, and route-scoped observation (1.9008ms)
+✔ M5 presets persist in Oracle v3 state with real JSON pickers and confirmations (2.2765ms)
+✔ M5 focused suites are part of the full verification stack (0.1754ms)
+✔ effect index preserves the exact host video mapping, audio grouping, and duplicate occurrences (1.9428ms)
+✔ effect index refuses to guess a mismatched video display/match mapping (0.4548ms)
+✔ cache validation rejects stale host versions, forged IDs, and broken duplicate ordering (1.1807ms)
+✔ bounded typo-tolerant search finds host effects without inventing categories (1.0253ms)
+✔ 5,000-effect local search stays inside the Milestone 6 keystroke budget (30.6343ms)
+✔ M6 dependencies remain ordered before main with one current stable cachebuster (1.6602ms)
+✔ M6 Quick Apply route is enabled and its complete workspace contract is mounted (13.7464ms)
+✔ M6 main validates every Quick Apply global and constructs real services only after v3 hydration (2.9616ms)
+✔ M6 v3 facades are distinct, preserve sibling domains, and are wired to the correct consumers (1.8089ms)
+✔ M6 persistence is awaitable and propagates failures to adapters and domain actions (1.0548ms)
+✔ M6 forwards route and preferences lifecycle and wires real JSON and confirmation hooks (2.817ms)
+✔ M6 UXP recipe import verifies file size before reading and rechecks true UTF-8 bytes (0.379ms)
+✔ M6 controller teardown releases each Quick Apply owner and shared-adapter lease exactly once (0.9616ms)
+✔ M6 feature flag and every focused module/test participate in the full verification stack (0.4113ms)
+✔ corrupt cache is cleared and rebuilt from the exact installed host factories (3.6608ms)
+▶ inspectHost reports missing and failed effect discovery honestly instead of ready Available
+  ✔ an index has not been loaded (4.0097ms)
+  ✔ an installed factory method is missing (2.0309ms)
+  ✔ a factory call fails while rebuilding the index (1.0489ms)
+✔ inspectHost reports missing and failed effect discovery honestly instead of ready Available (11.3634ms)
+✔ observation is visible-only, bounded to 100-250 ms, and removes host listeners on hide (2.3305ms)
+✔ opaque media identity is exposed while factory plus chain action proves exact video compatibility (17.0238ms)
+✔ Apply Once is duplicate-safe by stable match identity and records no false history (1.2349ms)
+✔ video factory identity may publish only after append while exact chain readback remains mandatory (0.8883ms)
+✔ Premiere 26.3 append actions are created only inside project lockedAccess and recreated for apply (1.1795ms)
+✔ wrong committed video identity fails exact readback after the transaction and reports the partial boundary (1.3094ms)
+✔ a null video factory token fails before action creation or transaction (0.5416ms)
+✔ a stale effect stack invalidates a preflight plan before any transaction (0.7328ms)
+✔ a second append-action creation failure starts no recipe transaction and mutates no component (2.0916ms)
+✔ transaction rejection does not commit components or claim verified history (4.1839ms)
+✔ transaction action rejection retains the exact transaction boundary details (0.4915ms)
+✔ audio application uses createComponentByDisplayName and skips incompatible video items explicitly (0.7445ms)
+✔ empty selection returns a non-executable exact report without a transaction (0.2354ms)
+✔ Oracle Recipe applies ordered components, then parameters, with exact two-stage readback (1.494ms)
+▶ recipe compatibility metadata is enforced before any effect candidate or transaction
+  ✔ minimum Premiere version (0.5685ms)
+  ✔ effect-index version (0.2649ms)
+  ✔ matching metadata remains executable (0.3233ms)
+✔ recipe compatibility metadata is enforced before any effect candidate or transaction (1.4883ms)
+✔ recipe parameter readback failure reports the unavoidable committed boundary honestly (0.7615ms)
+✔ recipe preflight rejects time-varying parameters before adding any component (0.3649ms)
+✔ duplicate audio display names remain indexed but application fails closed instead of guessing (0.3313ms)
+✔ generic parameter metadata is honestly unavailable while explicit recipe values remain supported (0.2727ms)
+✔ destroy cancels timers/listeners and makes issued plans unusable (0.5455ms)
+✔ public effect IDs remain stable across JSON cache validation (3.4176ms)
+✔ M6 effect normalization preserves host mapping, duplicate occurrence, grouping, and absent category truth (3.9927ms)
+✔ M6 grouping preference drives stable domain groups without inventing missing Premiere categories (25.1104ms)
+✔ M6 bounded typo-tolerant search returns 5,000-record results within the 50 ms local budget (171.8956ms)
+✔ M6 selection normalization exposes mixed and unresolved media without silently claiming compatibility (0.7847ms)
+✔ M6 verified effect application uses plan then apply and records Recent only after receipt verification (1.5931ms)
+✔ M6 unverified apply reports failure and never records history (0.4409ms)
+✔ M6 favorites and Recent stay bounded and durable through the provided v3-state facades (0.5733ms)
+✔ M6 Oracle Recipes validate ordered host effects, indexed values, migration, and JSON-only import/export (2.0901ms)
+✔ M6 recipe Apply Once defaults flow into every step while explicit step overrides win (1.0438ms)
+✔ M6 supported-parameter discovery requires explicit host and descriptor proof (0.7845ms)
+✔ M6 recipe JSON import enforces the 2 MB limit on UTF-8 bytes, not JavaScript characters (7.1422ms)
+✔ M6 strict recipe bounds match the adapter and oversized JSON imports are rejected, never truncated (0.5367ms)
+✔ M6 recipe CRUD persists ordered stacks and applies through the honest two-stage adapter boundary (2.8569ms)
+✔ M6 adapter receipts retain committed, partial-failure, stage, Undo, and skipped boundaries (0.7098ms)
+✔ M6 returned partial recipe receipts remain exact instead of collapsing to a generic unverified error (0.4459ms)
+✔ M6 persistence rejection is reported and rolled back without misreporting host mutation truth (1.0176ms)
+✔ M6 verified Oracle Recipe applications participate in durable Recent history (0.4962ms)
+✔ M6 explicit refresh uses the host-derived index rebuild and selection refresh APIs (0.3586ms)
+✔ M6 lifecycle forwards visibility/activation and owned teardown without duplicate services (0.251ms)
+✔ M6 workspace exposes stable integration IDs and aliases (2.4129ms)
+✔ M6 canonical elements protect the main Replays empty state from Quick Apply clean snapshots (3.6957ms)
+✔ M6 always renders a nonblank state and host-truth result presentation (1.8049ms)
+✔ M6 renders domain grouping as labeled ARIA groups without changing option behavior (0.7514ms)
+✔ M6 lifecycle auto-focuses search only while visible and active and cleans listeners once (5.0776ms)
+✔ M6 keyboard search supports Up/Down, Enter apply, and layered Escape (2.9399ms)
+✔ M9 Quick Apply scopes use one roving tab stop with Arrow, Home, End, Enter, and Space activation (4.6193ms)
+✔ M6 Apply status is immediate, verified, and does not blank or disable unrelated results (1.5339ms)
+✔ M6 recipe editor is a real two-stage ordered-effect and supported-parameter contract (2.6025ms)
+✔ M6 parameter stage stays useful and honest when Premiere exposes no semantic descriptors (0.9567ms)
+✔ M6 Recipe import/export controls are wired only when UXP file hooks exist (2.2386ms)
+✔ M6 source remains UXP-safe, responsive, and contains no fake preset or hotkey surface (1.0566ms)
+✔ M7 manifest exposes exactly four real panel entrypoints with inter-panel communication (7.4887ms)
+✔ M7 registers all panels in one lifecycle setup and retains one application controller (3.4854ms)
+✔ M7 captures pristine workspace blueprints before bootstrap and never clones the main shell (1.9866ms)
+✔ M7 source document IDs remain unique and the main shell is explicitly scoped (0.6872ms)
+✔ M7 dedicated roots always have styled loading/error UI and mount-relative workspaces (0.5366ms)
+✔ M7 teardown is panel-local while plugin teardown owns singleton services (2.6322ms)
+✔ M7 main panel lifecycle gates route observation without acquiring replacement leases (2.2091ms)
+✔ M7 create prepares an inert root while show alone activates and mounts it (0.6622ms)
+✔ M7 rejects a panel ID collision on an already-owned UXP root (0.6276ms)
+✔ M7 first dedicated mount applies committed preferences and keeps action feedback panel-local (3.7478ms)
+✔ M7 compact workspaces preserve controls and never anchor past a visible replay toolbar (2.6515ms)
+✔ M7 emergency renderer leaves an actionable visible state when panel helpers are unavailable (2.0146ms)
+✔ M7 main lifecycle root attaches before bootstrap, moves safely, and hands off only current visibility (7.7758ms)
+✔ M7 dedicated teardown awaits delayed workspace cleanup, remains idempotent, and continues after rejection (2.1965ms)
+✔ M7 shared controller teardown awaits workspace, viewer, and coordinator cleanup while continuing after failure (4.3746ms)
+✔ M7 host registry mounts four panel entrypoints concurrently, shares state, survives arbitrary reopen order, and restarts cleanly (3.2176ms)
+✔ M7 resolves direct UXP roots and value.node wrappers without accepting arbitrary objects (0.942ms)
+✔ M7 dedicated shells render loading or actionable error copy synchronously and never blank (0.6204ms)
+✔ M7 pristine blueprints ignore later runtime render mutations and rewrite every local IDREF (6.2943ms)
+✔ M7 blueprint capture and document validation reject duplicate IDs with exact evidence (1.1436ms)
+✔ activation leases aggregate visible-and-active observation and start the raw adapter once (6.3836ms)
+✔ concurrent activation lease starts share one asynchronous raw start (0.7426ms)
+✔ activation coordinator teardown destroys the raw adapter even when deactivation throws (0.4733ms)
+✔ Source Monitor leases serialize opens, revoke the prior owner, and gate every owned operation (3.425ms)
+✔ a failed prior-owner close blocks the next open and preserves exact ownership (0.5522ms)
+✔ tokenless viewer opens are cleaned up and never create an owner (0.6287ms)
+✔ viewer coordinator teardown destroys the raw adapter even when owner close fails (0.483ms)
+✔ same-panel replay replacement ignores a normal close revocation and reaches the second raw open (7.4381ms)
+✔ M8 manifest exposes one honest Quick Apply command and no shortcut (1.3514ms)
+✔ M8 extends the sole entrypoints setup with a synchronous handled command wrapper (1.1827ms)
+✔ M8 normalizes Premiere's array-like plugin collection and targets the exact panel (0.3889ms)
+✔ M8 accepts Premiere's documented Set plugin collection (0.2004ms)
+✔ M8 helper always returns a Promise and converts synchronous host throws (0.6235ms)
+✔ M8 rejects every unsupported plugin-manager and showPanel outcome (0.6923ms)
+✔ M8 synchronous wrapper reports rejection once and never throws through the host (3.9284ms)
+✔ M8 ships no simulated-key or native global-hotkey mechanism (13.5139ms)
+✔ M8 cache revision is exact and uniform (0.4366ms)
+✔ CCX verifier is fail-closed, confined, and validates the complete private bundle contract (2.5792ms)
+✔ synthetic private-local CCX passes and reports package, inventory, and addon hashes (872.7818ms)
+✔ synthetic zip-slip CCX is rejected before extraction and cannot escape (756.6105ms)
+✔ synthetic Unix symlink CCX entry is rejected as a reparse-equivalent (630.8776ms)
+✔ synthetic private-path payload is rejected inside an exact-allowlist runtime module (861.205ms)
+✔ synthetic same-size post-inventory drift is rejected by per-file SHA-256 (897.8432ms)
+✔ synthetic development-only module is rejected from the release bundle (630.588ms)
+✔ synthetic ordinary extra module is rejected by the exact file allowlist (649.8865ms)
+✔ synthetic permission and host drift are rejected from the exact manifest contract (3890.6163ms)
+✔ M9 diagnostics remain bounded and production-console silent by default (6.9907ms)
+✔ M9 diagnostics redact paths, payloads, thumbnails, avatars, and byte-like strings (0.6767ms)
+✔ M9 diagnostic console mirroring is explicit and receives only sanitized records (0.2936ms)
+✔ M9 support summaries expose bounded structured codes and explicit privacy flags (0.7395ms)
+✔ M9 Preferences re-whitelists support diagnostics and cannot export provider details (0.6479ms)
+✔ M9 support bundle retains only allowlisted native-drag evidence across the full bounded buffer (2.3093ms)
+✔ M9 diagnostics load before application modules and Data & Diagnostics has a real bounded view (3.4068ms)
+✔ M9 production UI contains no stale milestone-gate copy (0.9548ms)
+✔ M9 package staging is explicit private-local acceptance and public release fails closed (0.8623ms)
+✔ M9 stages one exact file allowlist and excludes unused modules (0.9933ms)
+✔ M9 staging verifies one canonical addon, hashes, references, reparse points, and private paths (0.3143ms)
+✔ M9 staging enforces the exact private-local manifest contract (0.1485ms)
+✔ M2 has one v3 replay store and keeps v2 storage strictly as a migration input (2.0991ms)
+✔ permanent v3 history is uncapped and preserves exact export metadata (42.7747ms)
+✔ stable event delivery deduplicates while a physical overwrite remains a new replay (11.0375ms)
+✔ raw thumbnail bytes are live-only and never enter persistent v3 state (0.8046ms)
+✔ v3 ingest accepts exact local and UNC paths and rejects device, ADS, traversal, and relative forms (0.9886ms)
+✔ raw Base64 bridge thumbnails normalize in memory without becoming a stored URL (0.408ms)
+✔ native addon loader awaits require rejections and distinguishes invalid module shapes (5.5011ms)
+✔ native addon loader accepts only callable exports with a ready self-test (1.4302ms)
+✔ native addon loader rejects incomplete or throwing packaged font registration (1.5326ms)
+[Oracle Native Drag][Path Resolution] {
+  replayId: 'replay-1',
+  availablePathProperties: [ 'filepath' ],
+  canonicalPathPresent: true
+}
+[Oracle Native Drag][Event] {
+  gestureId: 'gesture-1784227406953-1',
+  replayId: 'replay-1',
+  eventType: 'pointerdown',
+  eventPhase: 0,
+  buttons: 1,
+  button: 0,
+  pointerId: 42,
+  movementSquared: 0,
+  thresholdCrossed: false,
+  nativeStarted: false,
+  activationConsumed: false,
+  targetTag: '',
+  targetClasses: '',
+  currentTargetTag: '',
+  canonicalPathPresent: true
+}
+[Oracle Native Drag][Event] {
+  gestureId: 'gesture-1784227406953-1',
+  replayId: 'replay-1',
+  eventType: 'pointermove',
+  eventPhase: 0,
+  buttons: 1,
+  button: 0,
+  pointerId: 42,
+  movementSquared: 800,
+  thresholdCrossed: false,
+  nativeStarted: false,
+  activationConsumed: false,
+  targetTag: '',
+  targetClasses: 'replay-card--drag-pending',
+  currentTargetTag: '',
+  canonicalPathPresent: true
+}
+[Oracle Native Drag][Event] {
+  gestureId: 'gesture-1784227406953-1',
+  replayId: 'replay-1',
+  eventType: 'threshold-crossed',
+  eventPhase: 0,
+  buttons: 1,
+  button: 0,
+  pointerId: 42,
+  movementSquared: 800,
+  thresholdCrossed: true,
+  nativeStarted: true,
+  activationConsumed: true,
+  targetTag: '',
+  targetClasses: 'replay-card--drag-pending',
+  currentTargetTag: '',
+  canonicalPathPresent: true
+}
+[Oracle Native Drag][Invocation] {
+  gestureId: 'gesture-1784227406953-1',
+  replayId: 'replay-1',
+  canonicalPathPresent: true,
+  fileExists: 'unchecked-synchronously',
+  startedAt: 1000,
+  buttons: 1,
+  workerState: 'ready',
+  selfTest: { ok: true, oleWorkerState: 'ready' }
+}
+[Oracle Native Drag][Snapshot] {
+  gestureId: 'gesture-1784227406953-1',
+  replayId: 'replay-1',
+  requestId: 17,
+  stage: 'PROMISE_RESOLVED',
+  requestReceived: true,
+  pathValidated: true,
+  leftButtonConfirmed: true,
+  workerQueued: true,
+  workerAwakened: true,
+  oleInitialized: true,
+  doDragDropEntered: true,
+  doDragDropReturned: true,
+  queryContinueDragCalls: 3,
+  giveFeedbackCalls: 2,
+  escapeObserved: false,
+  finalEffect: 1,
+  promiseCreated: true,
+  promiseResolved: true,
+  promiseRejected: false,
+  cancellationHookInstalled: true,
+  elapsedMs: 24.5
+}
+[Oracle Native Drag][Snapshot JSON] {"gestureId":"gesture-1784227406953-1","replayId":"replay-1","requestId":17,"stage":"PROMISE_RESOLVED","requestReceived":true,"pathValidated":true,"leftButtonConfirmed":true,"workerQueued":true,"workerAwakened":true,"oleInitialized":true,"doDragDropEntered":true,"doDragDropReturned":true,"queryContinueDragCalls":3,"giveFeedbackCalls":2,"escapeObserved":false,"finalEffect":1,"promiseCreated":true,"promiseResolved":true,"promiseRejected":false,"cancellationHookInstalled":true,"elapsedMs":24.5}
+✔ pointer movement over threshold never imports and starts native drag exactly once (7.4197ms)
+[Oracle Native Drag][Gesture End] native-dispatch-returned {
+  gestureId: 'gesture-1784227406953-1',
+  replayId: 'replay-1',
+  thresholdCrossed: true,
+  nativeStarted: true,
+  activationConsumed: true
+}
+[Oracle Native Drag][Result] {
+  gestureId: 'gesture-1784227406953-1',
+  replayId: 'replay-1',
+  ok: true,
+  dropped: false,
+  cancelled: true,
+  totalElapsedMs: 0,
+  nativeDispatchMs: 0,
+  errorCode: 'NATIVE_DRAG_CANCELLED'
+}
+Oracle native replay drag result {
+  ok: true,
+  dropped: false,
+  cancelled: true,
+  totalElapsedMs: 0,
+  nativeDispatchMs: 0,
+  errorCode: 'NATIVE_DRAG_CANCELLED'
+}
+✔ native drag returns a pending Promise without blocking snapshot polling (3.5086ms)
+✔ native drag records privacy-safe physical latency, completion, and pre-threshold cancellation evidence (2.2176ms)
+✔ post-OLE click and dblclick are consumed while ordinary activation remains separate (2.1935ms)
+✔ native replay drag filters non-primary and interactive targets and cancels released buttons (1.1597ms)
+✔ native drag invokes OLE before any await or ProjectItem work and retains no playhead fallback (0.4504ms)
+✔ button release after threshold cannot cancel before native OLE invocation (1.9153ms)
+✔ Escape after threshold is left to the active native OLE operation (1.4783ms)
+✔ post-drop reconciliation retains the immutable path actually sent to OLE (1.4415ms)
+✔ filesystem-style forward-slash Windows paths become valid native shell paths (1.2912ms)
+✔ ProjectItem lookup scans the fresh active-project tree and accepts exact normalized paths only (2.5593ms)
+✔ source readiness imports once, labels before drag readiness, and coalesces by exact path (2.1279ms)
+✔ source readiness rescans and recreates a ProjectItem deleted after prewarm (1.7392ms)
+✔ post-drop verification resolves the new TrackItem and matches its prepared ProjectItem identity (1.3505ms)
+✔ label reconciliation retries with bounded backoff and verifies label index 9 (0.9346ms)
+✔ label reconciliation reports a structured timeout without importing media (1.0596ms)
+✔ concurrent label reconciliation for one exact path is coalesced without importing a duplicate (0.792ms)
+✔ replay-bin and label actions are created synchronously inside lockedAccess (1.0453ms)
+✔ performImport suppresses consumed drag activation and keeps importFiles outside the lock (2.0508ms)
+✔ locked-access failures retain PROJECT_LOCK_REQUIRED and never become NO_REPLAY_PATH (0.7002ms)
+✔ manifest enables the Release x64 hybrid addon without changing plugin version (0.3863ms)
+✔ onerror and onclose share exactly one 2000ms reconnect timer (2.3814ms)
+✔ messages are parsed and delivered synchronously without a queue timer (1.5702ms)
+✔ lifecycle reconciliation stays queued until its exact correlated ACK (1.2059ms)
+✔ lifecycle reconciliation survives disconnect and retries the same request after reconnect (0.7666ms)
+✔ lifecycle outbox survives panel destruction and restores the same request (1.5204ms)
+✔ missing durable storage reports an honest boundary while retaining in-session delivery (0.7225ms)
+✔ lifecycle ACK timeout retries three times before rotating the socket (0.9481ms)
+✔ lifecycle NACK dequeues the bounded request and is delivered to the controller (0.7853ms)
+✔ destroy cancels reconnect work and destroys every socket handler (0.6321ms)
+✔ M2 store changes refresh the selector-driven workspace instead of mutating grid cards (0.9079ms)
+✔ M2 snapshot rendering rebuilds ID rows and commits only a virtual window (0.2934ms)
+✔ M3 production DOM updates avoid Premiere UXP's broken replaceChildren implementation (9.6761ms)
+✔ M2 virtual grid keeps a 5000-replay library ID-driven and DOM-bounded (6.0979ms)
+✔ visible logo does not schedule a perpetual animation timer (0.7635ms)
+✔ startup avoids mass-importing restored history and exposes an opt-in profiler (0.3627ms)
+✔ thumbnail cards use persistent cache URLs without logging image payloads or paths (0.7723ms)
+✔ replay import actions remain available independently of native drag and retain label 9 (3.4151ms)
+✔ native timeline dragging uses delegated pointer handlers and has no HTML or playhead fallback (0.4879ms)
+✔ M1 shell exposes centered navigation and profile controls without stale header copy (0.6682ms)
+✔ card metadata orders title, resolution, date, real indicators, and status below duration (0.3454ms)
+✔ grid column scaling coalesces resize work without a render loop (0.3414ms)
+✔ UXP virtual rows use equal flex tracks without paint containment (0.3569ms)
+✔ M1 packages and verifies Minecraft Regular, Five, and Ten semantic faces (3.7366ms)
+✔ grid slider changes equal responsive grid tracks at every supported step (2.2439ms)
+✔ one non-passive capture wheel listener handles cards and every descendant (2.5981ms)
+✔ wheel input accumulates in both directions and clamps without consuming boundaries (1.076ms)
+✔ line and page deltas normalize while Ctrl+wheel and non-scrollable viewports pass through (0.8708ms)
+✔ reduced motion scrolls immediately and replay pointerdown cancels pending motion (1.6616ms)
+✔ explicit motion preference overrides the operating-system media query (1.2789ms)
+✔ responsive grid coalesces resize work and keeps every track exactly equal (1.7436ms)
+✔ card CSS uses deterministic equal flex tracks without intrinsic image growth (0.4409ms)
+✔ filesystem fallback emits one stable new video without overlapping timers (20.6543ms)
+✔ frozen Milestone 0 invariants stay on while accepted product milestones advance (0.8673ms)
+✔ empty Oracle state is versioned, deterministic, and valid (2.3676ms)
+✔ legacy v2 migration preserves replay metadata without persisting image bytes (2.7096ms)
+✔ v3 migration is idempotent and retains collections, curve presets, and preferences (2.1248ms)
+✔ recovery rejects corrupt input and selects the newest valid complete snapshot (1.5936ms)
+✔ migration rejects relative records without weakening the valid snapshot (10.7189ms)
+✔ legacy entity ids stay stable when mutable metadata changes (1.1515ms)
+✔ legacy UUIDs are order-independent and collection references are rewritten (0.7917ms)
+✔ recovery never lets incomplete or future high-revision input beat a valid backup (0.5261ms)
+ℹ tests 449
+ℹ suites 0
+ℹ pass 449
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9591.4456
+
+> oracle-premiere-uxp@2.0.14 native:test
+> powershell -NoProfile -ExecutionPolicy Bypass -File native/build.ps1 -Action Test
+
+MSBuild version 18.8.2+ce25c0108 for .NET Framework
+
+  oracle-atomic-file-tests.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\Release\oracle-atomic-file-tests.exe
+  oracle-file-operation-tests.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\Release\oracle-file-operation-tests.exe
+  oracle-native-drag-tests.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\Release\oracle-native-drag-tests.exe
+  oracle-native-drag-harness.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\Release\oracle-native-drag-harness.exe
+  oracle-directory-watch-tests.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\Release\oracle-directory-watch-tests.exe
+  oracle-native-drag.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\stage\win\x64\oracle-native-drag.uxpaddon
+  oracle-packaged-font-registration-tests.vcxproj -> D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\Release\oracle-packaged-font-registration-tests.exe
+Test project D:/Blocky HQ/Oracle Plugin (Premiere Pro)/com.blocky.oracle.v5/native/build
+    Start 1: oracle-native-drag-tests
+1/6 Test #1: oracle-native-drag-tests ..................   Passed    1.40 sec
+    Start 2: oracle-native-release-trace-guard
+2/6 Test #2: oracle-native-release-trace-guard .........   Passed    0.92 sec
+    Start 3: oracle-atomic-file-tests
+3/6 Test #3: oracle-atomic-file-tests ..................   Passed    0.05 sec
+    Start 4: oracle-file-operation-tests
+4/6 Test #4: oracle-file-operation-tests ...............   Passed    0.34 sec
+    Start 5: oracle-directory-watch-tests
+5/6 Test #5: oracle-directory-watch-tests ..............   Passed    8.39 sec
+    Start 6: oracle-packaged-font-registration-tests
+6/6 Test #6: oracle-packaged-font-registration-tests ...   Passed    0.04 sec
+
+100% tests passed, 0 tests failed out of 6
+
+Total Test time (real) =  11.16 sec
+found 0 vulnerabilities
+
+> oracle-premiere-uxp@2.0.14 benchmark:m9
+> node release/run-m9-benchmarks.cjs
+
+{
+  "schema": "com.blocky.oracle.m9-benchmark",
+  "version": 1,
+  "generatedAt": "2026-07-16T18:43:54.079Z",
+  "machine": {
+    "platform": "win32 10.0.26200 x64",
+    "cpu": "AMD Ryzen 7 7800X3D 8-Core Processor           ",
+    "logicalCpuCount": 16,
+    "totalMemoryBytes": 67818041344,
+    "node": "v24.18.0"
+  },
+  "measurements": {
+    "replaySnapshot5000Ms": 278.061,
+    "replaySearch5000Ms": 2.809,
+    "replaySearchResults": 1,
+    "virtualScroll1000FramesTotalMs": 0.478,
+    "virtualScrollMeanFrameMs": 0.000478,
+    "virtualMaximumCommittedCards": 30,
+    "effectSearch5000Ms": 0.52,
+    "effectSearchFirst": "Installed Video Effect 3999",
+    "graphRefresh1000TotalMs": 37.781,
+    "graphRefreshMeanMs": 0.037781,
+    "graphLastPathCharacters": 1500,
+    "thumbnailTasks": 64,
+    "thumbnailMaximumConcurrency": 4,
+    "thumbnailQueueTotalMs": 0.338,
+    "queueDestroyMs": 0.039,
+    "heapDeltaBytes": 27190032,
+    "rssDeltaBytes": 57434112
+  },
+  "budgets": {
+    "replaySearchUnder50Ms": true,
+    "effectSearchUnder50Ms": true,
+    "virtualMeanFrameUnder16_7Ms": true,
+    "graphMeanRefreshUnder16_7Ms": true,
+    "virtualDomAtMost180Cards": true,
+    "thumbnailConcurrencyAtMost4": true
+  }
+}
+
+VERIFY_RELEASE_EXIT=0

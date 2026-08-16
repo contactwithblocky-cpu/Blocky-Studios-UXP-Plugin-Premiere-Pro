@@ -1,0 +1,22 @@
+{
+  "capturedLocal": "2026-07-16T12:36:11.947-04:00",
+  "capturedUtc": "2026-07-16T16:36:11.947Z",
+  "endpoint": "ws://127.0.0.1:3001",
+  "tcp": {
+    "localAddress": "127.0.0.1",
+    "localPort": 3001,
+    "state": "Listen",
+    "owningProcess": 61560,
+    "creationTime": "2026-07-16T11:46:58.000-04:00"
+  },
+  "process": {
+    "pid": 61560,
+    "parentPid": 25936,
+    "name": "javaw.exe",
+    "startTime": "2026-07-16T11:46:25.841-04:00",
+    "mainWindowHandle": 4068524,
+    "mainWindowTitle": "Minecraft* 1.21.11",
+    "executablePath": "C:\\Users\\salim\\AppData\\Roaming\\ModrinthApp\\meta\\java_versions\\zulu21.44.17-ca-jre21.0.8-win_x64\\bin\\javaw.exe"
+  },
+  "result": "PASS"
+}

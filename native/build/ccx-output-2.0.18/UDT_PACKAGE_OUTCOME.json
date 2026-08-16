@@ -1,0 +1,20 @@
+{
+  "schema": "blocky-studios-udt-private-package-v1",
+  "startedAt": "2026-08-13T17:59:06.435Z",
+  "completedAt": "2026-08-13T17:59:08.542Z",
+  "implementation": "C:\\Users\\salim\\AppData\\Local\\Temp\\oracle-udt-package-core-m9-9\\node_modules\\@adobe\\uxp-devtools-core\\src\\core\\client\\plugin\\actions\\PluginPackageCommand.js",
+  "stage": "D:\\Blocky HQ\\Oracle Plugin (Premiere Pro)\\com.blocky.oracle.v5\\native\\build\\ccx-stage\\com.blocky.oracle.v5",
+  "packageDir": "D:\\Blocky HQ\\Oracle Plugin (Premiere Pro)\\com.blocky.oracle.v5\\native\\build\\ccx-output-2.0.18",
+  "result": [
+    {
+      "success": true,
+      "host": "premierepro",
+      "error": null
+    }
+  ],
+  "ccx": {
+    "path": "D:\\Blocky HQ\\Oracle Plugin (Premiere Pro)\\com.blocky.oracle.v5\\native\\build\\ccx-output-2.0.18\\com.blocky.oracle.v5_premierepro.ccx",
+    "bytes": 25518646,
+    "sha256": "488965DADF002EE4127676035E404C511D14859FA25CF318FA36D25013E73621"
+  }
+}

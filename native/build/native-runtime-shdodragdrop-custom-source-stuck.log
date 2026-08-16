@@ -1,0 +1,17 @@
+[OracleNativeDrag] request=1 monotonicMs=16748937 thread=8416 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=1 monotonicMs=16748937 thread=8416 stage=PATH_VALIDATED
+[OracleNativeDrag] request=1 monotonicMs=16748937 thread=8416 stage=LEFT_BUTTON_CONFIRMED
+[OracleNativeDrag] request=1 monotonicMs=16748937 thread=8416 stage=WORKER_QUEUED
+[OracleNativeDrag] request=1 monotonicMs=16748937 thread=46432 stage=WORKER_AWAKENED
+[OracleNativeDrag] request=1 monotonicMs=16748937 thread=46432 stage=OLE_INITIALIZED hresult=0x0
+[OracleNativeDrag] request=1 monotonicMs=16748937 thread=46432 stage=DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=1 monotonicMs=16748937 thread=46432 stage=SH_DO_DRAG_DROP_ENTERED
+[OracleNativeDrag] request=2 monotonicMs=16753328 thread=8416 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=3 monotonicMs=16805859 thread=8416 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=4 monotonicMs=16809062 thread=8416 stage=DRAG_ALREADY_ACTIVE hresult=0x800700AA
+[OracleNativeDrag] request=1 monotonicMs=16914468 thread=8416 stage=SHUTDOWN_CANCELLATION_REQUESTED hresult=0x80004004
+[OracleNativeDrag] request=1 monotonicMs=17045562 thread=49724 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=1 monotonicMs=17045562 thread=49724 stage=PATH_VALIDATED
+[OracleNativeDrag] request=1 monotonicMs=17045562 thread=49724 stage=LEFT_BUTTON_NOT_HELD hresult=0x800704C7
+[OracleNativeDrag] request=2 monotonicMs=17045562 thread=49724 stage=REQUEST_RECEIVED
+[OracleNativeDrag] request=2 monotonicMs=17045562 thread=49724 stage=REQUEST_REJECTED hresult=0x80004004

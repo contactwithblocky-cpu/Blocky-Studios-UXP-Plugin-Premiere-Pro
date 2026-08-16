@@ -1,0 +1,43 @@
+
+> oracle-premiere-uxp@2.0.14 benchmark:m9
+> node release/run-m9-benchmarks.cjs
+
+{
+  "schema": "com.blocky.oracle.m9-benchmark",
+  "version": 1,
+  "generatedAt": "2026-07-16T16:36:08.899Z",
+  "machine": {
+    "platform": "win32 10.0.26200 x64",
+    "cpu": "AMD Ryzen 7 7800X3D 8-Core Processor           ",
+    "logicalCpuCount": 16,
+    "totalMemoryBytes": 67818041344,
+    "node": "v24.18.0"
+  },
+  "measurements": {
+    "replaySnapshot5000Ms": 480.653,
+    "replaySearch5000Ms": 3.98,
+    "replaySearchResults": 1,
+    "virtualScroll1000FramesTotalMs": 0.975,
+    "virtualScrollMeanFrameMs": 0.000975,
+    "virtualMaximumCommittedCards": 30,
+    "effectSearch5000Ms": 1.265,
+    "effectSearchFirst": "Installed Video Effect 3999",
+    "graphRefresh1000TotalMs": 39.695,
+    "graphRefreshMeanMs": 0.039695,
+    "graphLastPathCharacters": 1500,
+    "thumbnailTasks": 64,
+    "thumbnailMaximumConcurrency": 4,
+    "thumbnailQueueTotalMs": 0.252,
+    "queueDestroyMs": 0.029,
+    "heapDeltaBytes": 36231632,
+    "rssDeltaBytes": 57495552
+  },
+  "budgets": {
+    "replaySearchUnder50Ms": true,
+    "effectSearchUnder50Ms": true,
+    "virtualMeanFrameUnder16_7Ms": true,
+    "graphMeanRefreshUnder16_7Ms": true,
+    "virtualDomAtMost180Cards": true,
+    "thumbnailConcurrencyAtMost4": true
+  }
+}

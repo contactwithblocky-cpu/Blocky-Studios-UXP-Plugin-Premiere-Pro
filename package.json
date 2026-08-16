@@ -1,0 +1,37 @@
+{
+  "name": "blocky-studios-premiere-uxp",
+  "version": "2.0.18",
+  "private": true,
+  "description": "Blocky Studios cinematic workspace for Adobe Premiere Pro 2026.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "bridge": "node bridge/server.cjs",
+    "publish": "node bridge/publish.cjs",
+    "native:configure": "powershell -NoProfile -ExecutionPolicy Bypass -File native/build.ps1 -Action Configure",
+    "native:build": "powershell -NoProfile -ExecutionPolicy Bypass -File native/build.ps1 -Action Deploy",
+    "native:test": "powershell -NoProfile -ExecutionPolicy Bypass -File native/build.ps1 -Action Test",
+    "ui:build": "node release/build-ui.cjs && node release/generate-ui-build.cjs",
+    "ui:verify": "npm run check && node release/verify-ui.cjs && node release/audit-uxp-platform.cjs --check",
+    "check": "npm run ui:build && node --check release/build-ui.cjs && node --check release/uxp-responsive-compiler.cjs && node --check release/audit-uxp-platform.cjs && node --check release/generate-ui-build.cjs && node --check release/verify-ui.cjs && node --check release/package-private-ccx.cjs && node --check src/generated/oracle-build-info.js && node --check src/core/oracle-ui-runtime.js && node --check src/core/oracle-platform-telemetry.js && node --check main.js && node --check src/app/oracle-shell.js && node --check src/app/oracle-panel-dom.js && node --check src/app/oracle-runtime-registry.js && node --check src/core/oracle-diagnostics.js && node --check src/settings/oracle-preferences.js && node --check src/data/oracle-data-schema.js && node --check src/data/oracle-migrations.js && node --check src/replays/oracle-replay-library.js && node --check src/replays/oracle-replay-media.js && node --check src/replays/oracle-replay-workspace.js && node --check src/replays/oracle-replay-organization.js && node --check src/replays/oracle-replay-lifecycle-ui.js && node --check src/replays/oracle-replay-viewer.js && node --check src/curves/oracle-curve-math.js && node --check src/curves/oracle-curve-presets.js && node --check src/curves/oracle-premiere-curves-adapter.js && node --check src/curves/oracle-curves-workspace.js && node --check src/quick-apply/oracle-effect-index.js && node --check src/quick-apply/oracle-premiere-effects-adapter.js && node --check src/quick-apply/oracle-quick-apply-domain.js && node --check src/quick-apply/oracle-quick-apply-workspace.js && node --check oracle-platform-telemetry.test.cjs && node --check blocky-studios.overhaul.test.cjs && node --check m1.shell-preferences.test.cjs && node --check m2.replay-library.test.cjs && node --check m2.replay-workspace.test.cjs && node --check m3.replay-organization.test.cjs && node --check m3.replay-lifecycle-ui.test.cjs && node --check m3.main-controller-acceptance.test.cjs && node --check m4.replay-viewer.test.cjs && node --check m4.main-controller-acceptance.test.cjs && node --check m5.curve-math.test.cjs && node --check m5.curve-presets.test.cjs && node --check m5.curves-adapter.test.cjs && node --check m5.curves-workspace.test.cjs && node --check m5.main-controller-acceptance.test.cjs && node --check m6.effect-index.test.cjs && node --check m6.premiere-effects-adapter.test.cjs && node --check m6.quick-apply-domain.test.cjs && node --check m6.quick-apply-workspace.test.cjs && node --check m6.main-controller-acceptance.test.cjs && node --check m7.panel-dom.test.cjs && node --check m7.runtime-registry.test.cjs && node --check m7.multi-panel.test.cjs && node --check m8.quick-apply-command.test.cjs && node --check m9.diagnostics.test.cjs && node --check m9.release-staging.test.cjs && node --check m9.ccx-verifier.test.cjs && node --check replay.repolish.test.cjs && node --check replay.media.test.cjs && node --check release/run-m9-benchmarks.cjs && node --check main.ui.test.cjs && node --check main.watcher.test.cjs && node --check oracle-overdrive.m0.test.cjs && node --check src/core/feature-flags.js && node --check bridge/server.cjs && node --check bridge/publish.cjs && node --check bridge/server.test.cjs && tsc --noEmit -p jsconfig.json",
+    "test": "node --test blocky-studios.overhaul.test.cjs bridge/server.test.cjs m1.shell-preferences.test.cjs m2.replay-library.test.cjs m2.replay-workspace.test.cjs m3.replay-organization.test.cjs m3.replay-lifecycle-ui.test.cjs m3.main-controller-acceptance.test.cjs m4.replay-viewer.test.cjs m4.main-controller-acceptance.test.cjs m5.curve-math.test.cjs m5.curve-presets.test.cjs m5.curves-adapter.test.cjs m5.curves-workspace.test.cjs m5.main-controller-acceptance.test.cjs m6.effect-index.test.cjs m6.premiere-effects-adapter.test.cjs m6.quick-apply-domain.test.cjs m6.quick-apply-workspace.test.cjs m6.main-controller-acceptance.test.cjs m7.panel-dom.test.cjs m7.runtime-registry.test.cjs m7.multi-panel.test.cjs m8.quick-apply-command.test.cjs m9.diagnostics.test.cjs m9.release-staging.test.cjs m9.ccx-verifier.test.cjs replay.repolish.test.cjs replay.media.test.cjs main.performance.test.cjs main.history.test.cjs main.watcher.test.cjs main.native-drag.test.cjs main.ui.test.cjs oracle-overdrive.m0.test.cjs",
+    "test:ui-runtime": "node --test oracle-ui-runtime.test.cjs",
+    "test:platform": "node --test oracle-platform-telemetry.test.cjs oracle-ui-runtime.test.cjs",
+    "platform:audit": "node release/audit-uxp-platform.cjs",
+    "verify": "npm run ui:verify && npm run test:platform && npm test",
+    "release:stage:private": "npm run ui:build && npm run verify && npm run native:build && npm run native:test && powershell -NoProfile -ExecutionPolicy Bypass -File release/stage-private-ccx.ps1 -PrivateLocalAcceptance",
+    "release:package:private": "powershell -NoProfile -ExecutionPolicy Bypass -File release/package-and-verify-private.ps1",
+    "release:install:private": "powershell -NoProfile -ExecutionPolicy Bypass -File release/install-private-ccx.ps1",
+    "benchmark:m9": "node release/run-m9-benchmarks.cjs",
+    "verify:release": "npm run verify && npm run native:test && npm audit --omit=dev --audit-level=high && npm run benchmark:m9"
+  },
+  "dependencies": {
+    "ws": "8.21.0"
+  },
+  "devDependencies": {
+    "@adobe/premierepro": "26.3.0",
+    "typescript": "7.0.2"
+  }
+}

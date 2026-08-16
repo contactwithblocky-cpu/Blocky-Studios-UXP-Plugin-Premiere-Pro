@@ -1,0 +1,217 @@
+{
+    "schema":  "com.blocky.oracle.private-ccx-inventory",
+    "version":  1,
+    "releaseEligible":  false,
+    "distribution":  "PRIVATE LOCAL ACCEPTANCE ONLY - DO NOT DISTRIBUTE",
+    "pluginId":  "com.blocky.oracle.v5",
+    "pluginVersion":  "2.0.14",
+    "generatedAt":  "2026-07-16T12:26:17.4506845Z",
+    "nativeAddon":  {
+                        "path":  "win/x64/oracle-native-drag.uxpaddon",
+                        "size":  553984,
+                        "sha256":  "FAB8477C6273EF1AA4690B9F1A284155ACC61E00FB702574DBAF67ED5FE92407"
+                    },
+    "files":  [
+                  {
+                      "path":  "assets/fonts/Minecraft Regular.ttf",
+                      "size":  21636
+                  },
+                  {
+                      "path":  "assets/fonts/minecraft_five.otf",
+                      "size":  20480
+                  },
+                  {
+                      "path":  "assets/fonts/minecraft_ten.ttf",
+                      "size":  43148
+                  },
+                  {
+                      "path":  "assets/icons/settings_icon.svg",
+                      "size":  365
+                  },
+                  {
+                      "path":  "assets/logo/oracle_logo_anim.json",
+                      "size":  303
+                  },
+                  {
+                      "path":  "assets/logo/oracle_logo_anim.png",
+                      "size":  4713527
+                  },
+                  {
+                      "path":  "icons/dark.png",
+                      "size":  1037
+                  },
+                  {
+                      "path":  "icons/dark@1x.png",
+                      "size":  1037
+                  },
+                  {
+                      "path":  "icons/dark@2x.png",
+                      "size":  2047
+                  },
+                  {
+                      "path":  "icons/light.png",
+                      "size":  996
+                  },
+                  {
+                      "path":  "icons/light@1x.png",
+                      "size":  996
+                  },
+                  {
+                      "path":  "icons/light@2x.png",
+                      "size":  2149
+                  },
+                  {
+                      "path":  "icons/plugin@1x.png",
+                      "size":  888
+                  },
+                  {
+                      "path":  "icons/plugin@2x.png",
+                      "size":  2621
+                  },
+                  {
+                      "path":  "icons/plugin-icon.png",
+                      "size":  888
+                  },
+                  {
+                      "path":  "icons/plugin-icon@2x.png",
+                      "size":  2621
+                  },
+                  {
+                      "path":  "index.html",
+                      "size":  58852
+                  },
+                  {
+                      "path":  "main.js",
+                      "size":  421243
+                  },
+                  {
+                      "path":  "manifest.json",
+                      "size":  2014
+                  },
+                  {
+                      "path":  "PRIVATE_LOCAL_ACCEPTANCE_ONLY.txt",
+                      "size":  344
+                  },
+                  {
+                      "path":  "src/app/oracle-panel-dom.js",
+                      "size":  15907
+                  },
+                  {
+                      "path":  "src/app/oracle-runtime-registry.js",
+                      "size":  21064
+                  },
+                  {
+                      "path":  "src/app/oracle-shell.js",
+                      "size":  9815
+                  },
+                  {
+                      "path":  "src/core/oracle-diagnostics.js",
+                      "size":  6585
+                  },
+                  {
+                      "path":  "src/curves/oracle-curve-math.js",
+                      "size":  19410
+                  },
+                  {
+                      "path":  "src/curves/oracle-curve-presets.js",
+                      "size":  35030
+                  },
+                  {
+                      "path":  "src/curves/oracle-curves-workspace.js",
+                      "size":  85363
+                  },
+                  {
+                      "path":  "src/curves/oracle-premiere-curves-adapter.js",
+                      "size":  88205
+                  },
+                  {
+                      "path":  "src/data/oracle-data-schema.js",
+                      "size":  13315
+                  },
+                  {
+                      "path":  "src/data/oracle-migrations.js",
+                      "size":  20418
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-effect-index.js",
+                      "size":  13829
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-premiere-effects-adapter.js",
+                      "size":  83039
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-quick-apply-domain.js",
+                      "size":  62439
+                  },
+                  {
+                      "path":  "src/quick-apply/oracle-quick-apply-workspace.js",
+                      "size":  52557
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-library.js",
+                      "size":  60589
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-lifecycle-ui.js",
+                      "size":  69985
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-organization.js",
+                      "size":  74365
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-viewer.js",
+                      "size":  33369
+                  },
+                  {
+                      "path":  "src/replays/oracle-replay-workspace.js",
+                      "size":  12387
+                  },
+                  {
+                      "path":  "src/settings/oracle-preferences.js",
+                      "size":  78749
+                  },
+                  {
+                      "path":  "style.css",
+                      "size":  19026
+                  },
+                  {
+                      "path":  "styles/overdrive-m1.css",
+                      "size":  24011
+                  },
+                  {
+                      "path":  "styles/overdrive-m2.css",
+                      "size":  7484
+                  },
+                  {
+                      "path":  "styles/overdrive-m3.css",
+                      "size":  10211
+                  },
+                  {
+                      "path":  "styles/overdrive-m4.css",
+                      "size":  6045
+                  },
+                  {
+                      "path":  "styles/overdrive-m5.css",
+                      "size":  15388
+                  },
+                  {
+                      "path":  "styles/overdrive-m6.css",
+                      "size":  17136
+                  },
+                  {
+                      "path":  "styles/overdrive-m7.css",
+                      "size":  2458
+                  },
+                  {
+                      "path":  "win/x64/oracle-native-drag.uxpaddon",
+                      "size":  553984
+                  }
+              ],
+    "blockers":  [
+                     "Font redistribution/commercial-use rights are undocumented.",
+                     "Oracle logo/icon redistribution rights are undocumented.",
+                     "Final semantic version requires project-owner confirmation."
+                 ]
+}

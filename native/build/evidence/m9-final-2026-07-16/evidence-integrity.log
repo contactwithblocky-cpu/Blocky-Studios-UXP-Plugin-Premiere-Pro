@@ -1,0 +1,18 @@
+ORACLE M9-8 EVIDENCE INTEGRITY
+GENERATED_AT=2026-07-16T12:47:37.7766652-04:00
+PASS	JavaScript 441/441	final TAP totals
+PASS	Native 6/6	Release CTest
+PASS	Audit zero	npm production audit
+PASS	Benchmark budgets	six encoded booleans
+PASS	Artifact identity	source/stage/archive/install
+PASS	Installed identity	normal External install
+PASS	Live bridge	protocol-v2 live probe
+PASS	Command no duplicate	two repeat invocations
+PASS	Oracle UXP log	installed host log
+PASS	User state preserved	Developer state versus backup
+PASS	Paired mod/runtime	Java21 build and live client
+PASS	CCX hash	CA4D4FB48DFD8DF1E73F5543379790664327C54B732ED9EFD7A50418A9D81DAE
+PASS	Installed screenshots	missing=
+CHECKS=13
+FAILURES=0
+RESULT=PASS

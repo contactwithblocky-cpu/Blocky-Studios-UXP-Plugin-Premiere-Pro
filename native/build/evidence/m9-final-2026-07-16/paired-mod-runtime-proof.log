@@ -1,0 +1,39 @@
+ORACLE PAIRED MOD POST-BUILD AND LIVE-CLIENT PROOF
+RECORDED_UTC=2026-07-16T16:44:06.8075695Z
+BUILD_LOG=D:\Blocky HQ\Oracle Plugin (Premiere Pro)\com.blocky.oracle.v5\native\build\evidence\m9-final-2026-07-16\paired-mod-java21-build.log
+BUILD_JAVA=Temurin 21.0.11
+GRADLE_RESULT=BUILD SUCCESSFUL in 2m 6s
+GRADLE_EXIT_CODE=0
+TEST_SUITES=76
+TESTS=520
+TEST_FAILURES=0
+TEST_ERRORS=0
+TEST_SKIPPED=0
+BUILD_LOG_FATAL_MARKERS=0
+BUILD_STDERR_CAPTURE=combined with stdout (2>&1)
+BUILT_JAR=D:\Blocky HQ\Oracle Mod by Blocky\Oracle\build\libs\oracle-0.40.0.jar
+BUILT_JAR_SIZE_BYTES=219970864
+BUILT_JAR_SHA256=785252F0AE853626F736809776ABE71196129E5675A73C45D6FCE4150C5700F1
+PROFILE_JAR=C:\Users\salim\AppData\Roaming\ModrinthApp\profiles\Blocky HQ 1.21.11 (1)\mods\oracle-0.40.0.jar
+PROFILE_JAR_SIZE_BYTES=219970864
+PROFILE_JAR_SHA256=785252F0AE853626F736809776ABE71196129E5675A73C45D6FCE4150C5700F1
+BUILT_EQUALS_PROFILE=True
+MINECRAFT_PID=61560
+MINECRAFT_PROCESS=javaw
+MINECRAFT_START=2026-07-16T11:46:25.8410868-04:00
+MINECRAFT_RESPONDING=True
+MINECRAFT_WINDOW_HANDLE=4068524
+MINECRAFT_WINDOW_TITLE=Minecraft* 1.21.11
+MINECRAFT_JAVA_PATH=C:\Users\salim\AppData\Roaming\ModrinthApp\meta\java_versions\zulu21.44.17-ca-jre21.0.8-win_x64\bin\javaw.exe
+BRIDGE_LISTEN_127.0.0.1_3001=True
+BRIDGE_OWNER_PID=61560
+LATEST_LOG=C:\Users\salim\AppData\Roaming\ModrinthApp\profiles\Blocky HQ 1.21.11 (1)\logs\latest.log
+RUNTIME_CRASH_OR_HSERR_FILES_SINCE_CLIENT_START=0
+RUNTIME_STARTUP_MARKERS:
+777:[11:46:51] [Render thread/INFO]: [Oracle Runtime Validation]
+778:ImGui runtime present: true
+780:ImGui loaded from: file:/C:/Users/salim/AppData/Roaming/ModrinthApp/profiles/Blocky%20HQ%201.21.11%20(1)/mods/oracle-0.40.0.jar
+2612:[11:46:58] [Oracle-Premiere-WebSocket-Boss-2-1/INFO]: [Oracle Premiere Bridge] WebSocket server listening on ws://127.0.0.1:3001
+RUNTIME_NONFATAL_DIAGNOSTIC:
+5036:[11:47:48] [Render thread/ERROR]: Missing program minecraft:pipeline/debug_quads in override list. This is likely an Iris bug!!!
+RUNTIME_NONFATAL_STATUS=client remains responsive; no crash report or hs_err artifact
